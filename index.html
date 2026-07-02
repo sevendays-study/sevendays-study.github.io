@@ -1,0 +1,6649 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://c-lang.sevendays-study.com/ -->
+<html lang="jp">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="C,C言語,入門,初心者,ビギナー,入門,プログラミング,一週間,学習" lang="ja" xml:lang="ja">
+    <meta name="description"
+        content="プログラミングの初心者でも1週間でC言語プログラミングが出来るように、基礎からきちんと学べるC言語入門サイトです。基本的なプログラミングの方法から、オブジェクト指向を使ってプログラムを作る方法まで解説します。"
+        lang="ja" xml:lang="ja">
+    <meta name="author" content="亀田健司">
+    <title>一週間で学べるシリーズ - おさえておきたいプログラミングの基本</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="https://c-lang.sevendays-study.com/assets/favicon.ico">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="./index_files/styles.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script type="text/javascript" async="" src="./index_files/analytics.js.ダウンロード"></script>
+    <script type="text/javascript" async="" src="./index_files/js"></script>
+    <script async="" src="./index_files/js(1)"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-48887342-1');
+    </script>
+    <style type="text/css">
+        #htmlToothbrush #bodyToothbrush .parentToothbrush .bilibili-player-video {
+            margin: 0 !important;
+        }
+
+        #htmlToothbrush,
+        #bodyToothbrush {
+            overflow: hidden !important;
+            zoom: 100% !important;
+        }
+
+        #htmlToothbrush #bodyToothbrush .parentToothbrush {
+            overflow: visible !important;
+            z-index: auto !important;
+            transform: none !important;
+            -webkit-transform-style: flat !important;
+            transition: none !important;
+            contain: none !important;
+        }
+
+        #htmlToothbrush #bodyToothbrush .absoluteToothbrush {
+            position: absolute !important;
+        }
+
+        #htmlToothbrush #bodyToothbrush .playerToothbrush {
+            position: fixed !important;
+            top: 0px !important;
+            left: 0px !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            max-width: none !important;
+            max-height: none !important;
+            min-width: 0 !important;
+            min-height: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            z-index: 2147483646 !important;
+            border: none !important;
+            background-color: #000 !important;
+            transform: none !important;
+        }
+
+        #htmlToothbrush #bodyToothbrush .parentToothbrush video {
+            object-fit: contain !important;
+        }
+
+        #htmlToothbrush #bodyToothbrush .parentToothbrush .videoToothbrush {
+            width: 100vw !important;
+            height: 100vh !important;
+        }
+
+        #playerControlBtn {
+            text-shadow: none;
+            visibility: hidden;
+            opacity: 0;
+            display: none;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            font: 12px "微软雅黑";
+            margin: 0;
+            width: 64px;
+            height: 20px;
+            line-height: 20px;
+            border: none;
+            text-align: center;
+            position: fixed;
+            z-index: 2147483647;
+            background-color: #27A9D8;
+            color: #FFF;
+        }
+
+        #playerControlBtn:hover {
+            visibility: visible;
+            opacity: 1;
+            background-color: #2774D8;
+        }
+
+        #picinpicBtn {
+            text-shadow: none;
+            visibility: hidden;
+            opacity: 0;
+            display: none;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            font: 12px "微软雅黑";
+            margin: 0;
+            width: 53px;
+            height: 20px;
+            line-height: 20px;
+            border: none;
+            text-align: center;
+            position: fixed;
+            z-index: 2147483647;
+            background-color: #27A9D8;
+            color: #FFF;
+        }
+
+        #picinpicBtn:hover {
+            visibility: visible;
+            opacity: 1;
+            background-color: #2774D8;
+        }
+
+        #leftFullStackButton {
+            display: none;
+            position: fixed;
+            width: 1px;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: 2147483647;
+            background: #000;
+        }
+
+        #rightFullStackButton {
+            display: none;
+            position: fixed;
+            width: 1px;
+            height: 100vh;
+            top: 0;
+            right: 0;
+            z-index: 2147483647;
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="https://c-lang.sevendays-study.com/index.html">一週間で学べるシリーズ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link"
+                            href="https://c-lang.sevendays-study.com/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link"
+                            href="https://sevendays-study.com/privacypolicy.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://shift-system.jp/">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="https://qiita.com/kameda05">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page header with logo and tagline-->
+    <header class="py-1 bg-light border-bottom mb-1">
+        <div class="container">
+            <div class="text-center my-3">
+                <h1 class="fw-bolder"><a href="https://c-lang.sevendays-study.com/index.html"
+                        style="text-decoration:none; color:inherit;">一週間で身につくC言語の基本</a></h1>
+                <p class="lead mb-0">おさえておきたいプログラミングの基本</p>
+            </div>
+        </div>
+    </header>
+    <!-- Page content-->
+    <div class="container">
+        <div class="row">
+            <!-- Blog entries-->
+            <div class="col-lg-8">
+                <!-- Featured blog post-->
+                <div class="card mb-4">
+                    <a href="https://c-lang.sevendays-study.com/index.html"><img class="card-img-top"
+                            src="./index_files/top.png" alt="..."></a>
+                    <div class="card-body">
+                        <h2 class="card-title">一週間で身につくC言語の基本</h2>
+                        <p class="card-text">これからプログラミングを学ぶ初心者に、C言語を1週間で身につけてもらうための内容です。内容は以下のようになっています。</p>
+                    </div>
+                </div>
+                <!-- main contents -->
+                <div class="card mb-4">
+                    <div class="card-header">基本編</div>
+                    <div class="card-body">
+                        <p>C言語が初めての人が基本を身に着けるための内容です。まずはここからスタートしましょう。</p>
+                        <table class="table table-striped mt-2">
+                            <tbody>
+                                <tr>
+                                    <th>日数</th>
+                                    <th>内容</th>
+                                    <th>詳細</th>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/day0.html">0日目</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/day0.html">C言語とは</a></td>
+                                    <td>プログラミングとC言語の基本</td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/day1.html">1日目</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/day1.html">はじめの一歩</a></td>
+                                    <td>printf()関数の利用</td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/day2.html">2日目</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/day2.html">演算と変数</a></td>
+                                    <td>C言語での演算と変数の概念</td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/day3.html">3日目</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/day3.html">条件分岐</a></td>
+                                    <td>if文やswitch文による分岐</td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/day4.html">4日目</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/day4.html">繰り返し処理</a></td>
+                                    <td>for文、while文、do～while()文</td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/day5.html">5日目</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/day5.html">配列変数</a></td>
+                                    <td>配列変数を用いて多くのデータを扱う</td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/day6.html">6日目</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/day6.html">関数の作り方</a></td>
+                                    <td>ユーザー定義関数</td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/day7.html">7日目</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/day7.html">ファイル分割</a></td>
+                                    <td>一つのプログラムを複数ファイルに分割</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">応用編</div>
+                    <div class="card-body">
+                        <p>基本編でC言語に関する基本的な知識が身につきますが、更に深く学習するために、以下の内容を追加しておきます。</p>
+                        <table class="table table-striped mt-2">
+                            <tbody>
+                                <tr>
+                                    <th>日数</th>
+                                    <th>内容</th>
+                                    <th>詳細</th>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/ex-day1.html">1日目</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/ex-day1.html">数値の扱い</a></td>
+                                    <td>数値の扱いに関する注意点</td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/ex-day2.html">2日目</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/ex-day2.html">アドレスとポインタ</a></td>
+                                    <td>アドレスとポインタの概念</td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/ex-day3.html">3日目</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/ex-day3.html">ポインタと配列</a></td>
+                                    <td>ポインタと配列変数の関係</td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/ex-day4.html">4日目</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/ex-day4.html">文字列とポインタ</a></td>
+                                    <td>文字列の概念と文字列を操作</td>
+                                </tr>
+
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/ex-day5.html">5日目</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/ex-day5.html">構造体</a></td>
+                                    <td>構造体の概念と扱い方</td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/ex-day6.html">6日目</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/ex-day6.html">ファイルの読み書き</a></td>
+                                    <td>ファイルの読み書き</td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/ex-day7.html">7日目</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/ex-day7.html">高度なファイル分割</a></td>
+                                    <td>複雑な依存関係のあるファイルの分割</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">練習問題（基本編）</div>
+                    <div class="card-body">
+                        <p>練習問題に多数チャレンジしてさらに理解を深めましょう。</p>
+                        <table class="table table-striped mt-2">
+                            <tbody>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>内容</th>
+                                    <th>対応する基本編の日数</th>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/problem1.html">1</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/problem1.html">最も基本的なプログラム、演算と変数</a>
+                                    </td>
+                                    <td><a href="https://c-lang.sevendays-study.com/day1.html">1日目</a>、<a
+                                            href="https://c-lang.sevendays-study.com/day2.html">2日目</a></td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/problem2.html">2</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/problem2.html">条件分岐</a></td>
+                                    <td><a href="https://c-lang.sevendays-study.com/day3.html">3日目</a></td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/problem3.html">3</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/problem3.html">繰り返し処理</a></td>
+                                    <td><a href="https://c-lang.sevendays-study.com/day4.html">4日目</a></td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/problem4.html">4</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/problem4.html">配列変数</a></td>
+                                    <td><a href="https://c-lang.sevendays-study.com/day5.html">5日目</a></td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/problem5.html">5</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/problem5.html">関数</a></td>
+                                    <td><a href="https://c-lang.sevendays-study.com/day6.html">6日目</a></td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/problem6.html">6</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/problem6.html">ファイル分割</a></td>
+                                    <td><a href="https://c-lang.sevendays-study.com/day7.html">7日目</a></td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/problem7.html">7</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/problem7.html">チャレンジ問題</a></td>
+                                    <td>すべて</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">練習問題（応用編）</div>
+                    <div class="card-body">
+                        <p>練習問題に多数チャレンジしてさらに理解を深めましょう。</p>
+                        <table class="table table-striped mt-2">
+                            <tbody>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>内容</th>
+                                    <th>対応する基本編の日数</th>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/problemex1.html">1</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/problemex1.html">乱数、数学関数、論理演算</a>
+                                    </td>
+                                    <td><a href="https://c-lang.sevendays-study.com/ex-day1.html">1日目</a></td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/problemex2.html">2</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/problemex2.html">ポインタと配列・文字列</a>
+                                    </td>
+                                    <td><a href="https://c-lang.sevendays-study.com/ex-day2.html">2日目</a>、<a
+                                            href="https://c-lang.sevendays-study.com/ex-day3.html">3日目</a>、<a
+                                            href="https://c-lang.sevendays-study.com/ex-day4.html">4日目</a></td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/problemex3.html">3</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/problemex3.html">構造体</a></td>
+                                    <td><a href="https://c-lang.sevendays-study.com/ex-day5.html">5日目</a></td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/problemex4.html">4</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/problemex4.html">ファイルの読み書き</a></td>
+                                    <td><a href="https://c-lang.sevendays-study.com/ex-day6.html">6日目</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br>
+                <div class="card mb-4">
+                    <div class="card-header">統合開発環境</div>
+                    <div class="card-body">
+                        <p>C言語でプログラムをするのに必要な統合開発環境(IDE)の利用方法を紹介します。</p>
+                        <table class="table table-striped mt-2">
+                            <tbody>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>内容</th>
+                                    <th>詳細</th>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/development1.html">1</a></th>
+                                    <td><a
+                                            href="https://c-lang.sevendays-study.com/development1.html">VisualStudio2022</a>
+                                    </td>
+                                    <td>Microsoft社のWindows向け開発環境VisualStudio2022での開発方法について説明します。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br>
+                <div class="card mb-4">
+                    <div class="card-header">コラム</div>
+                    <div class="card-body">
+                        <p>CC言語にまつわるコラムです。勉強の合間に読んでみてください！。</p>
+                        <table class="table table-striped mt-2">
+                            <tbody>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>内容</th>
+                                    <th>詳細</th>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/column.html">1</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/column.html">コラム</a></td>
+                                    <td>C言語にまつわる、知っているとちょっとうれしい知識が満載です。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br>
+                <div class="card mb-4">
+                    <div class="card-header">参考資料</div>
+                    <div class="card-body">
+                        <p>学習に役立つ参考資料を紹介します。</p>
+                        <table class="table table-striped mt-2">
+                            <tbody>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>内容</th>
+                                    <th>詳細</th>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/appendix1.html">1</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/appendix1.html">参考になるC言語の本</a></td>
+                                    <td>さらなる学習の助けになるC言語の書籍を紹介します。</td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/appendix2.html">2</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/appendix2.html">アスキーコード表</a></td>
+                                    <td>基本的な文字コードである、アスキーコード表です。</td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/appendix3.html">3</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/appendix3.html">エスケープシーケンス</a></td>
+                                    <td>特殊な文字を表す、エスケープシーケンスの一覧表です。</td>
+                                </tr>
+                                <tr>
+                                    <th><a href="https://c-lang.sevendays-study.com/appendix4.html">4</a></th>
+                                    <td><a href="https://c-lang.sevendays-study.com/appendix4.html">演算子の優先順位</a></td>
+                                    <td>C言語で出てくる様々な演算子の優先順位を紹介します。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <!-- Side widgets-->
+            <div class="col-lg-4">
+                <!-- Categories widget-->
+                <div class="card mb-4">
+                    <div class="card-header">参考資料</div>
+                    <a href="https://www.udemy.com/course/cc-lubmn/"><img class="card-img-top"
+                            src="./index_files/c-lang.png" alt="..."></a>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="https://c-lang.sevendays-study.com/appendix2.html">アスキーコード表</a></li>
+                                    <li><a href="https://c-lang.sevendays-study.com/appendix3.html">エスケープシーケンス</a></li>
+                                    <li><a href="https://c-lang.sevendays-study.com/appendix4.html">演算子の優先順位</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="https://c-lang.sevendays-study.com/development1.html">VisualStudio</a>
+                                    </li>
+                                    <li><a href="https://c-lang.sevendays-study.com/appendix1.html">役立つ書籍</a></li>
+                                    <li><a href="https://c-lang.sevendays-study.com/column.html">C言語のコラム</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">一週間で学べるコースの一覧</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="https://c-lang.sevendays-study.com/">C言語</a></li>
+                                    <li><a href="https://cpp-lang.sevendays-study.com/">C++言語</a></li>
+                                    <li><a href="https://java.sevendays-study.com/">Java言語</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="https://csharp.sevendays-study.com/">C#言語</a></li>
+                                    <li><a href="https://web.sevendays-study.com/mysql/">MySQL</a></li>
+                                    <li><a href="https://sevendays-study.com/computer-literacy/">コンピュータリテラシ</a></li>
+                                    <!-- 「自動音声の方がまだ感情あるわ」
+
+「あ、常盤君、閉店作業大変そうならオレもちょっと手伝おうか？」
+
+　彼女に釣り合わないレベルで彼氏がいい人すぎる件について。
+
+「い、いや大丈夫です。宇佐君は一刻も早く彼女と楽しくメシ行って下さい」
+
+「そうそう、こんなボドゲ臭い場所早く離れよう、ウサくん」
+
+「自分のバイト先によくそんなこと言えたなおい」
+
+「あ、ごめぇん、今ボドゲ臭いってディスったのはぁ、場所じゃなく従業員っていうかぁ」
+
+「よぉし小鳥遊たかなしさんこっちおいで、今から『爪剝がしゲーム』のインストをしますよぉ」
+
+「やーん、バンジョーがこわーい」
+
+「わ、ちょ、みふる、そんな腕引っ張るなって。じゃあね常盤君！」
+
+「ばいばい、バンジョー。って、あ、そだ！　最後に飴あめ一個ちょーだい！」
+
+　ドア前で振り返り、僕に一個投げろと促して来る小鳥遊さん。僕は軽く嘆息すると、補充された飴達の中からレモン味を探して彼女へと放る。小鳥遊さんはそれを受け取ると、手をぱっと開いて味を確認し。そして……
+
+「へへっ」
+
+　何が嬉うれしいのか、無邪気に僕へ微ほほ笑えみかけてきた。僕はふいと視線を逸そらして応じる。
+
+「ほら、さっさと行ったらどうですか」
+
+「わ、この店カンジわるー。あとで星１つけとこーっと」
+
+「はいはい、どうぞご勝手に」
+
+「あはは、じゃーね、バンジョー。……おまたせ、ウサくん！　ね、なに食べるぅ？」
+
+
+
+　きゃっきゃとはしゃぎながら、宇佐君の手を引いて店を出て行く小鳥遊さん。正直腹立たしいことこの上ない。この上ないのだが……。
+
+「…………。……ああ、クソッ、ずるい笑顔してんなぁ、ホント」
+
+　あんなに幸せそうにされたんじゃ、想おもいを寄せる人間としてもう何も言えない。推しアイドルに幸せな結婚報告された時のファンの気持ちって、こんな感じなのだろうか。いつか武たけ士しにでも訊きいてみたいものだ。…………。
+
+　……うん。でもまぁ、実際小鳥遊さんが幸せなら、それ以上のことなどないだろう。
+
+　僕の恋心なんていう彼女の投げ銭にさえならないものは、どこかに放るべきなのだ。
+
+　そう、どこかに……。
+
+「まずはサイコロを振らなきゃ、恋ゲームは始まらないっしょ」
+
+「…………」
+
+　ふと、彼女の言葉を思い出してしまう。
+
+「…………。……でも、ま、どうせ『放る』なら……」
+
+　テーブル上のダイストレイには現在、一つだけダイスが入っていた。
+
+　僕はおもむろにそれを手に取ると、ふと今日彼女にあげたサイコロキャンディの出目を──自分を象徴するような出目を思い出し、ふっと笑い、神様へと向けて宣言する。
+
+
+
+「３が出たら、告白する。それ以外なら、きっぱり諦める」
+
+
+
+　それは６分の５の確率で終わる恋。分の悪い花占いもいいところだった。しかし彼氏持ちが相手なのだ。それでも贅ぜい沢たくすぎと言えるだろう。
+
+　……僕は意を決してダイスをトレイへと放る。
+
+　人生の重要な選択を運に委ねるなんて、いかにも馬鹿げている。本来であれば熟考と葛藤の末に、自ら結論を選び取るべきなのだろう。
+
+　けれどこと「恋」に限ってだけは、きっと「正解」なんてどこにもないのだ。
+
+　どうせ何を選んだって後悔する。
+
+　であれば、分の悪い賭けに天の采配で負けた方が幾分清すが々すがしいってものだろう。
+
+　それこそ、ダイスを使用するボードゲーム達と同じだ。
+
+
+
+　大事なのはきっと「正解する」ことじゃない。「後悔しない」ことなのだから。
+
+
+
+　僕が熱視線を注ぐ中、トレイの中のダイスはカラカラと音を立てて回転すると。
+
+　やがてピタリと止まり、そうして──
+
+「……そう、来ますかぁ」
+
+　──僕は遊びの神が下した無慈悲な運命の悪戯いたずらに大きく嘆息すると。
+
+　まずは英気を養うべく、大好きなコーラ味の飴を舐なめることから始めたのだった。
+
+
+
+＊
+
+
+
+　六面全てが三つの丸で構成された、「３」を顕あらわすサイコロ形のレモン飴。
+
+　淡黄色のそれを真っ赤な夕ゆう陽ひへと透すかし、小鳥遊みふるは嬉しそうに微笑んでいた。
+
+　少し先を行く恋人の宇佐が振り返る。と同時にみふるはそれを口内に放り込むと、可愛らしく至福の表情を浮かべた。
+
+　そんな彼女の様子に、金髪の美青年が若干呆あきれ顔で問う。
+
+「ってか、みふるって、そんな勢いでレモン味が好きだったっけ？」
+
+「まぁねー。あ、でも今回は出目が良かったから、更にアゲって感じかな」
+
+「出目？　いやいや、飴の味を左右する出目って、なんだよ」
+
+　冗談で返されたとでも解釈したのか、カラカラと笑って先を歩き始める宇佐。
+
+　しかしみふるは立ち止まったまま、口内の舌先で３の出目を確認するようになぞると。
+
+　恋する乙女のはにかみと共に、小さく呟つぶやくようにその答えを返したのだった。
+
+
+
+「……好きピナンバー、かな」-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">Udemy</div>
+                    <a href="https://www.udemy.com/course/cc-lubmn/"><img class="card-img-top"
+                            src="./index_files/udemy.png" alt="..."></a>
+                    <div class="card-body">
+                        <h2 class="card-title h4">Udemyでも学びましょう！</h2>
+                        <p class="card-text">一週間でわかるC言語・C++言語がオンライン講座になりました！<b>動画</b>と<b>音声</b>によってさらにわかりやすくなりました!!
+                            1講座で2つの言語を学ぶことができる上に、<b>練習問題の回答もダウンロードできます。</b></p>
+                        <a class="btn btn-primary" href="https://www.udemy.com/course/cc-lubmn/">Read →</a>
+                        <!-- 
+【第二話　アブストラクト・クイーンの敗北（Ｄａｙ５８）】
+
+
+
+「負けました」
+
+　そう頭を下げた対局相手のつむじを眺めながら、私──歌うた方かた月つき乃のは深く息を吐いた。
+
+　数時間ぶりに呼吸をした気がする。公式の試合は多かれ少なかれ常に緊張感を孕はらむものだが、今日のはとびきりだった。今更ながらにうなじにじっとりと汗が滲にじむ。
+
+　なんとか、しのいだ。
+
+　ここしばらく、私の対局後の感想の九割がこれだ。勝った、などという甘い充足感ではなく、どうにか負けなかった、なんとか生き延びた、という安あん堵ど感の方が先に立つ。
+
+　結果試合後に残るのは「敗者と勝者」ではなく「死者と重傷者」だ。
+
+　互いに苦味しかない感想戦をぽつぽつと交わした後、身支度を調えて千せん駄だヶが谷やセンタービルを出る。そのまま駅に向かおうとしたところで、突然背後から肩を叩たたかれた。
+
+「あの、歌方月乃さんですよね？　女流名人の！」
+
+　きゃぴっとした甲高い声。対局後の疲れもあって正直なところ振り返るのも億おっ劫くうだけれど、とはいえ私とて女流棋士の端くれ。将棋文化の普及もまた大事な責務。私は一瞬でビジネススマイルを作ると「対応モード」で相手を振り返り、そうして──
+
+「なぁんて」
+
+　──ほっぺを指で突つつかれるという昭和の洗礼を受けると同時に激しく後悔した。
+
+　そうだ。昔からこういうことをする人だった「この人」は。
+
+「……なんでいらっしゃるんですか、師匠」
+
+「もう、相変わらずつれないんだからぁ、ツクちゃんったら」
+
+　仏ぶっ頂ちょう面づらで返す私に、極めて軽い調子で応じて来る妙齢の女性。
+
+　巽たつみ真ま理り狭さ。露出が多い派手なルックスからは想像もつかないが、元・女流棋士だ。
+
+　金属アクセサリー類をジャラジャラと鳴らしつつ、なおも彼女は続けて来る。
+
+「それに、師匠はやめてって何回も言ってるでしょ？　もう現役じゃないんだし」
+
+「あ、そうでしたね『おばさん』」
+
+「うん、それはもっとやめようか。響き的に」
+
+　突然真顔になるアラサー女子。しかし私は至極当然の返しで応じた。
+
+「でもマリさんと私の関係は、師弟を除いたら『叔母』と『姪』なので──」
+
+「是非マリさんでおなしゃす、ツクちゃん」
+
+「はぁ」
+
+　昔は「叔母さん」でも「師匠」でも笑って受け容いれてくれていたのに。難しいものだ。
+
+　ちなみに「ツクちゃん」というのは、私の主に親族間におけるあだ名だ、舌足らずだった幼児期の私が、自分の名前である「つきの」が中々うまく言えず、ずっと「つくのはね、つくのはね」と言っていたのが由来らしい。
+
+　……三つ子の魂百までとは言うけれど、まさかそれをこの年まで引っ張られるとは。
+
+　せめて公的な場でぐらいは、叔母ではなく師匠として「月乃」と呼んでほしいのだけれど、そんな私の要望はしかし「可愛くない」の一言で却下された。可愛くないて。
+
+　まぁ今更そこを糾弾するつもりもない。私は話を先へと進めることにした。
+
+「ししょ──マリさんが会館にいらっしゃるなんて、珍しいですね」
+
+「ん？　ああ、今の仕事でちょい千駄ヶ谷に用事があってね。で、ツクちゃんの対局あったの思い出して、ちょっと寄ってみただけなんだけど」
+
+「そうだったんですね。わざわざありがとうございま──」
+
+　そう礼を告げ深々とお辞儀をしかけたところで、マリさんが差し込んでくる。
+
+「つまんない指し方してんね、ツクちゃん」
+
+「────」
+
+　それはいつもの軽い叔母の──マリさんの言葉ではなく、私に将棋の全てを教えてくれた「師匠」の言葉だった。私はごくりと唾を飲みこみつつ応じる。
+
+「見て……らしたんですね」
+
+「ま、多少ね」
+
+　言いながら自分のスマホを軽く振るマリさん。私は青ざめていく顔を背けるも、彼女は追及の手を緩めてはくれなかった。
+
+「ツクちゃんがやたら堅い棋風であること自体は昔からそうだし、別にいいんだよ」
+
+「でしたら……」
+
+「でもそれは」
+
+　マリさんは師匠時代にさえあまり見せなかった厳しい眼まな差ざしを私に向ける。
+
+「そこに『確固たる信念を伴ってるなら』という前提の話だよね」
+
+「…………」
+
+　何も言い返せず右手で左の二の腕を握り込む。マリさんはやれやれと息を吐いた。
+
+「女流名人戦あたりまでは何の文句もなかったんだけどね。ツクちゃんのツクちゃんらしさがいい方向に出ていて、結果も伴ってたし」
+
+「…………」
+
+「でも、その後からかな。ツクちゃんの棋風が、がたつき始めたのは」
+
+「…………。…………はい」
+
+　絞り出すような声で認める私。マリさんは私が悩みの言語化に窮しているのを察してくれたのか、とりあえず近くのカフェに入ろうかと提案してくれた。
+
+　私はそれに頷うなずくと、思考を纏まとめながら促されるままに店へと赴く。
+
+　席につき、注文を済ませたところで、私は改めてマリさんに胸の内を吐き出した。
+
+「マリさんの仰おっしゃる通り……少し前までは、自分の棋風に疑問なんてなかったんです」
+
+「知ってる。ツクちゃん昔っから私のこと師匠とか呼ぶくせに、全然棋風は私に似ないんだもの」
+
+「それはマリさんが自由すぎるせいもあると思いますが……」
+
+「あっはっは、公式戦で二歩を五回もやった女流棋士は後にも先にも私だけだろうね！」
+
+「まったく笑い事じゃないですね」
+
+　当時は外部からのみならず身内からさえも結構風当たりが強かったはずなのに。当人はずっとこの調子なんだから、尊敬するやら、呆れるやら……。
+
+「まぁ私のことはいいとして。ツクちゃんのその迷いはどこから来たわけ？」
+
+「それなんですが……」
+
+　そう切り出したところで、私の注文していたあずきミルクラテがやってきた。
+
+「ふふ」
+
+　大好物たる和甘味の登場に、流石さすがの私も一時浮世の悩みを忘れ、目を輝かせてしまう。と、次いで店員さんが若干の戸惑い顔でテーブルに、事前に追加料金を払ってまで注文しておいたコンディメント類を置き始めた。
+
+「そしてこちら、フレッシュミルク、はちみつ、メープルシロップ、スティックシュガーになります」
+
+「これは重畳。ありがとうございます」
+
+　笑顔で丁寧にぺこりと頭を下げる私。マリさんが「出た、ちょーじょー」と私の口癖を懐なつかしそうに笑う中、店員さんは「ごゆっくりどうぞー」とビジネススマイルで去っていく。
+
+　私がそのまませっせとあずきミルクに「いつもの」甘味増量作業を行っていると、マリさんは「で？」と先を促してきた。
+
+「稀き代たいの天才女流棋士・歌方月乃ともあろう御方が、なぜに調子崩したわけ？」
+
+　その質問に、私は甘味増し増しあずきミルクを一口舐めてから応じる。
+
+「えと、近頃私の対局を見て下さる方が爆発的に増えまして。ネットなどでも様々なことを言われるようになり……」
+
+「みたいね。あー、でもさ……」
+
+　マリさんがそう言葉を続けかけたところで、彼女の注文していた「トロピカルビッグサンダーパフェ」とやらが到着した。……大きい。私はそれをジト目で眺めて指摘する。
+
+「胸焼けしそうですね」
+
+「いやアンタにだけは言われたくないっての」
+
+　私の使用した甘味達を眺めて切り返してくるマリさん。……まあ、好みは人それぞれだ。
+
+　彼女はパフェアイス部分を、見ているこちらがハラハラするほど豪快に切り崩しながら先程までの話題を再開させてきた。
+
+「ツクちゃんって、ＳＮＳの反応とか気にするタイプだったっけ？」
+
+　私はその質問に対して首を大きく横に振る。
+
+「いえ、全然ですね。ただ、そんな私でさえ看過出来ない指摘もあったんです」
+
+「なに？」
+
+「私の棋風が、ＡＩ……将棋ソフトのそれっぽいという疑惑です」
+
+「あー、その手のやつかー」
+
+　マリさんがパフェを食べ進める手を止め、辟へき易えきした様子で呻うめく。
+
+「アタシが現役の頃からあったなぁ。将棋ソフトによるカンニング疑惑みたいなの」
+
+
+
+「はい。私にも多少その疑いがかけられまして」
+
+「で？　実際やっちゃってんの？」
+
+「まさか」
+
+「だよね」
+
+　知ってた、という様子で再びパフェを口に運び始めるマリさん。私はその絶大なる無条件の信頼に少しだけ救われながらも、話を続ける。
+
+「それ自体は事実無根ですし、だからさして炎上もしませんでした。実に重畳です」
+
+「そりゃ良かったじゃん。でも、じゃあ何が問題なの？」
+
+　マリさんのもっともな質問に、私は、深く深く嘆息しながら答える。
+
+「その一件で、私自身がＡＩというものを改めて意識し始めてしまったことですね」
+
+「あー……」
+
+　なるほどなぁ、というリアクションをするマリさん。私は吐露を続けた。
+
+「確かに指摘された方々の懸け念ねんも分かるのです。私の棋風は『学習に学習を重ねて最適解を導く』というところを突き詰めるような路線ですからね」
+
+「そんなのは棋士全員に言えることだけどね。まぁただツクちゃんの場合は確かに人一倍その傾向が強いか。戦略に個人の好みや癖がほぼ反映されないっていうか」
+
+「はい。そしてその考えの完成形が、ＡＩなのではないかと。でもそうなると……」
+
+「私はこのままでいいのだろうか、みたいに考え始めちゃった？」
+
+「お恥ずかしながら」
+
+「若いねぇ」
+
+　そう言ってカラカラ笑ってから、すぐに自分で「いや、私も若いけど」と謎のフォローを入れてくるマリさん。私はその一人漫才をスルーして話を続けた。
+
+「そうして今更ながらに『私らしい棋風』とやらの模索を始めてしまった結果……」
+
+「これまでの型を崩しただけのつまらない棋士のできあがり、ってわけね」
+
+「うぅ……」
+
+　項うな垂だれる私。昔からこうだ。「定められた答え」に向かって進むのは大得意なのに、「自分なりの答え」を求められると途方に暮れてしまう。夏休みの宿題は初日で終わらせられるのに、「自由研究」だけはどうにも捗はかどらない。それが歌うた方かた月つき乃のという人間だった。
+
+　だからこそ自由闊かっ達たつな女流棋士の叔母に憧れて将棋を始め、遂ついにはある程度の結果を残し、自分にもようやく少しだけ自信がついてきた矢先に……またこれだ。
+
+　一応まだ辛勝で粘れているから戦績としては深刻な事態に陥ってない。けれどこのままスランプが加速すればそれさえ危うい。そうして一度完全に崩れてしまえば、もう二度と這はい上がれない予感もしている。実際奨励会時代にはそんな棋士をごまんと見てきた。
+
+　ふと気付けばマリさんはいつの間にやら巨大パフェをペロリと完食していた。ハッとして自分のあずきミルクラテを見ると、最初に唇を湿らす程度に飲んだだけだった。慌てて口をつけるも、すっかりぬるくなっている。なんだか泣きたい。甘くて美味おいしいけど。
+
+　と、私がこの世の終わりみたいな顔をしていたからか、マリさんが口調を緩めてきた。
+
+「ツクちゃんってさ、昔から『遊び』が足りないのよね。姉さんに似て」
+
+　遊びの塊みたいな人が何か言ってきた。私の表情を見て、マリさんがケラケラ笑う。
+
+「『遊びの塊みたいな人が何か言ってんな』って顔だね」
+
+「う……！」
+
+　図星を指摘され呻く私。マリさんが正面から私の目を見つめて続けてきた。
+
+「勿もち論ろん真面目で猪ちょ突とつ猛もう進しんなのはツクちゃんの美点よ？　でも今の悩み……『自分らしさ』みたいな漠然とした問題に取り組む時は、視野に幅を持たせることも肝要かな」
+
+「視野に幅、ですか？」
+
+「ええ。ほら、たとえば暗い迷路を探検する時はハンドライトが便利だけど、夜の草原を探索するとなったら、周囲を広く照らすランタンの方が適材でしょ？」
+
+「！」
+
+「要は目標地点が明確に定まっている時と、曖昧な探し物をする時とでは、やり方を切り換えなきゃいけないって話よ」
+
+　それは実にマリさんらしい、シンプルに真理を突いた表現だった。確かに、それこそまさに今の私の窮状。完全に視野狭きょう窄さくに陥ってるのだ。
+
+　久々に師匠から授かった天啓への感動に思わず打ち震える私。
+
+「……師匠、重畳です」
+
+「あはは、重畳いただきましたぁ。でも師匠じゃなくて、マリさんな」
+
+　マリさんはそう警告しつつも、そのままの勢いで突如、テーブルの上に置いた私の手をぎゅっと握り込んで来た。突然のことにぎょっとする私。マリさんはしかし、真剣な眼差しでこちらを見つめて続けてきた。
+
+「で、なんだけどさ。もし今ツクちゃんが『視野を広げたい』と思っているなら、そんな貴女あなたにピッタリのバイトがあるのだけれど……興味ないかしら？」
+
+　……？　あ、あれ、なんだか話が変な方向に傾き始めたような……。
+
+「ば、バイトですか？　えと、あの、そういえば、マリさんって今何のお仕事を──」
+
+　そう私が訊たずねかけた次の瞬間、テーブルに置いてあったマリさんのスマホが震えた。
+
+　点灯した画面に表示されたメッセージがたまたま視界に入ってしまう。
+
+〈宇う佐さ君〉〈着きました。今ドコッスか？〉
+
+「（宇佐？　誰だろう？）」
+
+　少なくとも私の知る相手ではないが、叔母の人間関係をあまり詮索しても仕方ない。
+
+　マリさんは私の手を放してスマホを回収すると、そのままの勢いでレシートを手に取った。
+
+「あぁ、ごめんねツクちゃん。アタシ、そろそろ行かないと」
+
+　バタバタと身支度を調えながら立ち上がるマリさん。私は呆あっ気けにとられつつ返す。
+
+「は、はい、それは構いませんが、結局マリさんのお仕事って……」
+
+「ああ、詳しいことはまた今度ね！　それじゃあね、ツクちゃん！」
+
+「それでは……」
+
+　そのままパタパタと忙せわしなく歩き出すマリさん。──と、しかし彼女は数歩進んだところで一度こちらを振り返ると、サバサバとした笑顔で告げて来た。
+
+「遊びよ、遊び！　結局人生において肝要なのは、仕事と遊びのバランスなんだから！　ね、ツクちゃん！」
+
+　そう、とても「らしい」捨て台詞ぜりふを吐いて去って行く師匠。
+
+「……はい！　重畳です、師匠！」
+
+　私がそう返すと、彼女は手早くレジを済ませ、誰かと通話しながら忙しそうにカフェを出て行ってしまった。
+
+　私はといえばまだあずきミルクラテが絶賛飲みかけだったので、もうしばし一人で居残らせて貰うことにする。丁度窓まど際ぎわの席だったので、しばらく見るとはなしにマリさんの姿を目で追った。彼女は店を出たところで、通話しながら周囲をキョロキョロと見回している。どうやら誰かと待ち合わせをしているらしい。仕事相手だろうか？
+
+　そんなことを考えながらマリさんを見守っていると、彼女はどうやら待ち人を見つけたらしく、手を振る。そうして合流したその相手というのが──
+
+「……え？」
+
+　──学生服姿の金髪少年だった。しかもあろうことか、合流するなり彼の頭をガシガシと撫なでたりと、なんだか妙に親しげだ。……え、えーと……。
+
+「（……「遊び」に重きを置くアラサー女子が……若い男子と……親しげに……）」
+
+　…………。……なんだか見てはいけないものを見た気がする。凄すごくする。…………。
+
+　私はふっと窓の外から視線を戻すと、ぼんやりと店内の観葉植物を眺めた。
+
+　…………。
+
+　あ、あずきミルクラテ、美味しいなぁ。うん、重畳、重畳。
+
+
+
+＊
+
+
+
+　千せん駄だヶが谷やから総武線で二十分。荻おぎ窪くぼ駅で降り、とぼとぼと自宅へ向けて歩き出す。
+
+　一時期は報道陣対策で車両送迎までして貰もらっていたけれど、もうすっかり平和なものだ。行き帰りで人に声をかけられることは殆ほとんどない。まぁ一時期軽くニュースで見かけた程度の平凡な女子高生の顔なんて、人はそうそう覚えていられるものでもないのだろう。
+
+　それに、一応私なりに変装──と呼ぶには恥ずかしい対策も、少しだけしている。
+
+　髪をアップにまとめた上で、キャップをかぶっているのだ。
+
+　正直変装と呼ぶのもおこがましいものなのだけれど、これが中々どうして効果的だ。というのも、普段……対局中や報道陣の前での私は常に髪を下ろしており、どうも世間的には「長い黒髪」が印象付いているようなのだ。だからこそ、逆に髪を隠すだけで「歌方月乃」の個性は随分と消える。
+
+　そんなわけで今日も今日とて私は、誰にも声をかけられることなく、自宅へ向けて「荻窪すずらん通り商店街」の中を悠々と歩いていた。
+
+「遊びが足りない……か」
+
+　帰路を往ゆきながら師匠からの指摘を反はん芻すうする。師匠とのお茶はさておき、対局を終えるとこうして真まっ直すぐ帰宅してしまうあたりにも、私という人間の「遊びのなさ」が出ている気がして少し滅め入いり、思わず重たいため息が出る。
+
+　ああ、こんな日は、めいっぱい甘味を……と考えたところで、今日の「夕飯後の甘味」を調達し忘れていることに気付いた。そういえば、今はお気に入りの買い置きスイーツも切らしてしまっていたのだ。これはもうコンビニに寄るしかないが、ここまで来てしまうと、家までの最短経路上にはもう私好みの甘味を揃そろえた店がない。
+
+「（仕方ない、ちょっと遠回りしましょう。ええと、確かこの路地から……）」
+
+　そう考え、普段は通らない道へと折れてみる。ある種、新鮮な景色。地元とはいえ自分の生活ルーティンから外れた道だ。基本的にはわざわざ通る理由が……。…………？
+
+「……カフェ？」
+
+　何もない、住宅と雑居ビルが林立するだけの通り──そう思い込んでいた道の中程で、見慣れない立て看板が目に飛び込んできた。近づいて確認してみる。
+
+「……ボードゲーム、カフェ？」
+
+　それはどうやら、「クルマザ」という名のボードゲームカフェらしかった。最近出来たのだろうか？　このあたりにカフェが出来たとなれば、甘味好きの私が気付かないわけはないはずなのだけれど……。
+
+「まあ飲食よりは、ボードゲームが主体なのかしらね」
+
+　正直「ボードゲームカフェ」なるものの業態をイマイチ理解していないので分からないが。漫画喫茶とかに近いのであれば、グルメ目的で入る店でもないのだろう。
+
+　私はしばし看板を眺めるも、しかしまぁ自分には関係のない店なので、改めてその場から去ろう────としたところで、突如、天啓のように再び頭の中に叔母の声が木こ霊だました。
+
+「ツクちゃんってさ、昔から『遊び』が足りないのよね」
+
+「っ！」
+
+　途端に足をぴたりと止める私。……遊び……。……正直、師匠のアドバイスは大変ありがたかったものの、具体的な「遊び」のカタチが私にはイメージ出来ていなかった。
+
+　夜遊び、火遊び、男遊び。世の中には多種多様な「遊び」を顕あらわす言葉があるけれど、そのどれもが今の自分からはあまりに縁遠い。ずっと将棋一筋で生きてきた私では、うまく楽しめそうな気がしなかった。けれど……。
+
+「……ボード、ゲーム……か……」
+
+　…………。
+
+　そうして、気付いた時には。私は既にビルの階段を上り始めてしまっていた。
+
+
+
+＊
+
+
+
+「こ、こんにちはー」
+
+　元々カフェの居抜き物件なのだろうか。妙に瀟しょう洒しゃで古めかしいドアを押し開き、私はボードゲームカフェ「クルマザ」の敷しき居いを跨またいだ。と同時にすぐに少しだけ後悔した。
+
+　店内は思いのほか小こ綺ぎ麗れいだったが、客の姿がなかったのだ。大混雑も困りものだが、客がゼロ人の飲食店もそれはそれでハードルが高い。
+
+　やっぱり引き返そうかな、という考えが頭を過よぎった矢先、突然奥から声がかかった。
+
+「あ、と、いらっしゃいませぇ！」
+
+　まさか客が来るとは、という動揺がありありと感じ取れる挨拶と共に、ぱたぱたと店員と思おぼしき人が出て来た。
+
+　それは、眼鏡をかけた細身の青年だった。年は私と同年代ぐらいだろうか。エプロンについたネームプレートには「常盤」と書かれている。
+
+「えー、あー……ご予約は……なかったよな。え、えと、お一人様でしょうか？」
+
+　接客業だというのに、どうにも人慣れしていない非常に頼りない青年。しかしそれがかえって、緊張していた私にはありがたかった。なんというか、妙な親しみを覚える。
+
+　彼がなんだか緊張した様子で眼鏡のブリッジをいじり出したので、私もつられて自らの──店に入る直前に掛けた付け焼き刃の追加変装たる伊達だて眼鏡を触る。そのまま少しの沈黙。……なにこれ、私達今、眼鏡通信でもしてるの？　ダメだ、喋しゃべろう。
+
+「あ、あの、予約はなく、一人です。……というか、その、ボードゲームというもの自体初心者なのですが、大丈夫でしょうか？」
+
+　少し口早にまくしたてると、私の不安が伝わったのか、途端に青年──常盤さんは、これまでの挙動不審さはどこへやら、にっこりと温かい微ほほ笑えみを浮かべてくれた。
+
+「勿もち論ろんです。むしろ大歓迎ですよ。さ、こちらの席へどうぞ」
+
+　言われて、席へと案内される。本来四人掛けのテーブル席のようだ。椅子の一つに荷物を置いたりしていると、常盤さんはカウンターの方へと赴き、水やおしぼりを用意してくれていた。着席しながら見るとはなしに見ていると、なにやらぶつぶつ呟つぶやいている。
+
+「なんでこういう時に限って遅刻してるかなぁ、あのギャルは……」
+
+　……どうも他の従業員が遅刻しているらしい。確かに、客が少ないとはいえこの規模のカフェに店員さん一人というのは妙な話だった。
+
+　水とおしぼりを運んで来てくれた常盤さんが、店のシステムを説明してくれる。
+
+「ここは、基本的には普通のカフェと同じシステムです。特に席代とかはなくて、飲食さえしていただければ、店内のボードゲームを自由に遊んで頂いて構いません」
+
+「そうなんですね。あ、ではとりあえずこの玉露茶を……砂糖とハチミツ付きで」
+
+「はい、かしこまり──はい？」
+
+「あ、もちろん甘味料の追加料金がありましたら払いますので」
+
+「え、あ、は、はい。承りました。しょ、少々お待ちください」
+
+　言って、店員さんはカウンターの方へ戻っていく。私が見るとはなしに店内の様子を観察したりしていると、数分後、お茶と甘味料を運んで来てくれた。しかもありがたいことに、甘味料は一つずつではなく、いくつか収まったトレイごとだ。
+
+「こちら、玉露茶になります。えっと、スティックシュガーとハチミツはご自由にどうぞ」
+
+「わぁ、ありがとうございます。重畳、重畳」
+
+「ちょう……？」
+
+　店員さんが首を傾かしげる中、私はほくほくと玉露にスティックシュガーとハチミツを注ぎつつ雑談を切り出す。
+
+「ところで、こちらのお店はいつごろから？」
+
+「まだ開店して二ヶ月程度なんです。なので僕も他スタッフもまだまだ不慣れで……」
+
+「そうだったのですね。あの、店員さんはいつもお一人で？」
+
+「いえいえ、基本は僕を含めたバイト二人制で、日によっては店長もいるのですが……」
+
+　そこで彼は重々しく息を吐いた。
+
+「店長は元々店をあけがちな上、今日は相棒さえも遅刻中で……」
+
+「な、なんだか大変そうですね」
+
+　中々にブラックな労働環境だったようだ。それを聞くと、なんだか現在つきっきりで接客して貰っているのが少しだけ申し訳なくなってくる。
+
+「あ、あの、今更ですけど私、一人で来店しても大丈夫だったでしょうか？」
+
+　本来は仲間同士で来店し、ボードゲームやテーブルを「貸して貰う」ような使い方だったのではないか、と危惧する私。
+
+　対する常盤さんは私の不安を察したのか、にっこりと微笑み返してくれた。
+
+「勿もち論ろん大歓迎ですよ。お一人様の場合は、私共店員と遊んだり、他のお客様と同卓したり、場合によっては一人プレイ用のものを遊んで頂くことも可能です」
+
+「あ、では、今日は……」
+
+「ええ、差し支えなければ僕が説明やお相手を務めさせて頂きますが、如何いかがでしょう」
+
+「はい、それは重畳です」
+
+「ちょーじょー……」
+
+「あ、いえ、よろしくお願い致します」
+
+「はい、かしこまりました。では今日のところは僕、常盤がお相手を務めさせて頂きますね。ええと、お客様のことは……」
+
+「あ、私は歌──」
+
+　とそこまですんなり自己紹介しかけて、慌てて思いとどまる。別に常盤さんを警戒するわけじゃないけれど、軽い変装もしてしまっている手前、今更本名を明かすのもバツが悪い。そう考えた私は、自己紹介へ咄とっ嗟さに軌道修正をかけた。
+
+「歌──ウタマルと呼んで下さい」
+
+「まさかのライムスター」
+
+　咄嗟の偽名にしても無理があった。もう少し何かあったろう。正直穴があったら入りたい心持ちだったが、常盤さんはツッコミの後にすぐ優しく微笑んで返してくれた。
+
+「でもいいですね『ウタマル』さん。凄すごく呼びやすいと思います。あ、じゃあ僕のことも常盤じゃなくて、是非『バンジョー』とお呼び下さい」
+
+「え？」
+
+　私の戸惑いに、常盤さんは照れ臭そうに頰を搔かきながら応じてくる。
+
+「このカフェでの僕のあだ名みたいなもんなんです。常盤をひっくり返して、バンジョー。いやぁ、恥ずかしいぐらいに安直ですよね」
+
+「い、いえ、そんな……」
+
+「でもほら、ゲームに興じる時って、デジタルでもアナログでも、ハンドルネームとかあだ名の方が自然な気もしません？」
+
+「え？　ああ……確かにそれはそうかもしれませんね」
+
+　私の場合特に、本名での勝負はどうしても「対局」を想起しがちだ。そういう意味じゃ、彼の言う通り、「ウタマル」は丁度いい距離感の名前だったかもしれない。
+
+　落ち着きを取り戻した私を、常盤さ──バンジョーさんは、とても穏やかな笑みで見つめてくれていた。……うん。
+
+「（……なんていうか、良くも悪くも根っからの『いい人』なんでしょうね、この方）」
+
+　全然人慣れしてない割には、こちらの不安や戸惑いには鋭敏で、不器用だけれど心からの気遣いをしてくれているのがよく伝わって来る。
+
+　正直、勝負事の世界だと生き残るのが厳しいタイプともいえる。女流棋士・歌うた方かた月つき乃のとしての目にはどうしても脆ぜい弱じゃくに映ってしまう人。
+
+　けれど一方で、ただの歌方月乃としては──
+
+「（どう、月乃ちゃん。しょうぎ、たのし？）」
+
+　ふと脳裏に、母親が初めて「どうぶつしょうぎ」で遊んでくれた幼少期の光景が過る。
+
+　私は肩の力を抜くと、改めて自らの内から湧き出る自然な笑顔を彼に向けた。
+
+「では、よろしくお願いしますね、バンジョーさん」
+
+「はい、ウタマルさん」
+
+　二人、挨拶を交わして微笑み合う。バンジョーさんはそのまま私に訊たずねてきた。
+
+「さてウタマルさん、何か遊んでみたいボードゲームの要望などはございますか？」
+
+「要望……ですか」
+
+　いまいちピンと来ていない私に、バンジョーさんは補足してくる。
+
+「ああ、いえ、難しい話では全然なくて。そうですね、たとえば初心者さんからのリクエストとして多いのは『運要素が欲しい』とか『会話が盛り上がるようなものがいい』だとか、あとは『あんまり頭を使いすぎたくない』みたいな感じですかね」
+
+「ああ、なるほど。そういうことでしたら、私の好みと致しましては……」
+
+　私は心の赴くままに、自分の嗜し好こうを口にした。
+
+「運うん否ぷ天てん賦ぷの排除された戦場で黙々と知略を尽くして屠ほふり合うのが好きですね」
+
+「ご職業が軍師さんか何かで？」
+
+　気付けばバンジョーさんが少し引いていた。しまった。思わず将棋への執念を表に出しすぎてしまった。今日はあくまで「遊び」を学びに来たはずなのに。
+
+　案の定、バンジョーさんは少し難しい顔で検討を口にする。
+
+「そうなってくると、極論『将棋』とかオススメしたくなりますけど……」
+
+　なんか元も子もないこと言い出した。何が悲しくて、将棋の気休めに入ったボドゲカフェで将棋を指さなければいけないのか。私は慌てて好みを取り繕う。
+
+「あ、で、でも、今日は新しい扉を開きにきているとこもあるので、完全に私の好みに沿って頂くよりは、少しズラして頂けるとむしろ重畳と申しますか……」
+
+「ああ、なるほど。かしこまりました。であれば……」
+
+　そう言ってバンジョーさんは大量のボードゲームが所蔵された棚へ向かうと、そこから一つ、月刊漫画雑誌サイズ程度の箱を持ち出して戻って来た。
+
+「こちらの『宝石の煌きらめき』など如何でしょうか？」
+
+　如何と聞かれても、私にはまだ判断材料が何もない。バンジョーさんもその辺は了解しているらしく、概要の説明を続けてくれた。
+
+「『宝石の煌き』は、カードと、各種宝石の描かれたチップを用いたゲームでして」
+
+　言いながら箱から実際に使うカードとチップを取り出し、検あらためさせてくれるバンジョーさん。何を見たらいいのかは分からないけど、とりあえず手に取ってみたチップは思いのほかズシリとした立派な質感で驚いた。道具が本格的なのはいいことだ。将棋にしたって、マグネット将棋や、オンライン将棋も勿論各おの々おのに素晴らしい点はあれど、やはり本格的な盤と駒を用いると、背筋が伸び、没入度も増すというもの。
+
+　バンジョーさんが説明を続ける。
+
+「詳細な説明は後回しにしますが、基本はこの各種チップを通貨代わりに、カードを買って点数を稼いでいくゲームです」
+
+　説明箇所の指さし確認などを交え、丁寧に解説してくれるバンジョーさん。
+
+「ただし、このチップもカードも互いに共通の場から取ることになります。なので……」
+
+「なるほど、そこで相手との駆け引きが生まれてくるのですね。互いの欲しいチップとカードの押さえ合い、みたいな」
+
+「その通りです。ウタマルさん、吞のみ込みが早いですね」
+
+　心から感心したように漏らすバンジョーさん。勿論リップサービスの要素も多少あるのだろうけれど、それでも彼の言葉には噓うそくささがなく、不思議と私も悪い気はしなかった。
+
+　バンジョーさんは「ちなみに」と少し興奮気味に続けて来る。
+
+「このゲームには『カードの確保』という、現実の買い物でいう『予約』にあたるシステムがありまして。どうしても欲しいカードが場にあるけれど、まだ資金がない、だけど絶対誰にも買われたくない……というときに用いるようなシステムです。基本は」
+
+　基本は、を強調してくるバンジョーさん。私はその意図を少しだけ考えると「ああ」と思いついたことを口にした。
+
+「逆に言えば、対戦相手が欲ほっするようなカードを、自分が予約で先んじて差し押さえてしまう戦略もあるというわけですか」
+
+「そうですそうです！　そうなんです！　凄いですね、ウタマルさん！」
+
+　最初の挙動不信さが噓みたいに思える無邪気な興奮振りを見せるバンジョーさん。なぜかわからないがこの人、私のゲーム理解度が高いのがたまらなく嬉うれしいらしい。本当におかしな人だ。けどまぁ、私も将棋に対してはこうだから、分からないでもないけど。
+
+　私が微ほほ笑えましく思っていると、バンジョーさんは更に続けて来る。
+
+「これに限らず、ボードゲームでは対戦相手の利を阻害するような動きを『カット』と言ったりもします。大事な戦術の一つで、今回のような『二人対戦』形式だと特にその傾向が強くなるのですが、それというのも……」
+
+　流石さすがにこれは女流棋士として言われるまでもない。私は先を引き取った。
+
+「二人対戦における敵の妨害は、そのまま自分の利に働きますからね。当然積極的に狙うべきです。一方で、こと三人以上で争うゲームの場合は少し注意が必要でしょうね。自分が誰かの妨害に力を注げば、それで一番得するのはむしろ第三者ですから」
+
+「おぉ……」
+
+　淡々と説明する私を、気付けばバンジョーさんは神様でも崇あがめるかのごとくキラキラした目で見つめていた。
+
+　流石にぎょっとする私。なんなんだろう、この人は。普段、そんなに物覚えの悪い人相手に説明することが多いのだろうか？
+
+　私が若干引いているのに気がついたのか、彼は咳せき払ばらいしてテンションを整える。
+
+「と、このように本作は運要素はほぼほぼない知略ゲームですが、カードが場に並ぶタイミングなどの関係で、一割ぐらいだけは運が介在します。また会話を楽しむゲームではないですが、かといって沈黙を強制されるようなこともないです。如何でしょう？」
+
+　それは、まさに私の示した好みから半歩だけズラしてくれたようなゲーム性だった。
+
+　私は微笑んで彼に応じる。
+
+「面白そうですね。是非やってみたいです」
+
+「そうですか！　ではやってみましょう！」
+
+　子供のように破顔して、うきうきと準備を始めるバンジョーさん。本当にボードゲームが好きなのだろう。なんだかこちらまで嬉しくなるような笑顔だった。けれど……。
+
+「ちなみに、バンジョーさんはこのゲーム、お強いのですか？」
+
+「あー、そうですね。仕事柄沢山のお客様と本作で遊んでいますので、どうしても経験値は高いかと。そして正直このゲームは結構知識差が出るタイプといいますか……」
+
+「定じょう跡せきの知識は盤上遊戯の強さに直結しますものね」
+
+「はい、その通りです。というかウタマルさん、ちょくちょく渋い言葉使いますね」
+
+　言いながら準備を続けつつ、バンジョーさんは相変わらずの笑顔で──少しだけ、私にとって聞き捨てならない台詞せりふを放ってきた。
+
+「あ、でもご安心下さい。最初は、僕もあんまりガチガチでプレイはしないので」
+
+　それは、確かにボードゲーム初心者相手には正解の気遣いだった。
+
+　しかしこと私……棋界で生き馬の目を抜いてきた歌方月乃という女流棋士にとっては、虎の尾を踏むにも近い発言でもあったわけで。
+
+　私はどうにか笑顔を保ったまま、バンジョーさんに軽くもの申す。
+
+「それは──手を抜いて下さると仰おっしゃっているのですか？　この私相手に」
+
+「え？　ああ、いえ、手を抜くといいますか、ええと、その……」
+
+　準備の手を止め狼ろう狽ばいするバンジョーさん。私は作り笑顔を貼り付けたまま続けた。
+
+「ふふ、私のことでしたらどうぞお気になさらず。是非全力でお願い致します」
+
+「え？　いや、でも、先程も言いましたがやはりこのゲームは経験者が圧倒的に……」
+
+「バンジョーさん」
+
+「は、はい」
+
+「全力で、お願い致します」
+
+　私の真剣な眼まな差ざしを受け、バンジョーさんはほとほと困り果てた様子を見せたのち、ごくりと唾を飲み、根負けした様子で応じてきた。
+
+「……お、お望みとあらば」
+
+「重畳です」
+
+　にっこりと応じる私。やはり勝負は何事も真剣が一番です。とはいえこのピリついてしまった空気を若干緩和したいため、私はバンジョーさんに冗談交じりの挑発を重ねた。
+
+「ふふ、私が勝ってしまっても、気落ちしないで下さいね、バンジョーさん」
+
+「ははっ、言いましたね、ウタマルさん」
+
+　爽やかに笑うバンジョーさん。……人のよさそうな彼には申し訳ないけど、遊びとはいえ勝負事である以上、私に負ける気はない。胸の内に密ひそかな気炎を上げる私。
+
+　私はそのまま、バンジョーさんからこのゲームの詳細なルール説明を拝聴すると。
+
+　思っていた以上に運要素が少ないことを確認し、その上でこのゲームの論旨、勝利するための押さえ所を頭の中で的確に整理した。
+
+　うん、面白い。将棋以外でこうして「戦略を練る」作業はとても新鮮だ。
+
+　だけど、だからこそ、大人げなく考察が捗はかどりすぎてしまった。もう負ける気がしない。
+
+「では、始めましょうか、ウタマルさん」
+
+「ええ。よろしくお願い致します」
+
+　私は対局開始の礼として深々と頭を下げる。バンジョーさんも少し戸惑ったあと「こ、これはご丁寧に」と笑顔で頭を下げてきた。うん、やはり好青年だ。しかし……。
+
+「（それだけに申し訳ないです。その笑顔を、数十分後には曇らせてしまうことが）」
+
+　それでも、ここは既に死合いの世界。互いに真剣を抜いている以上もはや「手を抜く」という選択肢はない。
+
+　ゲームが開始されると、私は烈火の如ごとく攻めたてた。このゲームの勘所たる「予約システム」を駆使し、バンジョーさんに「ウタマルさん、本当に吞み込み早いですね！」などと感心されながら彼の手を妨害に妨害し、一方で自分の場を順調に整え、着実に盤石な勝利への道を歩み続けた。そうして実に二十三分後──
+
+「負けました」
+
+　気付けば、さながら棋戦の如き、苦い苦い、悔しさの滲にじむ投了宣言が行われていた。
+
+　────私の口から。
+
+　…………。
+
+　あれぇ!?
+
+　著しく動揺しながら盤面──テーブル上のカード群を見つめ続け「脳内感想戦」を高速で回し始める私に、バンジョーさんが苦笑いしつつフォローを入れてくる。
+
+「凄すごいですよウタマルさん！　一戦目とは思えない程高度な戦略を見事に……」
+
+「でも負けました、私」
+
+「そ、それはまぁ、ボードゲームですので、時の運と言いますか……」
+
+「先程、このゲームに運要素は一割程度とバンジョーさんは仰いました」
+
+「え、ええ、まぁ。でも、えーと、その一割の部分が今回は僕に有利に働いて……」
+
+「バンジョーさん」
+
+　私はそこで彼の言葉を遮り、顔を上げて、その目を正面から見つめる。
+
+「勝者の謙遜は、時に敗者への冒ぼう瀆とくですよ」
+
+「…………」
+
+　圧に負けたのか神妙な顔つきになってしまうバンジョーさん。それを見て、私はすぐにハッとした。
+
+「（いやいや、あくまで『遊び』の勝負に、なんて理屈持ち出してるのですか、私）」
+
+　途端に顔が熱くなってくる。自分が真剣にやってなお敗北したという事実が衝撃すぎて、つい余裕を失ってしまっていた。素の自分が出てしまっていた。なんともお恥ずかしい。
+
+　私は慌てて謝罪を切り出す。
+
+「あ、あの、すいません、今のは──」
+
+「……確かに」
+
+「え」
+
+　しかし、バンジョーさんは一人、深く得心したご様子で何やら頷うなずいていた。
+
+「小鳥遊たかなしさんがやたら勝ち誇るのって、多少腹立つけど、清すが々すがしくもあるよなぁ」
+
+「？　小鳥遊さん？」
+
+　誰の話だろう。私が疑問符を浮かべていると、バンジョーさんは突然私の目を正面からしっかり見据えて、応じてきた。
+
+「ありがとうございます、ウタマルさん。今のご指摘、大変参考になりました」
+
+「え、あ、いや……」
+
+　私が戸惑う中、バンジョーさんはといえば、こちらはこちらで慣れない様子のピースサインを掲げて宣言してきた。
+
+「というわけで『宝石の煌きらめき』は僕の勝ちです。や、やったぜ、ぶいぶい！」
+
+　とてつもなくぎこちない笑顔と指の動きを見せるバンジョーさん。私はその光景に、思わず吹き出してしまう。
+
+「もう、なんですかそれ、バンジョーさん」
+
+「す、すいません。僕なりの喜び方は、まだまだ模索中なもので……」
+
+　そう言って、ぶつぶつと「とりあえず、小鳥遊さんは参考にしちゃダメだな……」などと反省しているバンジョーさん。……本当に面白くて優しい人だ。そして、色々な意味で、私が今学ぶべき部分の多い人でもあると思う。
+
+　それは、人間性部分は勿もち論ろんなのだけれど。ある種の「棋風」に関しても、だ。
+
+「（実際、彼の戦略は素晴らしかった。僅かな運要素へのバッファの取り方が明らかに私より上手うまかった。それは確かに将棋にはない考え方で、だからこそ、新鮮）」
+
+　なにか、脳の、普段使われてない部分が刺激される感覚があった。これは本当にいいかもしれない。師匠の言う、私に足りない「遊び」とやらが、ここにはある気がする。
+
+　私の悔しがり方に気を遣ったのか、バンジョーさんが提案してくる。
+
+「じゃあ、今のは練習として、もう一戦やってみましょうか？」
+
+　それは大変に魅力的なお誘いだった。が……。
+
+「いえ、折角ですが結構です」
+
+「あ、お気に召しませんでしたか？」
+
+「いえ、そうではなくて。すごく楽しかったからこそ、もっと他のカタチでも……」
+
+　そこで私は少しはにかんで、応じた。
+
+「あなたと、遊んでみたくなりました」
+
+　言ってから、なんだかこれは少し、彼個人への告白みたいでは……と思い恥ずかしくなってきたものの。しかし当のバンジョーさんはと言えば……
+
+「それは良かった！」
+
+　まるで照れる様子もなく、ただただ、純粋に、目をキラキラと輝かせて応じてきた。
+
+「ボードゲーム、楽しいですよね！」
+
+「え？」
+
+　実際告白でこそないものの、私の言葉にはバンジョーさん個人への好意も含まれていた。しかし、彼はそれをまるで受け取らなかったようだ。ただただ、新しいお客さんが、ボードゲームの魅力に気付いてくれたことがたまらなく嬉うれしい。そんな様子だった。
+
+　私はその在り様に思わずくすくすと笑ってしまいながら、彼に応じる。
+
+「ええ、そうですね。楽しくて……好きになれそうです」
+
+「そうですかそうですか！」
+
+　本当に心の底から嬉しそうに笑うバンジョーさん。彼はそのまま「宝石の煌き」を手早く片付けつつ、私に確認をいれてきた。
+
+「ちなみにウタマルさん、今日お時間の方は？」
+
+「ああ、えっと、あと一時間半ほどでしたら……」
+
+「かしこまりました。では、短時間で遊べるのを数本見繕いましょうか」
+
+「お願い致します。あ、私も一緒に棚を見させて貰もらってよろしいですか？」
+
+「勿論です。ぜひぜひ」
+
+　無邪気に喜ぶ彼の隣に並び、一緒にボードゲーム棚を眺める。相変わらず私には何が何やらだったものの、それでもビジュアルやタイトルに惹ひかれて箱を手に取ると、バンジョーさんは「お目が高い」とばかりに嬉き々きとして内容を簡潔に解説してくれた。
+
+　中にはプレイ人数が五人からだったり、所要時間が「半日」だったりと現在探しているものにはまるで合致しないゲームもあったのだけれど、それでもバンジョーさんは絶対に否定から入らず、そのゲームの魅力を実に端的に語って私の興味を惹いては、「是非今度やりましょう」と話を閉じてくれた。
+
+　正直、将棋の振興に努める者としては、見習いたい程の鮮やかな解説手腕である。
+
+　私は本当に心の底から感心してしまった。
+
+「バンジョーさんのご説明は、全てとても簡潔で分かりやすく、素晴らしいですね」
+
+「え？」
+
+　私の評価に、彼は一瞬驚いたような表情を見せると、少し照れ臭そうに笑い出した。
+
+「そう仰おっしゃって貰えると嬉しいですが……でもそれは多分、全て同僚のおかげですね」
+
+「同僚さん、ですか？」
+
+「はい。あいにく今日は遅刻していますが。なんというかその同僚が、その……元々、本当にボドゲに全く興味ない人でして」
+
+「えっ、ボドゲカフェの店員さんなのに、ですか？」
+
+「はい、ボドゲカフェの店員さんなのに、です」
+
+　困ったものですホント、なんて続けつつも、彼の顔はとても穏やかだった。
+
+「そんな彼女にボードゲームの説明をしようと思うと、自然、話し方にも工夫が必要になってきましてね」
+
+「工夫……」
+
+「説明は簡潔に。ポジティブなポイントを強調。小難しい単語は絶対出さない。詳細な説明は、充分に興味を引いてから初めて行う、等ですかね」
+
+「な、なるほど」
+
+　彼はこの仕事からとても素晴らしい学びを得ているようだ。……まあその学びを得ている対象が客ではなく同僚であることに問題がある気がしないでもないが。
+
+　なにはともあれ、いい話だった。私は彼に礼を告げる。
+
+「大変参考になるお話、いたみいります」
+
+「い、いたみいりますか」
+
+　私の少し独特なワードチョイスに反応するバンジョーさん。彼は雑談ついでに訊たずねてきた。
+
+「ウタマルさんって、どこか独特の言い回しをなさいますよね？」
+
+「す、すいません。クセというか、生活環境由来のものでして……」
+
+　まあこれは将棋がどうこうというより、あの叔母によって、幼少期に面白半分にすり込まれた感があるのだけれど。
+
+　バンジョーさんは笑顔で返してきた。
+
+「いえ、自然にそういう言葉が出て来るのって、単純にカッコいいなと思いまして。僕とそう年も変わらないでしょうに」
+
+「あ、十七です」
+
+「じゃあ同い年だ」
+
+　嬉しそうに微ほほ笑えむバンジョーさん。と、そんな会話の流れでつい、私も少々迂う闊かつなことを言ってしまった。
+
+「でしたら、高校に通いながら働かれているバンジョーさんこそご立派だと……」
+
+「あ、いえ」
+
+　少しバツが悪そうに否定してくるバンジョーさん。
+
+「僕、高校は通ってないんですよ、今」
+
+「あ……」
+
+　しまった、と即座に後悔する。普段なら絶対しないミスだったが、今の会話の流れは、なんというか、罠わなだった。にしても迂闊すぎる。
+
+　私が苦虫を嚙かみつぶしていると、気を遣ったバンジョーさんがフォローを入れてきた。
+
+「で、でも全然気にしないで下さい。最後は自分の意思で退学したんで……！」
+
+「あ、ということは、なるほど、何か他に夢があって……」
+
+「い、いえ、そういうわけでもないのですが」
+
+　ミス二。今日の私、迂闊すぎるでしょう。ああ、もう……。
+
+　私が心の中で頭を抱えていると、バンジョーさんが続けて来る。
+
+「と、とにかく、僕的にも納得しての退学と言いますか……」
+
+「そ、そうですよね！　何か貴方あなたが問題を抱えての退学とかはないんでしょうし！」
+
+「え、あ、いえ、かなり激しめにトラブった末の退学ではあったのですが……」
+
+　ミス三。野球のストライクカウントだったらアウトだ。もう死にたい。
+
+　私が心の中どころかいよいよ現実世界において顔を両手で覆っていると、バンジョーさんが申し訳なさそうに苦笑して切り出して来た。
+
+「って、あはは、今のはダメでしたね。僕も、まだまだです」
+
+「え？」
+
+「ほら、さっきの、ボドゲの説明に関するポイント。簡潔に、ポジティブな要素を言うって部分。あれ今、全然守れてなかったじゃないですか、僕」
+
+「あ……」
+
+「小鳥遊さんがいたら、めっちゃ怒られていたところですよ。危ない危ない」
+
+「バンジョーさん……」
+
+　冗談交じりに話してくれる彼に、少しだけ安あん堵どする。そんな私に、彼は優しく続けてくれた。
+
+「さて、僕の『ドン引き退学エピソード〜泥沼地獄編〜』はまたの機会としまして」
+
+「なんですかそのタイトル、すっごい気になります！」
+
+「ふふ、でしょう？　でも残念、この話は来店十回目からしか聞けないんですよね」
+
+「なんたる商売上手」
+
+　冗談めかして笑うバンジョーさん。その笑顔に、私もまた心から救われる。本当に、優しい人だ。
+
+　彼は話を元に戻すように一つ咳せき払ばらいをする。
+
+「それはそうと、次のボードゲームをしましょう、ウタマルさん」
+
+「っと、そうでしたね」
+
+　少し忘れかけていた。そんな私をからかうように、バンジョーさんが煽あおる。
+
+「そろそろ、敗戦の傷も癒えた頃でしょうし？」
+
+「言いましたね？」
+
+　私もまた、それに対して挑発的に応じる。
+
+「次は……いえ、もう二度と負けませんよ。私、ホントは強いんで、こういうの」
+
+「はは、それは怖いですね。では僕も、全力でお応えしませんと」
+
+「それは重畳。ここから全戦全勝で、バンジョーさんの鼻っ柱を折ってみせましょう」
+
+　ふんすと鼻息荒く意気込む私。
+
+　先程の初戦で学んだ今の私にもはや死角はない。であれば、まぁバンジョーさんには少し申し訳ないですが、私の自己肯定感回復のためにも、ここから先は存分に無双させて頂くこととしましょう。
+
+　ああ、おいたわしや、心優しき殿方、バンジョー様。
+
+　──そうして、改めて二人でボードゲームに勤いそしむこと、一時間半後。
+
+　そこには、全戦全敗で見事に鼻っ柱を折られた──私の、姿があった。
+
+　…………。なんでェ？
+
+「あ、そろそろいいお時間ですね。この辺にしておきましょうか」
+
+「え？　あ、ああ、はい……」
+
+　バンジョーさんに促されるまま、頭の上に疑問符を大量に浮かべつつ席を立つ私。
+
+　…………え、私って、少し前に女流名人獲とったよね？　今日も、かろうじてとはいえど、手て練だれの女流棋士に勝ってから、ここに来たよね？　それが、全敗？
+
+「…………」
+
+「では、お会計はお飲み物二点で、１１００円になります」
+
+　気付けばレジ前だった。私は未いまだぼんやりとしたまま、どうにか応じる。
+
+「……えっと、ＰａｙＰａｙ払いで」
+
+「かしこまりました」
+
+　バンジョーさんの差し出してきた小型リーダーに、自分のスマホをかざす。いつもは可か愛わいらしくさえ思える電子音声が、今日はなんだか耳に引っかかった。
+
+　支払いが終わったところで、バンジョーさんが定番の台詞せりふを告げる。
+
+「またのご来店をお待ちしております」
+
+「え？　ああ、はい。そうですね。リベンジ、しないとですし」
+
+「そ、そうですね」
+
+　気まずそうに応じるバンジョーさん。私はといえば、スマホに表示された残高を確認して、別の意味でも頭を抱えてしまっていた。
+
+「（とはいえ、私も毎日カフェ通いが出来るほど懐ふところが暖かくはないのですが……）」
+
+　実際問題、私のお小遣いは一般女子高校生の平均額だ。将棋での収入は親が全額管理している。勿もち論ろん、将棋周りで何か必要な出費は「経費」として出して貰えるし、だからこそ、これまで特別お金に困ったこともなかったのだけれど。
+
+　流石さすがにボドゲカフェ代金を親に堂々と「経費」として申告する胆力はないわけで。
+
+「（でもお小遣いの範囲だと、週一でさえちょっとしんどいかな……）」
+
+　改めてむむむと勘定を始めてしまう私。
+
+　と、そんな私の様子を見て何か勘違いしたのか、バンジョーさんがとても申し訳なさそうに頭を下げてくる。
+
+「あ、あの、その、今日は本当に申し訳ございませんでした」
+
+「え？」
+
+「その……ウタマルさんがあまりに逸材といいますか、ルール説明に対する吸収の良さとかもホント『打てば響く』って感じで、イチボードゲーマーとしての僕が仕事抜きでテンションブチ上がってしまったといいますか……」
+
+　そこで照れ臭そうに頰を搔かくバンジョーさん。
+
+「結果、完全に加減を忘れてしまい……ホント、店員失格でした」
+
+　穴があったら入りたいです、などと心の底から恥じ入るように続けるバンジョーさん。
+
+　まあ確かに、客をタイマンで全敗させて返すボドゲカフェというのも、よく考えたら大概だ。そんなのイチ店員としては失格なのかもしれない。けれど……。
+
+　私はくすっと笑んでそれに応じた。
+
+「私は嬉うれしかったですよ。バンジョーさんが、お仕事の垣根を越えてまで、本気で私に向き合ってくれたこと。むしろ、ありがとうございました。本当に楽しかったです」
+
+「ウタマルさん……」
+
+　少しホッとした顔を見せるバンジョーさん。なんというか、本当に「店員」らしくない人だ。終始「ビジネスの香り」が一切しなかった。それは、私にとっては……本当に好ましいことで。だからだろうか。
+
+　気付けば私まで、必要以上の本音を、ぽろっと口にしてしまっていた。
+
+「それに私は、『好き』に本気で臨める人が、大好きですから」
+
+「え？」
+
+「え？」
+
+　……ぽかんとするバンジョーさんの反応を見て、私までぽかんとする。
+
+　そうして数秒後……じわじわと頰が熱くなり始めた。な、何を言っているんだろうか、私は。同年代の異性に面と向かって、貴方の人柄が大好き的なことを堂々と……！
+
+「あ、いや、ちが、その」
+
+　慌てて軌道修正を図ろうとする私。と、その刹那、突然店の入り口のベルがカラカラと鳴った。誰かが来店したようだ。
+
+「あ、いらっしゃ────なんだ、小鳥遊たかなしさんか」
+
+　バンジョーさんが来店者を見て露骨に態度を変える。察するに、どうやら他の従業員か何からしい。
+
+　見れば、桃色の髪色をした可愛らしい女子高生が可愛らしく頰を膨らませていた。
+
+「うーわ、サガるわー。どうせなら最後まで接客対応で通しなよバンジョー。『おかえりなさいませぇ、ご主人様』って」
+
+「いや普段からそんな接客形式じゃないでしょ、うち」
+
+「え？　あたしは結構やるけど。ノリで」
+
+「小鳥遊さんのノリでうちの店のジャンル変えないで下さいよ……。ってか、今まさにほら、本物のお客様ご来店中」
+
+　バンジョーさんが私の方を見やる。もう会計も終えて退店間ま際ぎわだから別に紹介頂く必要もなかったのだけれど、私は彼女に一礼した。
+
+「ウタマルです」
+
+「ヤッバ、笑点じゃん。ネーミングセンス神かよ」
+
+　連想対象が思いのほか渋かった。私が曖昧に笑っていると、彼女はぐいぐい来る。
+
+「小鳥遊みふるッス。よろ、ウタちゃん」
+
+「よ、よろしくお願い致します、小鳥遊さん」
+
+「ってかウタちゃん、ごめんね？　あたし、遅刻しちゃって」
+
+「え？」
+
+「だってそのせいで、可愛い子に、チー牛と二人きりで遊ばせちゃったわけじゃん？」
+
+「誰がチー牛だ、誰が」
+
+「じゃあバンジョー、すき家で一番好きなメニューは？」
+
+「チーズ牛丼」
+
+「いやガチのチー牛じゃん。ウケる」
+
+「ウケんな。ってかそもそも遅刻を謝る相手間違ってないですか、そこのギャル」
+
+「あー、バンジョーうっさい、きしょい、どしがたい」
+
+「ツッコミの過剰防衛がすぎんな、おい」
+
+　わ、私は今いったい何を見せられているのだろう。小鳥遊さんが登場してからここまでまだ一分程度だというのに、二人が丁々発止すぎて既にお腹なかいっぱいだ。
+
+　私は愛あい想そ笑わらいを浮かべると、体をそっと出口の方へ向けつつ告げる。
+
+「で、では、私はこれで……」
+
+　と、少し慌てた様子でバンジョーさんが見送りに来てくれた。
+
+「あ、あの、今日遊んだ他にも沢山楽しいボードゲームがありますので、興味ありましたら、その、また気軽にご来店頂けると嬉しいです！」
+
+「は、はい。お金と時間に余裕が出来ましたら、その際には是非……」
+
+　実際頻繁には来られない懐事情なので、そう曖昧に濁して立ち去ろうとする私。
+
+　と、しかしそんな退店の流れさえ意に介さない自じ由ゆう闊かっ達たつさで、小鳥遊さんが更なる話題を普通に振ってきた。
+
+「んで、バンジョーとウタちゃんは今日、何をしてどっちが何回勝ったん？」
+
+「え？　ああ、いや、それは……」
+
+　その質問に、バンジョーさんが気まずそうにする。私は一つ息を吐くと、ビジネススマイルを浮かべて彼女に応じた。
+
+「お恥ずかしながら五ゲームほどやって私の全敗でした。では、私はこれで──」
+
+「え、マジ？　ウケんだけど。ウタちゃん雑ざ魚こすぎん？　ｗ」
+
+「……はい？」
+
+　と、そこで流石に退店の動きを止める私。
+
+「ちょ、ちょっと小鳥遊さん！」
+
+　私がカチンと来た様子に気付いたバンジョーさんが制止するも、小鳥遊さんはまるで気にせず続けて来る。
+
+「や、だってバンジョーってめっちゃボドゲ弱いじゃんね？　それに連敗するとかｗ」
+
+「え？　弱い？　バンジョーさんが？」
+
+　聞き捨てならない話だ。私はぽかんとして彼を見やる。彼はなんだか非常に不服そうに小鳥遊さんを睨にらみ付けた後、嘆息混じりに私へ説明してきた。
+
+「まぁ彼女──小鳥遊さん相手だと、確かに僕の勝率は低いですね」
+
+「へへん」
+
+　胸を張る小鳥遊さん。しかしすぐにバンジョーさんが注釈を続けてきた。
+
+「でもそれは、僕が基本手加減してるからです。ってか、聞いて下さいよウタマルさん。この人ときたら、貴女あなたとは真逆で、むしろ全力でやると怒るんですよ」
+
+　そこまで語って勢いづいたのか、バンジョーさんが愚痴モードに入る。
+
+「しかもこの人『あ、今の手やっぱなし』を乱用しますからね！　だけどまぁ初心者だから仕方ないよねと周りが譲ると、今度は急に馬鹿みたいなサイコロ運でぶん殴ってきたりするわけで！　だから実際僕が弱いというわけでは……」
+
+「あはは、雑魚オタクの言い訳きっつ！　あ、ごめん、ウタちゃんの方が弱いんだっけｗ」
+
+　うけるー、とゲラゲラ笑い続ける小鳥遊さん。…………。
+
+　私はその嘲笑を受けつつも、聞くに堪たえないといった面持ちで店のドアを開いた。
+
+「あ、ウタマルさん！　す、すいません、小鳥遊さんが……！」
+
+「あれ、ウタちゃんもう帰るん？　あたしも一戦ぐらい一緒に遊びたかったなぁ」
+
+　退店しようとする私に、バンジョーさんは謝罪を、小鳥遊さんは更に天然で煽あおるような台詞を吐いてくる。
+
+　私はそんな二人に対して──最高の「作り笑顔」で振り返ると。
+
+　いつのまにか、自らの財政事情など度外視した台詞を吐いてしまっていたのだった。
+
+
+
+「ではまた『明日』この時間にお手合わせ願えますと重畳です──お二人とも」
+
+
+
+＊
+
+
+
+　結論から言えば私はその後、約三週間にわたり、この二人に連敗を喫し続けた。
+
+　初回の如ごとくバンジョーさんに「普通に」負けてしまうのは勿論だけど。それに加えて、確かに「小鳥遊みふる」さんは私にとっても天敵すぎた。
+
+　彼女はバンジョーさんの証言通り、本当に「待った」と「運」で殴ってくる。これがもう将棋にはない概念の強さすぎてどうにもならない。かといって私の性格上、「待ったへの待った」もかけられないわけで。
+
+　また、私がバンジョーさんへの「手加減禁止」を要請する一方で、小鳥遊さんは彼に私とは真逆の「本気禁止」を強制した結果、バンジョーさんは「小鳥遊さんを補助し、私にだけ攻撃する」という「ギャルの使い魔」化してしまい。
+
+　そうなると当然ながら、三人プレイのゲームだとほぼ小鳥遊さん無双になった。
+
+　ただこれが不思議なことに、不快とかでは全然なかった。むしろ、単純な「ゲームの楽しさ」だけに焦点を絞れば、なるほど小鳥遊さんが同卓した方が上とさえ言えた。
+
+　なんというか、彼女は根っから「遊び」に向いている人柄なのだ。勝てば喜び、負ければむくれ、ゲーム中はわいわいと賑にぎやかしてくれる。本当に、私とは真逆の人で。だからこそ「将棋からの気分転換」という意味での対戦相手として申し分なかった。
+
+　一方で、初日のようなバンジョーさんとの二人対戦も私は大好きだった。
+
+　麗らかな休日の午後に、美味おいしいお茶を頂きながら、彼と向き合って穏やかに知的遊戯へ取り組む時間は、私にとって、将棋を学び始めた頃をも想起する「宝物」そのもので。
+
+　……まぁ、結局負けて心底悔しがるところまで含めて、だけど。
+
+　いや、一応、運要素の妙などで、ごくたまに私が勝利を収めることもあるにはあった。
+
+　当然勝利の瞬間にはテンションが上がり、今日こそ大満足、もうしばらくボドゲカフェには通わないぞと、すこぶるいい気分で帰宅まではするものの。
+
+　夜、ゆっくりとお風ふ呂ろに浸つかっていると、なぜかもわもわとバンジョーさんの顔が浮かんできて。その流れで「なんか、やっぱりまだ完勝とは言い難がたい気がする」という気持ちに。
+
+　将棋に限らず「プロ」の世界に身を置く者は、長い目で見た「勝率」こそを最重視する傾向にある。もちろん私もその一人だ。
+
+　そういう意味で、バンジョーさんに「たまたま勝った」だけでは、本当の意味で実力が彼を上回ったということにはならない、というのが私の見解だった。
+
+　結果、湯船からザバリと上がる頃には、次の勝利へ向けてすっかり新たな闘志の炎が胸の中で燃え盛ってしまっている始末。
+
+　結果、まんまと翌日もボドゲカフェに顔を出しては、また当然のようにボコボコにされて、更に勝利への気炎を上げる……という、負のループにはまりこんだ結果。
+
+　私のボドゲカフェ通いは、完全に習慣化してしまっていった。
+
+　そうして、ある日のお会計時。私の急所を突くその指摘は、突如としてやってきた。
+
+「ウタちゃんって、実はなんかのプロとかだったりするん？」
+
+「え──？」
+
+　刹那、思わず顔を青ざめさせてしまう私。一瞬、自分が女流棋士の歌うた方かた月つき乃のであることがバレたのかと思ったのだ。しかし、小鳥遊たかなしさんの意図は別にあったようで。
+
+「や、店員が言うのもアレだけどさ、うちへの出費、かなりの額じゃね？　ウタちゃん、週四ペースぐらいで来てっし。だからなんかガチめの収入がある人なんかなって」
+
+「ああ、そういうことでしたか」
+
+　女流棋士の歌方月乃だと身バレしたわけではないらしいが、鋭い。この人は実際、色んな意味で油断ならない。この前も「ウタちゃん、それない方が可か愛わいげじゃね？」とかって私の変装用帽子を突然取ろうとしてきたり……ホント、読めないわけで。
+
+　私は出費の件に関して、テキトーな言い訳でかわしておくことにした。
+
+「ええと、プロかどうかはさておき、割のいいバイトをしてまして」
+
+　が、この言い訳もまた違う意味で悪手だったらしい。「割のいいバイト」と言った途端、小鳥遊さんが目を輝かせて食いついてきてしまった。
+
+「え、マジ!?　なにそれ、あたしにも紹介して──」
+
+　が、そこでこの会話を傍そばで聞いてたらしいバンジョーさんが、淡々としたテンションで店奥に向かって報告する。
+
+「店長ぉー、小鳥遊さんがうちのバイト辞めたいみたいですよー」
+
+「ちょ、こらバンジョー！　うそうそ、てんちょ。あたし、この店だぁい好き──」
+
+　そのままレジ奥へドタバタと引っ込んでいく小鳥遊さん。これは重畳。私は支払いを済ませると、そっと退店することでその場を逃れた。
+
+　そうして店を出てしばらく歩いたところで、スマホの電子マネー残高を確認し、大きくため息をつく。
+
+　実際彼女の指摘は、本当に痛いところを突いてきていたのだ。
+
+　女流棋士としての収益が親管理であり、私個人の財布事情が一般平均的な女子高生のそれでしかない以上、週四のボドゲカフェ通いという出費はエグい。エグすぎる。現在は今まで貯ためてきた小遣いを、ガリガリと切り崩している状況なのだ。
+
+　更に言えば、女流棋士としては時間的浪費だって馬鹿にはならない。本来将棋の勉強に割いていた時間をも切り崩していると言えるわけだから。
+
+　ただこれに関してはまださして問題ではないというか、むしろ現時点の私に関してはプラスに作用していると言っても差し支えなかった。
+
+　それこそ叔母であり師匠であるマリさんの慧けい眼がんとでも言うべきか。ボドゲカフェに通って「遊び」を学んだおかげか、最近の私の将棋方面での成績は上々だった。一部ネット記事では「完全に調子を取り戻した」などと書かれている始末だ。
+
+　正直これに関しては自分でも「いったい何がどう作用したのか」がイマイチ分かっていない。ただ、以前よりも精神面でのコンディションがいいことは事実だろう。
+
+　今までは将棋での不調に対して答えの出ない煩はん悶もんをしていた時間が、今では「規格外すぎる小鳥遊さんはさておき、バンジョーさんにどう勝ってやろう」と悩む時間に置き換わったのだ。
+
+　勝利への執念を燃やしているという点では同じなのだが、なぜだろうか。バンジョーさんと指す──いや、遊ぶ予定は「わくわく」を伴っていて、胸が温かく、寝付きも良い。母親からも「最近顔色が良いわね」なんて安心されたぐらいで。実に重畳。
+
+　つまり私のボドゲカフェ通いは、今のところ、本業においてさえメリットしかないのだ。
+
+　……金銭面以外。
+
+「（どうしたものかな……）」
+
+　普通に考えれば、両親に事情を話して小遣いの増額をせびるのがベターだと思うのだけれど、ことうちに限っては絶対無理な話だ。なぜなら……。
+
+「（びっくりする程『ゲーム』アレルギーなのよね、うちの親）」
+
+　二人とも決して悪い親とかではないのだけれど、こと「ゲーム」に関してだけは、デジタルにしろアナログにしろ、私への供給を極端に絞りがちなところがある。特に母親にその傾向が強い。
+
+　それというのもまぁ、その昔、母と、その妹──マリさんの間で起こった、「将棋」に関するある出来事が原因である。というのも。
+
+　母は幼少期、近所の将棋教室に通い、その生来の真面目さでめきめきと実力を伸ばし、一年も経たつ頃には棋士としての大成まで有望視されていたのだけれど。
+
+　ある時、「最近面白いゲームがなくて暇だから」と気まぐれに姉と共に将棋教室通いを始めたマリさんが──僅か三日目にして、姉に完勝してしまうという事件が起きたのだ。
+
+　そしてその悲惨な敗北は、当然のように母の将棋にかける想おもいを……それどころか「ゲーム」というものに対する関心をも、完全に折った。
+
+　それ以降母はすっかり将棋をやめてしまい、一方で自由人のマリさんの方はといえば「将棋って、けっこー面白いじゃん」のテンションで邁まい進しん、女流棋士にまで至ったわけで。
+
+　…………。
+
+　うん、そりゃゲーム嫌いにもなるよね。
+
+　我が母のエピソードながら何度聞いても泣ける話だ。特に何が泣けるって、なんだかんだうちの母は、その後もマリさんの女流棋士活動を熱心に応援してたり、今だって、私の棋士生活のことは最大限にサポートしてくれているのだ。いい人すぎる。
+
+　特に私が幼少期に「叔母に憧れて」将棋に興味を持った時なんて、わざわざボードゲームの「どうぶつしょうぎ」を購入してきて、私と「楽しく」遊んでくれたわけで。
+
+　……当時の幼かった私は母の背景事情など知る由よしもなかったとはいえ、なんて残酷なことをしてしまったのだろうか。正直今でも悔やんでいる。というか、そんな悲惨な背景をおくびにも出さず、ただただ笑顔で子供の私と将棋を指してくれた母の愛情ときたら。どれだけ「いい人」なのかって話だ。
+
+　でも、だからこそ、それだけに。現在の、ゲーム及び「遊び」全般に対して距離をとりたがる母のスタンスは可能な限り尊重してあげたいわけで。
+
+　だからいくら私が金銭面で逼ひっ迫ぱくしているからって──
+
+
+
+「よぉ、おふくろ。遊びまくるためにボードゲームカフェ通いすっから、金くれやぁ」
+
+
+
+　──なんて言えるわけがない！　どんな親不孝娘よ！　悪魔すぎるでしょ！
+
+　というわけで、両親に事情を話してお小遣いをねだるというのは完全却下。
+
+　となればあとは、こっそりバイトでもするしかないわけだけれど……。
+
+「（それこそ、どこから時間を捻出するつもりよ）」
+
+　ただでさえ将棋の時間を削ってボドゲカフェ通いをしているのだ。その上更にバイトでの労働時間を重ねるなど、流石さすがに無理があった。
+
+　ふと、小鳥遊さんの先程の発言が頭を過る。
+
+「割のいいバイト……か」
+
+　そんなのがあったら、教えてほしいのは私の方だ。
+
+　拘束時間が殆ほとんどなく、それでいて高給で、棋士としての身バレもしない。
+
+　そんな都合のいいバイトがあれば──などと考えたその瞬間、手に持っていたスマホが震える。見れば、珍しいことに師匠──マリさんからの着信だった。
+
+「はい、もしもし」
+
+〈あ、ツクちゃん？　私だけど、この前の話考えてくれた？〉
+
+「？　この前の話、ですか？　ええと、なんでしたっけ？　ああ、私に遊びが足りない、というアドバイスのことでしょうか？」
+
+〈ううん、そっちじゃなくて。ってか、それに関しては最近いい感じじゃんツクちゃん。棋風に柔軟性が出てきたっていうか〉
+
+「あ、ありがとうございます。そうなんです、師匠のおかげでいい『遊び』が見つかりまして……」
+
+〈そりゃ良かった。でも、今日の本題はそっちじゃなくてさ。もう一件の方なんだよね〉
+
+「もう一件？　えっと、何かありましたっけ？」
+
+　マリさんとこの前話したことは、それこそ「遊び」のことだけだった気がするけど。
+
+　どうにもピンとこない私に、師匠は呆あきれた様子で続けて来る。
+
+〈薄情ねぇ、ツクちゃん。この前カフェでの別れ際ぎわ、大事なお誘いをしたでしょ？〉
+
+「別れ際に、お誘い？　えっと……」
+
+　言われて、ようやく朧おぼろ気げに思い出す。そうだ、確かあの時、手を握られて何か変な提案をされたような。当時は「遊び」のアドバイス以外にまるで興味がなかったため流してしまったけれど。確か、あれって……。
+
+　そんな私の回想を後押しするように。この悪魔的なタイミングで。
+
+　マリさんは女流棋士時代もかくやという、劇的な王手を掛けてきたのだった。
+
+
+
+〈ツクちゃんさ。割のいいバイトに、興味なぁい？〉
+
+
+
+＊
+
+
+
+　翌日。マリさんに指定された場所に赴いてみると、そこはあまりに意外な場所で、私は思わずぽかんと開口してしまった。
+
+「ここって……」
+
+　そこは地元たる荻おぎ窪くぼの、最近よく通う雑居ビル──ボードゲームカフェ「クルマザ」が四階に入っている雑居ビルそのものだったのだ。
+
+　念のためもう一度スマホの地図アプリで確認してみるも、間違いない。ここだ。
+
+　荻窪インタラクションビル、五階。
+
+「（まさかクルマザの上階に、マリさんの会社があったなんて……）」
+
+　マリさんの今の仕事は「社長である」ことと「まぁまぁ忙しい」ぐらいしか私も母も把握してなかったけど、まさかうちのこんな近くに事務所を構えていたとは。
+
+　私は少し考えた後、今日はエレベーターで五階へと向かうことにした。階段で「クルマザ」の入り口前を通って五階に向かうのはなぜだか少し気が引けたのだ。別に何か悪いことをしているわけでもないのだけれど。
+
+　エレベーターを降りて周囲を見ると、クルマザだけでワンフロア使っていた四階とは違い、五階は三つほどの部屋で構成されているようだった。
+
+　税理士事務所に、興信所。そして──今日の私の目的の会社。
+
+　人材派遣会社ロールワーカー。
+
+　簡素な字体で社名が記された無機質なドアを前に、呼吸を整える。
+
+　……なんだろ、同じビルだというのに、クルマザのポップな雰囲気とはえらい違いだった。まぁどちらかといえばクルマザの方が異質なのだろうけど。たしかあれも小鳥遊さんが勝手に装飾したとか言っていた気もするし。
+
+　私はドア脇に設置されたインターフォンを押す。と、すぐに部屋の中から直接声が響いてきた。
+
+「はいはーい、あいてますよー」
+
+「失礼します」
+
+　少し緊張を孕みつつドアを開け入室する。そこは、まさに雑居ビルの小規模オフィスといった内観だった。部屋の中心にはビジネス・応接兼用と思おぼしき長机と四脚ほどのデスクチェア。その奥に、恐らくは社長用のそれと思われるビジネスデスクが配置されている。今はそこにマリさんが着席していた。ちなみに現在、他の社員さんは見当たらなかった。
+
+　私に気付いたマリさんが、パソコンモニターの横から顔を出して人なつっこい笑みを浮かべる。
+
+「よく来てくれたね、ツクちゃん」
+
+「はい、師匠」
+
+「マリさんね。あ、もしくは、ここでは『社長』」
+
+　言いながらマリさんは立ち上がり、私の方へ向かってくる。私は室内を見渡しながらぽつりと呟つぶやいた。
+
+「社長……」
+
+「そ、社長。どう、我が社は？」
+
+「いえ、どう、と言われましても……」
+
+　正直立派でもなければ、かといって目立つツッコミ所があるわけでもない。感想を求められても困るが、一応少しだけ、目に付く場所もあった。
+
+「えっと、あれって……？」
+
+　オフィスの入り口から見て、右手側奥の一角が、青かったのだ。ええと、たしか、ブルーバックとか言ったろうか。そんな壁の前には撮影機材と思しきものがあり、更には、まるで衣料店の試着室みたいな更衣ボックスまである始末。この手の小規模オフィスにしては大分スペースを割いてしまっている印象だ。
+
+　私の疑問に、マリさんが応じてくれる。
+
+「ああ、あれはプロフィール写真とか、たまに動画撮ったりする場所ね」
+
+「写真や動画を……？」
+
+　思わずごくりと唾を飲む。……というのも、母からよく「真ま理り狭さはどうにもいかがわしい仕事をしてそうで心配」という話を聞かされていたからだ。
+
+　そうしていざこうして来てみると、その心配は的中しているように思えてならない。
+
+　雑居ビルの怪しいオフィス。語りたがらない仕事。姿のない社員。謎の撮影ブース。「人材派遣会社」といういかにもな触れ込みと、そして……。
+
+「（この前会った時は、金髪少年とやたら親しげにしてましたよね、マリさん……）」
+
+　思わず目を細めてマリさんをジーッと見つめてしまう。
+
+「（割のいいバイト、という単語に釣られて来たのは早計だったかも）」
+
+　早速後悔する私。……うん、今日のところはやはりテキトーにあしらって帰宅しよう。
+
+　そう決めつつマリさんの方を見ると、彼女はそんな私の思考をも全て読んだ様子でニヤニヤと笑っていた。
+
+「ツクちゃん、私の仕事をいかがわしいものと疑ってんでしょ？」
+
+「う。そ、そんなことは……」
+
+　図星を突かれて目を逸そらす私。しかしマリさんは、カラカラと笑うと、意外な言葉を続けてきた。
+
+「その通り。お姉ちゃんに言えない程度には、グレーなビジネスに手を染めてるかな」
+
+「え？」
+
+「とはいえ」
+
+　そこで私に軽くウィンクするマリさん。
+
+「ツクちゃんやお天道てんと様さまに顔向け出来ない程までは、腐った仕事じゃないつもりだよ」
+
+「マリさん……」
+
+　相変わらずな叔母の姿勢に、私はホッと胸をなで下ろす。そうだった。昔からこういう人だった。確かに自由奔放なタイプではあるけれど、大事な一線はちゃんと守れる人。だからこそ、母も私もずっと親しくさせて貰もらっているのだ。
+
+　私は安あん堵どの笑みを浮かべつつ、マリさんに訊たずねる。
+
+「それで、マリさんのお仕事って具体的には一体……」
+
+「ああ、うん、それだけどね。まあ端的に言えば……」
+
+　彼女は笑顔で、堂々と、恥じ入ることなく、告げてくる。
+
+
+
+「青年の貸し出し業務かな！」
+
+
+
+「あ、私今日は交番寄って帰らないとなので」
+
+「待って待って待って待って」
+
+　即座に警察へ駆け込もうとする姪めいを必死で止める叔母。
+
+　完全に親族の愛情を失った冷酷な視線で見下す私に、師匠──いや巽たつみ真理狭（29歳）は涙目で弁明を入れてきた。
+
+「違うの違うの！　法に触れるようなことはしてないんだって！」
+
+「なるほど、上手うまく法の目を搔かい潜くぐった仕事、と。流石さすがは師匠。頭がよろしいことで」
+
+「言い方！　そ、そうじゃなくて……ああ、もう！　ほら、これ見て、これ」
+
+　師匠はくしゃくしゃと頭をかきむしると、なぜか突然壁に設置されたテレビをつけた。そうして、ハードディスクレコーダーにでも録画されてたと思しき映像を流す。
+
+　そこに映し出されたのは、なんの変哲もない街頭インタビューの模様だった。……あ、いや、多少変哲はある。インタビューを受けているのは高校生男子だったのだが、なんというか、変わり者でその発言がイチイチ面白いのだ。ワイプに映ったスタジオの芸能人達もゲラゲラと笑っている。どうもバラエティ番組のコーナーの一部のようだ。
+
+　しばらくそれを見て、私はハッとして訊ねる。
+
+「あ、もしかして、この高校生が……」
+
+「そ、うちから派遣した子」
+
+「ああ、青年の貸し出し業務って、そういう……」
+
+　なんとなく私が理解したのを見て、テレビを消すマリさん。私は誤解を謝罪しつつも、しかし、それなら……と話を続けた。
+
+「要は芸能事務所とかエキストラ派遣会社、ですよね？　それならそうと……」
+
+「あー、いや、そこがまぁうちの少しグレーなところでさ」
+
+　バツが悪そうに頭を搔くマリさん。
+
+「さっきの街頭インタビュー見て貰えたら分かると思うけど、あれが『エキストラ』や『役者』だと堂々と標ひょう榜ぼうするのは、ちょっとダメなのよ」
+
+「はぁ、確かに。あれは、街で偶然インタビューした男子というていでしたもんね」
+
+「そうなの。だけどあのトーク内容自体は、そう噓うそでもなくてね。派遣した男の子は、本当にああいう性格とエピソード持ちの子なのよ。そこに噓はないの。ただまぁ……」
+
+「『街で偶然』の部分だけが、真っ赤な噓っていうことですか」
+
+「そーゆーこと」
+
+　苦笑いするマリさん。……なるほど、法に触れてはいなくとも、確かに、うちの根っから真面目な母には言いにくいお仕事だ。
+
+　マリさんが更に詳細を語る。
+
+「他にも、イベントだとかサイン会だとかに人数稼ぎの人員を派遣したり、簡単なフラッシュモブを請け負ったり、一名じゃ予約出来ないレストランに付き合わせたり……」
+
+「あー……確かにそれは『人材派遣』ですね。ちょっとグレーな。でも……」
+
+　そこで私はふと師匠の棋風を思い出し、ふふっと笑ってしまう。
+
+「師匠らしいです。将棋でも大胆かつ奇抜な駒の運用が、持ち味でしたから」
+
+「ありがと、ツクちゃん。あ、でもお姉ちゃんには絶対内緒よ？」
+
+「ふふ、分かっていますよ」
+
+　まぁ確かに若干グレーな部分があるとはいえ、反社会的な仕事ではなさそうだ。
+
+　そんなマリさんの仕事への理解を深めた上で、私は改めて、訊ねることにした。
+
+「それでマリさん、私に頼みたいバイトっていうのは？」
+
+「そうそう、それなんだけどね。時間のないツクちゃんにはピッタリの、割が良くて、とっても簡単なバイトなのよ」
+
+「へぇ、それは重畳です。丁度私、そういうお仕事探していまして」
+
+「ふふ、なら良かった。それでね。ツクちゃんにお願いしたいお仕事ってのは……」
+
+「はい」
+
+
+
+「レンタル彼氏、なんだけど」
+
+
+
+「あ、私、ちょっと文○春秋寄って帰るんで」
+
+「待って待って待って！　ある意味交番以上に待って！」
+
+「私のバイトだけ急に業務のいかがわしさがうなぎ登りじゃないですか！」
+
+「違うの違うの！　レンタル彼氏って言ってもアレよ？　性的なアレじゃないわよ？」
+
+「当然です！　その上で、なお、イヤと言ってるんです！」
+
+「どうして？」
+
+「どうしてって……！」
+
+　…………。……あ、あれ、どうしてだろう？
+
+　私のそんな一瞬の迷いを師匠は見逃さず、すかさず的確に突いてくる。
+
+「さっきは便宜上『レンタル彼氏』って言ったけど、うちが請け負うそれは、世間一般の思うそれとは少し違うのよね」
+
+「……どういうことですか？」
+
+「ツクちゃんが想像しているのって、こう、一日一緒にデートとかして、お客さんが疑似恋愛を楽しんでお金貰う的な……ぶっちゃけパパ活みたいなのでしょ？」
+
+「まぁ……そうですね。マリさんのとこのは、違うと？」
+
+「そうね。それこそ、インタビューだとかイベントやサイン会のそれと一緒よ。うちが請け負うのは、疑似恋愛ではなく、あくまで『サクラ』としての彼氏。つまりは……」
+
+　マリさんはそこで一拍置き、ここで言う「レンタル彼氏」の定義を熱く語る。
+
+
+
+「『対他』を目的とした、周囲へのマウント用レンタル彼氏なのよ！」
+
+
+
+「それはそれで堂々と言うことでしょうかねぇ！」
+
+　私のツッコミに、やれやれと肩を竦すくめ、ふぅとアンニュイな息を吐くマリさん。
+
+「ツクちゃん。人にはね、素敵なパートナー設定の必要なタイミングが、必ずあるのよ」
+
+「な、なんでしょう、このかつてない説得力」
+
+　師匠がこほんと咳せき払ばらいして続ける。
+
+「そんなわけだから、字じ面づらほどのいかがわしい要素はない仕事なのよ。それこそ、主な活動はＳＮＳ用の素材提供だったりするし」
+
+「ああ、デート写真を投稿したりですか」
+
+「そ。要は『彼氏役エキストラ』ね。当然性的な接触とかはなし。ってか最初に身元確認は徹底するし、どこか遠出する際は、お隣の興信所さんと提携して見張りさえつけるからね。ちなみに拘束時間と料金は、こんな感じ」
+
+　言いながら、スマホで数字を見せてくるマリさん。……！
+
+「こ、これは、中々に重畳と言いますか……」
+
+　思わず目がお金マークになってしまう私。確かにそれは「割のいい仕事」だった。破格と言っていい。しかも写真を撮ったりする程度なら、拘束時間も少なく済みそうだ。
+
+　検討を始める私に、マリさんが補足説明を入れてくる。
+
+「最近そんなレンタル彼氏業を主に請け負ってくれていた子が一人、事務所を抜けちゃってね。でもその需要って結構多いっていうか、うちの営業兼ねた看板業務の一つだったりしたから、大至急補充したいのよ。多少バイト代や就業時間に色つけても、ね」
+
+「なるほど、だからこれほどに重畳な好条件で……」
+
+「そ。しかも業務が業務だから、身元を隠した芸名でＯＫ」
+
+　今の私には本当にぴったりだ。思わず揺れてしまったが、しかし、まだ問題はあった。
+
+「あ、でもマリさん。これ『レンタル彼氏』ですよね？　『彼女』じゃなくて」
+
+「当然じゃない。可か愛わいい姪っ子を見ず知らずの男に貸し出したりなんかしないわよ」
+
+　いや見ず知らずの女性には貸し出そうとしているわけですが。……じゃなくて。
+
+「私に、男性役を演じろと？」
+
+　確かに元の「歌うた方かた月つき乃の」から完全に離れた役の方が私も動きやすいだろうけど……。
+
+「ええ。大丈夫よ、ツクちゃん、美人であると同時に男前の顔立ちだから」
+
+　それは喜んでいいことなのだろうか。悩む私に、マリさんが続けて来る。
+
+「それにほら、ツクちゃんって変装上手いでしょ？」
+
+「え？　いや上手いっていうか、ちょっといじるだけで染まりがちというか。特に髪なんかは、少しまとめただけでも露骨に人相が変わりますし」
+
+　ボドゲカフェで未いまだに「歌方月乃」とバレていないことがその証拠だ。と……
+
+「そう！　そこが一番大事なの！　あ、ちょっと待ってね！」
+
+　マリさんは突如鼻息荒くドタドタと事務所奥へ向かうと、数秒後、その手に何かを持って戻って来た。
+
+「これこれ！　前任者用に買ったんだけど、結局使わなかったやつ」
+
+「はぁ、金髪のカツラ……ですか」
+
+　流れで思わず受け取りながら呟つぶやく。と、マリさんが「かぶれ」と暗に促してくるため、仕方なく私は脇の姿見の前まで行って装着を始めた。
+
+　作業中、マリさんがつらつらと続ける。
+
+「前任者の子、面倒だからって自前で染めちゃってさ。本人も気に入ってたからまぁそれはいいんだけど、このカツラは未使用のまま無駄になってたから、丁度いいわね」
+
+「はぁ……金髪の前任者……」
+
+　……そういえば、前回マリさんと会った時、彼女が、金髪の少年と待ち合わせしていたのを目撃した気がする。あれが「前任者」だとすれば、私のバイトは彼の役割を──芸名をも引き継ぐのだろうか？　だとすれば、確かあの時は……。
+
+「あら、いいじゃない」
+
+　そんなこと考えていたら、いつのまにかカツラの装着が終わっていた。
+
+　見れば正面の姿見には、金髪の美青年が映っている。
+
+　そのあまりの染まり方、別人っぷりに、自分でも思わず感心してしまった。
+
+「わ……すごい。これが、わた──」
+
+「あ、そこは『オレ』の方がそれっぽいんじゃないかしら、一人称」
+
+　確かに。私は一つ咳払いすると、声をワントーン落として言ってみる。
+
+「……これが、オレ？」
+
+「エクセレント！」
+
+　パチパチと拍手してくるマリさん。少し大げさだとは思ったものの、正直私としても満更ではなかった。元々髪型次第で染まりがちな人間だったが、こうしてカツラまでかぶると、意識まで容易に別人設定へと切り換わるようで、なんだか不思議とゾクゾクする。
+
+　マリさんがうっとりと評価を続けて来る。
+
+「思った通り。ツクちゃん、男装似合いすぎ。これなら即戦力よ。ね！」
+
+　言いながら、バンッと盛大に私の背中を叩たたき、私の返事も聞かずにバイト契約を締結してくるマリさん。
+
+「じゃ、よろしくね。我が社の看板たるレンタル彼氏──」
+
+　そうしてこの派遣会社の社長は。
+
+　今やすっかり怜れい悧りな顔つきをした金髪美青年と化した私に対して。
+
+　以前も一度だけ聞いた「その名前」を、与えてきたのだった。
+
+
+
+「──『宇う佐さ樹いつき』君」
+
+
+【第三話　正体隠匿のジレンマ（Ｄａｙ９３）】
+
+
+
+　開け放した網戸の隙間から、ジリジリいう蟬せみの声と、微かすかな涼を含んだ風が店内を抜けていく。
+
+　ボードゲームカフェ「クルマザ」の開店から約三ヶ月。低気圧の影響で珍しく暑さの和らいだとある日の夕方。
+
+　僕、常盤ときわ孤こ太た郎ろうは前髪を揺らす自然の風を存分に堪たん能のうしていた。ここしばらくうちのカフェは旧式の天井埋め込み型エアコンが常時フル稼か働どうだったから、たまにはこうして自然の爽やかな風を店内に取り入れるのも悪くな────
+
+「あっつ！　ちょっとバンジョー、冷房いれるから窓閉めてよ」
+
+　──傍若無人ギャルが入店するなり刹那で雰囲気をぶち壊してきた。
+
+　ギャルこと小鳥遊たかなしみふるは慣れた手つきで店のコンパネを操作すると、そのまま「あちーあちー」と愚痴りながら、カウンター内からうちわを持ち出して、店内客席でボドゲを広げていた僕の方へとやってくる。
+
+　そうして隣のテーブルの上にどっかと腰を下ろすと、あろうことかその艶なまめかしい太ももを冷ますように、絶妙に下着の見えない勢いでスカートをぱたぱたやり始めた。……うん、なんだこれ、アダルト動画のサムネか何かかな？　十代男子の理性を問答無用で吹っ飛ばす光景に目め眩まいさえおぼえる。さよなら、夏の風ふ情ぜい。こんにちは、男の劣情。
+
+　僕は血の巡りを紛らわすように立ち上がると、仕方なく店内の窓を閉める作業へと取りかかった。ギャル本人はといえば手伝う気皆無で、スカートをはためかせている。
+
+「バンジョーさぁ、いっつも『ボドゲは湿度管理がぁ』とか五月蠅うるさいクセに、お客さんいない時の冷房はケチるよね」
+
+「そりゃ僕しかいなくて、汗かくような作業もしてない時は普通に止めるでしょ。まぁ、たった今重役出勤なさった誰かさんは暑いんでしょうけど」
+
+「分かってんなら冷やしとけー、気が利きかんなぁ」
+
+「マジもんのクソ重役じゃねぇか」
+
+　そんなやりとりを交わしながらも冷房のために窓を閉め終えた僕は、自分の席へと戻っていく。……つまりは、露出過多女子高生ギャルの目の前に。
+
+「ふぁー、いきかえるー」
+
+　天井から吹き下ろす冷房の風を浴びながら、汗ばんだうなじ、背を反らすように張られた胸、白い太ももをまざまざと見せつけてくる女子高校生。
+
+
+
+　もうまさに「目のやり場に困る」の用例に載せて頂きたいぐらいの状況だった。
+
+　そしてまたこういう時だけはイヤに目ざといのが小鳥遊みふるというギャルなわけで。彼女は僕に見せつけるかの如ごとく、スカートの裾をつまんで悪戯いたずらに微ほほ笑えんだ。
+
+「あっれぇ？　バンジョーは、あたしが暑いままの方が、嬉うれしかったかなぁ？」
+
+　はい、クソ嬉しいです。正直本当にそういう狙いはなかったとはいえ、言われてみれば確かに、小鳥遊さんの──想おもい人の艶あで姿すがたを見られるのは悦よろこび以外の何ものでもない。次回からは更に、節電を心がけていきたい所存である。勿もち論ろん、徹頭徹尾ＳＤＧｓの観点から。……とは思ったものの。
+
+「…………」
+
+　当然そんな内心はおくびにも出さず、僕は眼鏡のブリッジを上げると。
+
+　深く深く嘆息しながら、つとめて冷静に彼女へと切り返した。
+
+「僕にとっての『得』とは、主に『勝利点』が絡からむ時だけの概念ですね」
+
+「うーわ、でたよ『しょーりてん』」
+
+　ドン引く小鳥遊さん。ちなみに「勝利点」とは、言葉そのまま「勝つために必要な点数」のことであり、ボードゲームではよく出て来る概念だ。基本的にはスポーツにおける「点数」と一緒のものだが、ボドゲの場合、お金やらエネルギーやら、必ずしも勝利に直結はしない数値も並行して扱いがちなため、それらとの差別化を兼ねて「勝利点」という表現が出て来ることが多い。
+
+「それ、マジでここで以外聞かないんだけどぉ」
+
+　げんなり吐き捨てる小鳥遊さん。というのも彼女、この手のボドゲ用語に若干のアレルギーがあるのだ。結果、どうやら僕をからかう気力も削そがれたらしい。こちらへの誘惑行動を中断してくれた。僕はホッと胸をなで下ろす。
+
+　僕はボドゲのルール確認作業へ戻りつつ、小鳥遊さんに雑談を切り出した。
+
+「というか小鳥遊さん、そういうの、冗談でもやめた方がいいんじゃないですか？」
+
+「そーゆーのって？」
+
+　無邪気に小首を傾かしげる小鳥遊さん。うん、むしろ本人に誘惑するつもりがない、そういう意図外の所作こそ彼女はイチイチ可か愛わいくて胸が搔かきむしられるから、マジでやめてほしい。いや、本当の本当は、やめてほしくないんだけども。もう、わけがわからない。確実なのは、トニカク、カワイイ。それだけだ。
+
+　しかしそんなキモい心中などおくびにも出さず、僕は平静を装よそおって続けた。
+
+「その、彼氏がいるのに、他の男の前で肌晒さらしたりするのは、いかがなものかなって」
+
+「男？　え、でもここ、バンジョーしかいないじゃん？」
+
+「僕って、貴女あなたの中で何？」
+
+　ガチでハムスターか何かだと思われている疑惑が出てきたなこれ。
+
+　小鳥遊さんが笑いながら続けて来る。
+
+「ってかバンジョー、気にしすぎだって。そもそも、あたしが好きでやってんだしさ」
+
+「いや、たとえ小鳥遊さん自身が良くても、彼氏さんがいい気しないでしょう」
+
+「彼ピが？　あー、うーん……」
+
+　なんだか歯切れの悪い小鳥遊さん。珍しく思案顔だが、僕はそんな彼女の表情に少しだけ見覚えがあった。というのも……。
+
+「（これ……明らかにブラフ系のゲームやってる時の、小鳥遊さんの顔だよなぁ）」
+
+　しかも、もっと言えば、噓うそをつこうとしている時の小鳥遊さんの表情そのものだった。
+
+　……どうにも、小鳥遊さんは彼氏さんの話になると口が重くなりがちだ。
+
+　最初は照れとか、もしくは交際が上手うまくいってない等などのセンシティブな話題なのかなと思って、僕もあまり触れないようにしていたのだけれど。
+
+　その割にはことあるごとに「彼氏いるアピール」自体はしてくるわけで。これはなにか聞いてほしいのかな、自慢でもしたいのかなと仕方なくその話に食いついてみせると、今度は途端に、口ごもる。
+
+　やたらと彼氏の自慢はするのに、なぜか彼氏の詳細は語れない。押せば引く、引けば押してくる。それがここ数ヶ月の、小鳥遊みふるの彼氏情報に対するスタンスなわけで。
+
+「（……まぁ順当に考えて、ぶっちゃけ、限りなく怪しいよなぁ）」
+
+　それが今の僕の結論だ。いや何が怪しいって、その……希望的観測も多分に込みで、彼氏の存在そのものが。ただそれを、流石さすがに直球で訊たずねるのは難しく。だけど、気になる。
+
+「あー……ところで」
+
+　僕はボドゲの駒を動かしながら、半ば冗談めかしつつも、この機会に彼女に少しだけ踏み込んでみることにした。
+
+「小鳥遊さんの彼氏さんって、どういう方なんです？」
+
+「え？　ど、どういう方……とは？」
+
+　明らかに動揺して目を泳がせながら返してくる小鳥遊さん。やはり怪しい。怪しすぎる。普段の彼女ならもっと軽やかに「えぇ、なぁにぃ？　バンジョー、それまさか嫉妬ぉ？　うーわ、きんもーｗ」みたいな切り返しをしてくるハズなのだが。
+
+　今はこう、明らかに、「早くこの話題終われ」の顔をしている。『人じん狼ろう』で自分が吊つられかけているときのガチ焦燥と同種のものが表情にも滲にじみ出ている。
+
+　とはいえ僕も彼女を過剰に追い詰めたいわけではない。あくまで手元はボドゲを動かしながら「あくまで雑談ですよー」といったていで続けさせて貰もらった。
+
+「いや名前とか、年齢とか？　そういうの、なんかないのかなって」
+
+「イケメン」
+
+「この世で最もふわっとした情報開示」
+
+「あとは……その……なんていうか。…………個人情報だから」
+
+「ギャルの情報リテラシーが急な爆上がりを見せましたね」
+
+　いや「イケメン」以外全てが謎に包まれた人物ってなんだよ。今や黒の組織のボスだってもう少し情報あるだろ。
+
+　見れば小鳥遊さんが明らかに困った様子で唇を尖とがらせ、僕から視線を逸そらしていた。
+
+　そりゃ僕だって同僚をいじめる趣味はない。趣味はないが……。
+
+「（貴女に惚ほれている者としては、ガチで死活問題な情報なんですよねぇ！）」
+
+　そういう意味では当然ながら根掘り葉掘り糾弾したい。糾弾したいが、小鳥遊さんを困らせたいわけでもない。そんな葛藤の結果……。
+
+『…………』
+
+　二人の間に、気まずい沈黙が降りてきてしまった。二人とも、切り出す言葉が見当たらない。結果、どちらからともなくスマホをいじり始めてしまう始末。地獄だ。
+
+　また、基本的に各種ＳＮＳ操作を忙せわしなく行っている小鳥遊さんとは違い、僕なんてスマホを開いたところで通知の一件もないのがデフォだ。
+
+　仕方なしにパーソナライズされたオススメニュース記事をスクロールして眺めていく。しかしこの前従姉いとこに唆そそのかされて「世界の未解決事件」系動画を見まくったのがいけなかったのか、暗あん澹たんたるニュースしか流れてこなかった。もう、色んな意味で病みそうだ。
+
+　辟へき易えきしながら高速でスクロールを続けていく。と、しばらくしてようやく、僕本来の趣味に近いオススメ記事が現れた。
+
+〈女流名人・歌うた方かた月つき乃のインタビュー「大事なのは『あそび』」〉
+
+　それは、とある女流棋士に関するネットニュース記事だった。いくらボドゲ好きとはいえ流石に囲碁・将棋・チェスあたりは専門外な僕なのだけれど。ただこの「歌方月乃」さんに関してだけは、確かに何度か検索した覚えがある。
+
+　というのも、彼女がこのあたり……荻おぎ窪くぼ在住だという噂うわさを、何度か数人のお客さんから聞いたことがあったためだ。
+
+　ただその検索自体も、その場でお客さんのノリに合わせて……という側面が強く、僕自身がこの歌方月乃さんに特別興味があったかと言えば、そうではなかったのだけれど。
+
+　しかし……。
+
+「…………」
+
+　……なぜだろうか。こうしてオススメネット記事で久々に顔が目に入った今、僕の指はぴたりと止まり、それどころか彼女の顔を食い入るように見つめてしまっていた。
+
+　…………？
+
+　無意識に、思わず記事をタップし、記事本文に貼られた大きな写真を更に熱心に見つめてしまう。……いや、確かに以前から……下世話な話だが「可か愛わいい」とは評判だったし、僕自身、「綺き麗れいな人だな」という印象はあった。
+
+　けれど、まぁ、それだけだ。僕にとっては日々流れるニュースの一つでしかなかったし、あの時のお客さん達みたいに、「このあたりに住んでるなら、ワンチャンあるかも」なんて妄想もしなかった。これは別に聖人ぶっているわけではない。ただ単純に、当時の僕には既に「小鳥遊たかなしみふる」という「最推し」が存在してしまったというだけの話だ。
+
+　しかしだからこそ、今更この記事に改めて目を留めてしまう理由が自分でも理解出来なかった。
+
+　答えを探すように記事本文のインタビュー内容を読んでいく。……まあ実際、なかなかどうして、好感の持てる人だな、とは感じた。特に「遊びが大事」というくだりには、僕も大変感銘を受けた。だから人柄の面での興味は確かに湧いた。でも……
+
+「（…………）」
+
+　……気付けば、僕は記事本文を遡り、彼女の写真を表示させると、それを拡大表示してしまっていた。
+
+「…………？」
+
+　一体どうしたというのだろう？　僕は自分で思うよりも、ずっとルッキズムに傾倒した人間だったのだろうか？　いくら「可愛い女の子」だからって、こんなに目を皿のようにして観察してしまう自分が、ただただ不思議でならない。
+
+「（無意識レベルで『好みのタイプ』だったとか？　……いや、でも……）」
+
+　ちらりと「現在進行形でガチ恋してるギャル」を見て、そのあまりの美しさにはふぅとため息をついたのち、また視線を、まるで正反対の清せい楚そ系女流棋士に戻す。
+
+「（そんなことはないと……思うんだけど……）」
+
+　自分の性癖ぐらい自分で把握しとけとは思うが、こればっかりは分からない。実際小鳥遊さんのことだって、初見のビジュアルからというよりは、日々の交流で好きになってしまったわけだから。僕が「生きっ粋すいのギャル好き」みたいなことではないと思う。
+
+　かといって大和やまと撫子なでしこがタイプなのかと言えば、そんな自覚もないわけで。その証拠に、以前「歌方月乃」さんの記事を見た時は、こんな風にならなかったのだ。
+
+　つまりは……。
+
+「（あれから、今日までの間に、何かあったっけ？　歌方月乃さんに関する何か……）」
+
+　……いくら考えても何も思い当たらない。歌方月乃ファンのお客さんとの交流があったとかも特にないし。ってか、常連のお客さんなんて、ここ最近じゃウタマルさんぐらいしかいないわけで。…………。……？
+
+「（あれ？　なんだろう……この歌方月乃さん、誰かに似ているような……？）」
+
+　自分がなぜこのビジュアルに今更惹ひかれたのか、一瞬閃ひらめきかける。が……
+
+「ちょっとなになに、バンジョー、そんな熱心になに見てんのさぁ？」
+
+「わ」
+
+　気付けば、いつの間にやら正面から小鳥遊さんが画面を覗のぞき込んできていた。
+
+　僕は思わずスマホの画面をオフにすると同時に、椅子から立ち上がって距離をとる。
+
+「な、なんでもないです」
+
+「いやそれ、なんでもなくないやつじゃーん」
+
+　いいネタ見つけたとばかりに、手をわきわきさせてこちらににじりよる小鳥遊さん。
+
+「もしかして、好きピの写真とかじゃないのぉ？」
+
+「ち、ちち、違いますよ」
+
+　マジもんの「好きピ」に妙な疑いをかけられ、挙動不審になってしまう僕。
+
+　それを見て、どうも小鳥遊さんは更に疑惑を深めたらしい。その目が明らかに「マジモード」へと変質していく。……まずい。
+
+　それは完全に武力行使に至る時の顔だった。僕から是が非でもスマホを奪い取るためには「くんずほぐれつ」も辞さない覚悟のやつ。実際前に一度、ボドゲ中にそれをやられて、えらいことになった。……その、なんていうか、主に僕の情緒や、下半身が。
+
+「や、やめ……」
+
+「怖がらなくていいんだよ、バンジョー。やさしくするから」
+
+　涙目でスマホをギュッと握りしめる僕と、息を荒くするギャル。完全に性犯罪待ったなしの光景がそこにあった。……このままじゃまずい。本当に、色々、まずい！
+
+　そう僕が覚悟した──次の瞬間だった。
+
+「し、失礼します……」
+
+　ドアに設置されたベルを微かすかに鳴らしつつ、おずおずとお客様が入店して来たのは。
+
+　瞬間、僕らは弾はじかれたように距離をとると、反射的に接客モードへとシフトする。
+
+『いらっしゃいませぇ！』
+
+「わ」
+
+　勢い余って声が重なり、お客様を驚かせてしまった。僕らは顔を見合わせて反省しつつも、すぐにお客様の方へと駆け寄る。と、そこにいたのは……。
+
+「あ、いらっしゃいウタちゃん」
+
+「こんにちは、小鳥遊さん。バンジョーさんも」
+
+　ぺこりと礼儀正しく──というより、腰をしっかりと曲げて恭うやうやしく頭をさげてくる常連客女性。僕もまた負けじと礼をしつつ、笑顔で彼女を迎えた。
+
+「いらっしゃいませ、ウタマルさん。いつもありがとうございます」
+
+「い、いえ。むしろその、連日すいません……。お恥ずかしい限りです」
+
+　なにやら恐縮をするウタマルさん。店や僕らにとってただただ有り難がたいお客様以外の何ものでもないのに、何を謝っているのかがさっぱり分からない。ただ、正直僕はウタマルさんのこういうところをとても好ましく思っていた。
+
+　本来お客様に対して店員が好こう悪おを語るべきではないのだけれど。とはいえ一人のボードゲーマーとして、彼女のボドゲに対する姿勢や才覚は尊敬している。小鳥遊さんとはまた別の意味で、共に卓を囲んでいて心底楽しいと思える人だ。
+
+　ホント、彼女に会えるのを僕はいつも楽しみに……。…………。……？
+
+「あ、あの、バンジョーさん？　私の顔、なにかついてます？」
+
+「え？　あ、いや……」
+
+　気付けば、僕はウタマルさんの顔をまじまじと見てしまっていた。それこそ、先程のネット記事と同じように。
+
+　いったいどうしてしまったんだ、僕は。サカリでもついたのか？　自分でもどうしていいか分からず動揺していると、小鳥遊さんが茶化すようにいじってきた。
+
+「大丈夫ウタちゃん。恥ずかしいのは、うちのバンジョーの方だから。ウタちゃん来た途端、尻尾ぶんぶん振っちゃってさ」
+
+「え？」
+
+　なにやら頰を紅潮させこちらを見るウタマルさん。う、カフェ店員としてキモがられてしまった気がする。が、事実は事実なので、僕は笑顔で流した。
+
+「ウタマルさんが来てくれて嬉うれしいのは、小鳥遊さんだって同じでしょ？」
+
+「ん？　ま、そだね！」
+
+　ニッと笑う小鳥遊さん。ウタマルさんもまた、それに温かく微ほほ笑えみ返してくれる。
+
+　そのまま彼女を席へと案内し、いつものように三人で卓を囲む。
+
+　すると、今日のウタマルさんは珍しいオーダーを入れてきた。
+
+「あ、あの、出来れば、今日は噓うそや演技を駆使するものが遊べると重畳です」
+
+「え？」
+
+　いつもは「運要素少なめの頭脳戦」を好むウタマルさんらしくない注文だ。僕は一瞬戸惑ってしまったものの、小鳥遊さんはすぐに「いいね！」と笑顔で応じていた。
+
+「あたし、そーゆーの得意！　『はぁって言うゲーム』とかさ！」
+
+「それはどのようなゲームなのですか？」
+
+「えっとねぇ」
+
+　そのままゲームの解説を始める小鳥遊さん。相変わらずルール説明自体は覚おぼ束つかないものの、彼女の感じた「楽しさ」は存分に伝わってくるいい説明だ。思わずうっとりと聞き入ってしまう。──と。
+
+「バンジョーさんはどう思われます？　確かに『演技』は駆使しそうですが……」
+
+　急にウタマルさんから水を向けられ、びくっとする僕。やばい。小鳥遊さんに見とれていて完全に油断していた。
+
+「……私、バンジョーさんのオススメも、是非拝聴したいのですけど」
+
+　心なしか、あの穏やかなウタマルさんの声も普段より幾分冷たい。これはまずい。
+
+　僕は気持ちを落ち着け少し考えた後、切り出した。
+
+「でしたら『タイムボム』とか如何いかがでしょう？」
+
+「タイムボム？」
+
+「はい。いわゆる『人じん狼ろう』とかに類する正体隠匿系ゲームですが、三人という少人数でもちゃんと面白くて、プレイ感も軽い、とても良くできたゲームですよ」
+
+「へぇ、それは興味ありますね。どういったルールなのですか？」
+
+「基本的には『警察のみんなで協力して爆弾を解除しようぜっ！』っていう遊びです。ただし、役割決めの段階でこっそりテロリスト側に選ばれたプレイヤーは、逆に爆弾の爆発をこそ目指すことになります」
+
+「警察内部に隠れた裏切り者さんということですね」
+
+「はい、人狼ゲームで言う人狼ですね。ちなみにこのゲームでは、警察側を『タイムポリス』、テロリスト側を『ボマー団』と呼称します」
+
+「ではそのボマー団に選ばれた方は、皆と爆弾の解除を目指しているような振る舞いをしつつ、その実爆発を狙うと。まさに演技と噓が含まれたゲームですね」
+
+「ですね。更にこのゲームの優れている点は、もしボマー団の人物が判明しても、それだけでゲーム終了ではない点です。どういうことかというと……」
+
+　と、そこまで説明したところで、察しのいいウタマルさんが引き取る。
+
+「ああ、これは犯人捜しゲームじゃなく、あくまで『爆弾の解除』が焦点のゲームだからですね。ボマー側は、バレたらバレたで、開き直って堂々と爆発を狙いにいけると」
+
+「そそ、まだワンチャンあるんよ」
+
+　よくボマー団バレしては凶行に走る小鳥遊たかなしさんが嬉しそうに告げる。
+
+　僕は説明を続けた。
+
+「もちろん、その一方で、当然ながら他者に信頼されていた方がことは有利に進みますので、どこまで潜伏するかがボマー側の腕の見せ所ですね。逆にタイムポリス側にも、あえて少し不審な行動をとって、敵の懐ふところに潜り込む戦術なんかがあります」
+
+「なるほど……それはいいですね」
+
+　ウタマルさんの瞳に興味と知性の輝きが宿る。僕は小鳥遊さんと頷うなずき合うと、タイムボムを棚から取り出してきた。
+
+　開封作業をしつつ、小鳥遊さんがうめく。
+
+「あたしこれ、好きだけど、苦手」
+
+「ああ、小鳥遊さんは顔に出るのは勿もち論ろん、無駄に口数も多いですからね」
+
+「それね。ボロ出さないには、余計なこと言わないのが一番だし」
+
+「分かってはいるんですね」
+
+　僕はそう苦笑いしつつも、内心で小鳥遊さんに感心もしていた。そのコツが分かっていながら、それでもなお口数が多いのは、ひとえにその場を盛り上げてゲーム体験を豊かにするためだろう。小鳥遊さんのそういうところは、本当に心から尊敬できる。
+
+　でも、同時に……
+
+「（噓は余計なことを言わぬが肝要と、彼女も分かってはいる、か……）」
+
+　ふと、ボドゲのことではなく、彼女の話からなかなか出てこない彼氏のことを考えてしまう僕。あの情報の絞り方は、やはり……。
+
+　自分の恋に対する微かな希望が湧いたことで、思わず想おもい人の横顔を見つめてしまう僕。そうしていると、またウタマルさんに先を促されてしまった。
+
+「こほん。バンジョーさん？　ゲーム、始めないのですか？」
+
+「え？　ああ、すいません。では具体的なルール説明からしていきますね」
+
+「お願い致します」
+
+　そうして僕らは、気を取り直して「タイムボム」に興じ始めたのだった。
+
+
+
+＊
+
+
+
+　タイムボムの第一戦開始から約十五分後。ゲームもいよいよ佳境の現在。
+
+「ふふっ、私をタイムポリスと信用して頂き、ありがとうございます小鳥遊さん。実に重畳です」
+
+　そこには──第一ゲーム中、ずっと共に捜査へとあたってきた「相棒」たる小鳥遊さんに向けて、突如不敵に微笑みだしたウタマルさんの姿があった。
+
+「ウタ……ちゃん？　え、なにその不穏な前置き。ま、まさか……」
+
+「ええ、そのまさかです」
+
+　笑みを浮かべつつも小鳥遊さんからの絶大なる信頼の果てに手にしたそのニッパーで……既に「爆発」すると確定しきっていた導線を切りにかかるウタマルさん。
+
+　彼女は笑顔で「爆発」をめくると共に、小鳥遊さんへ宣言したのだった。
+
+「わたし、ボマー団です」
+
+「いやぁああああああああああああああああああ！」
+
+　最後の最後で爆弾を爆発させられ、頭を抱えて呻うめきながら自分の役職カード……当然の如ごとくタイムポリスだったそれを公開する小鳥遊さん。
+
+　お客さんへのチュートリアル的側面の強い一戦目からして見事に手玉にとられ、大敗を喫したボドゲカフェ店員ギャルの姿が、そこにあった。
+
+　小鳥遊さんが心底悔しそうに呻きながらウタマルさんを睨にらみ付ける。
+
+「うぅ、どうして、ウタちゃん……！　あんなに真面目な子だったのに……！」
+
+「ごめんなさい小鳥遊さん。でも貴女あなたとのバディ関係、楽しかったですよ。ふふ」
+
+「う……ウタちゃぁあああああああああああん！」
+
+　リア充経験者（ボドゲ）ギャルが、軽く見下していた初心うぶな清せい楚そ女子に見事な逆転劇を決められ、絶叫していた。なにこのＷｅｂ漫画の広告みたいなワンシーン。おもろ。
+
+　と、そこでふと、小鳥遊さんの意識が僕の方に向いた。彼女は涙目で「ばんじょぉ」とこちらに縋すがってくる。
+
+「ウタちゃんの演技力えぐかったよぉ」
+
+「ですね。僕も脱帽です」
+
+「だよね！　ああ、もう、悔しいよぉ！　初心者にここまで騙だまされるなんて！」
+
+「ええ」
+
+「ホント、タイムポリスとして情けないったらないよねぇ、あたし達」
+
+「……達？」
+
+　その言葉尻だけ捕まえる僕。刹那、小鳥遊さんが「え、まさか」と青ざめる中。
+
+　僕は……ニヤッと笑いつつ、自分の役職カードを公開した。
+
+「僕もまた、ボマー団ですが」
+
+「噓だぁあああああああああああああああああああああ！」
+
+　残酷な真実に、更なる絶望の淵ふちへと沈んでいく小鳥遊さん。ううむ、相変わらず主人公適性抜群のリアクション芸だ。好きだなぁ、小鳥遊さん。
+
+　ちなみに本作、三人プレイの基本ルールだとボマー団が二人いるという、ポリス側にとって地獄みたいなケースはまま起きる。そんなことは経験者なら誰でも想定できることなのだが、なぜか小鳥遊さんは今回もとても新鮮に驚いてくれていた。うーん、ホント一緒に遊んでいて楽しい人だなぁ。
+
+　そしてそれとは全く別の意味で、遊んでいて楽しい人がもう一人。
+
+　僕はウタマルさんへとにっこり微笑みかけた。
+
+「うまくいきましたね、ウタマルさん」
+
+「はい、バンジョーさん。途中、わざと自分が怪しく振る舞うカタチでのサポートありがとうございました。おかげで、私が小鳥遊さんの信用を勝ち取れました」
+
+「ウタマルさんこそ、僕の意図を見抜いて、わざと僕と対立してくれてありがとう」
+
+「こちらこそです。あれで、私とバンジョーさんの関係が完全に隠せましたから」
+
+　嬉き々きとしてゲーム中の意図を明かし合う感想戦に興じる僕ら。ああ、心底愉たのしい。
+
+　が、それを見て、小鳥遊さんはすっかりいじけてしまっていた。
+
+「もう誰も信用しない……」
+
+
+
+「いやそんな、友達に彼氏寝取られたみたいな落ち込み方しなくても」
+
+　たかがボドゲで一回負けただけで、えらい感情の起伏だった。まあそれは彼女の長所でもあるのだけれど、今日はいつもより酷ひどい気がする。
+
+　思わずウタマルさんと苦笑しあっていると、どうもそれも気に食わなかったのか、小鳥遊さんが頰を膨らませる。
+
+「バンジョーとウタちゃんは、最近ちょい仲良しすぎてズルくない？」
+
+　まるで嫉妬でもしてくれているかのような言いぐさに聞こえる。見れば、ウタマルさんもほんのり頰を赤らめていた。……一瞬、まるで自分にモテ期が来たかのような錯覚に陥る。が、そんな自分に都合のいい人間関係を信じてはいけない。それこそ、先程ウタマルさんに裏切られた小鳥遊さんのように。──退学沙汰にまで陥った時の、僕のように。
+
+　僕は心を落ちつけるため一つ息を吐くと、つとめて冷静に小鳥遊さんへと切り返した。
+
+「そんな風に言うんでしたら、小鳥遊さんも絶対的に信頼出来る味方を連れて来たらいいじゃないですか」
+
+「？　あたしのゼッタイ的な味方？　だれのこと？　祖母のしゅごれー？」
+
+「それは確かに絶対的な味方っぽいですが。物理的にボドゲが無理でしょう」
+
+「じゃあ、祖母のスタンド？」
+
+「ボドゲのために身内を異能にまで昇華させないで下さい。そうじゃなくて……」
+
+　僕は少し躊躇ためらったものの、思い切って、踏み込んでみた。
+
+「その……彼氏さんとか」
+
+　おずおずと、しかしハッキリと提案する僕。少しだけ意地悪かなと思ったものの、とはいえ僕も本気で打ち込んでいるわけでもない。要はいつもの小鳥遊さんとの漫才的口くち喧げん嘩かに持ち込むための前フリだ。それにより、ゲームの勝敗に対する遺恨を軽い笑いに変えて、次にいくためのブリッジ。
+
+　が、そんな語句の目もく論ろ見みは今回、少しだけアテが外れた。小鳥遊さんが切り返す前に──なぜかウタマルさんの方が食いついてしまったのだ。
+
+「え、小鳥遊さんって、彼氏さんがいらっしゃるんですか？」
+
+　その若干「らしくない」リアクションに、小鳥遊さんが目をぱちくりとする。
+
+「い、いるけど……それがどうかした？」
+
+「いえ、だって、私てっきり……」
+
+　そこまで言って、なぜか僕をちらりと見て、また小鳥遊さんに視線を戻すウタマルさん。と、流石さすがに僕も小鳥遊さんもラブコメ漫画の登場人物みたいな鈍感さではないので、それの意味するところには気付いた。
+
+　僕は内心喜んでしまうものの、当然ながら小鳥遊さんは即座に否定してきた。
+
+「ちょっとぉ、勘弁してよぉ、ウタちゃん。出禁にすんよ？」
+
+「ええ!?」
+
+　ショックを受けるウタマルさん。僕もまた嘆息混じりに告げた。
+
+「失礼ながら、ウタマルさんの知能指数を、僕は少々買いかぶっていたようです」
+
+「いやホントに失礼ですね！」
+
+　激しくツッコんでくるウタマルさん。が、流石に皆冗談なのは分かりきっているため、必要以上に揉もめることはなく。ウタマルさんが謝罪してきた。
+
+「す、すいません。でもそうですか……小鳥遊さんに、交際相手が……」
+
+「いやそんな驚かれんの、しんがいだし」
+
+「あ、いえ、変な意味はなく！　え、ええと……」
+
+　ウタマルさんは若干困ったように呻いた後、話題を逸そらすように切り出して来た。
+
+「ど、どんな彼氏様なのですか？」
+
+「彼氏様て」
+
+　その質問に小鳥遊さんはケラケラ笑った後、うーんと少し溜ためて、応じる。
+
+「めちゃイケメン」
+
+「出たよ、いつものふんわり彼氏情報」
+
+　その証言に嚙かみつく僕。小鳥遊たかなしさんがムッとする中、首を傾かしげるウタマルさんに僕は解説を続ける。
+
+「ウタマルさん。この人の彼氏話、いつも都市伝説みたいな感じでして」
+
+「としでんせつ……？　ああ、猫又とか海うみ坊ぼう主ずとか枕返しとかのお話ですね」
+
+「江戸のご出身かな？」
+
+　相変わらず発想のセンスがなぜか妙に渋いなウタマルさん。面白いけど。
+
+　僕が笑っていると、小鳥遊さんが強引に話の方向をねじってきた。
+
+「ウタちゃんこそどうなのさ。彼ピ、いるわけ？」
+
+「いえ。その『かれぴ』なるものが『交際相手』という意味であるならば、今のところ私の人生には一切存在しませんね」
+
+「そ、そっか」
+
+　なんだか至極真面目に返されて若干リアクションに窮する小鳥遊さん。なんだろう、相変わらずこのギャルと古風女子の取り合わせは面白いな。常に異文化コミュニケーション気味というか。二人の日常をそのまままんがタイムきららに連載したらいいと思う。
+
+　そんなわけで、僕はその模様をただニヤニヤと傍はたから見守らせて頂いていたのだが。
+
+　突如ウタマルさんがこちらに視線を向けると、いきなりぶっこんできた。
+
+「ではバンジョーさんは、意中の方がおられるのですか？」
+
+「ひょへ？」
+
+　突然の核心を抉えぐる一撃すぎて、変な声が出た。そしてなぜか分からないが、脳内に将棋で「王手」が指される瞬間のイメージ映像が流れる。ウタマルさんの佇たたずまいがそうさせるのだろうか。とにかく、心臓が跳ね上がった。
+
+　思わず、無意識にちらりと小鳥遊さんを見てしまう。──まぁ、完全に悪手だよね。
+
+　ウタマルさんは「あ」（察し）というリアクションを見せ、小鳥遊さんはと言えば……。
+
+「おやぁ？　おやおやおやぁ？」
+
+　完全にハンターの目で僕を睨ねめつけてきていた。
+
+　慌てて視線を逸らす引きこもりボドゲオタクに、リア充ギャルが胸元を強調しつつ迫る。
+
+「なになにぃ、バンジョぉ。キミ、そういう感じなわけぇ？」
+
+　はい、お察しの通り。まさに、ガチで、そういう感じです。──なんて言えるかっ。
+
+「そそそそ、そういう感じって、なんですか」
+
+「どどどど、童貞ちゃうわ、のイントネーションじゃーん」
+
+　ニヤニヤと小鳥遊さん。こ、これはまずい。明らかにしつこいやつだ。そして本人は冗談のつもりでも、結果的に僕側がうまくかわせなくなるのが目に見えているやつだ。
+
+　いや、だってガチで小鳥遊さんが好きなわけだからね、こちとら。最後の最後は本音、出ちゃうって。
+
+　でもバレちゃいけないわけで。このバイトの平穏のためにも、彼氏持ち女性を困らせちゃうという意味でも、絶対、駄目なわけで。
+
+　眼鏡を押し上げ、なんとか動揺を落ち着かせようとするも、うまくいかない。
+
+　これはやばい。本当にやばい。まさかこんな場面で、ここまでのピンチに陥るとは。
+
+　思わず助けを求めるようにウタマルさんの方を見やる。利発で優しい彼女ならば、この状況から色々察し、僕に助け船を出してくれる可能性が──
+
+「そういう感じなんですか、バンジョーさん？」
+
+　──一切感じられない、凍えるような詰め方をしてきなすった。え、なにこれ。なんでウタマルさん、そんな感じ？　僕の恋心を暴いて、貴女になんの得が？
+
+「…………」
+
+「うっ」
+
+　かたや嗜し虐ぎゃく感満載の目つきで。かたやなぜかこちらを品定めするような怜れい悧りな目力で。僕を言外に責め立ててくる女性陣。
+
+　もはや、下手なかわし方じゃどうしようもない断崖だ。
+
+　どうにか逃げ場を求めて、店内に視線を彷徨さまよわせる。しかし当然ながらそこに救援者などおらず、あるのはただ大量のボドゲと、そして、目の前のタイムボム程度……。
+
+「（……タイムボム？）」
+
+　先程の対戦で自分に割り当てられた役職カードであるボマー団を眺めて、思考する。
+
+　このゲームの美点──それは、正体がバレてもゲームの継続が可能な点だ。
+
+　なぜなら、一番大事な「焦点」がそこじゃないから。
+
+　最も大事なのは、裏切り者が誰かではなく、「爆弾が爆発するか否いなか」だからだ。
+
+　……それは、今、この状況にも置き換えられることじゃないのか？
+
+　今僕は「好きな人がいる」ことがほぼほぼバレている。ここを取り返すのはもう不可能と言っていいだろう。
+
+　が、しかしながら。一番大事な「焦点」は「そこ」じゃない。
+
+　ここでのゲームオーバーは、僕が「小鳥遊さんを好きなこと」がバレることだ。
+
+　幸い、今のところ小鳥遊さんは冗談交じりの迫り方だし、ウタマルさんも疑念に確信は抱いていない様子だ。
+
+　つまりは、僕に「好きな人がいること」こそ殆ほとんど確定されているが。
+
+　────それが「誰か」という一点において、まだつけいる隙がある！
+
+　問題はその「スケープゴート」を実際誰に設定したものかということだが……
+
+「あ、そういえばさ」
+
+　僕が悪巧みを巡らす中、小鳥遊さんが何か思い出したように追撃の一いっ矢しを放ってきた。
+
+「さっき、ウタちゃんが来る直前。バンジョー、スマホの画面隠したよね？」
+
+「え？　あ……」
+
+　言われて、改めて思い出す。そうだあの時僕は確かに小鳥遊さんから画面を隠した。というのも、あの時表示していた記事が……。…………。……そうか。
+
+　僕は自分の中で「あるプラン」が高速で組み上がっていくのを感じると同時に。
+
+　改めて、余裕の態度で、切り出した。
+
+「ふぅ、やれやれ、ここまで疑われちゃあ、しかたないですね」
+
+「お？」
+
+　大きく息を吐いて切り出した僕に、小鳥遊さんが反応する。
+
+　僕は……タイムボムにおいてボマー団バレした時のテンションで対応を続けた。
+
+「そうです。確かに僕には好きな人がいます。けれどそれは……遅刻魔女子じゃない」
+
+「ちょっと、それ誰のことさバンジョー！　しつれいな！　あたしに謝りなさい！」
+
+「いや自覚あるんじゃねぇか」
+
+　いつもの調子のやりとりをかわす僕と小鳥遊さん。
+
+　が、もう一人──妙に勝負師な一面を持ち合わせる女性客、ウタマルさんはまるで揺らがず、凪なぎのように穏やかに、疑念を保ったまま僕を見つめ続けていた。
+
+「……それでは、バンジョーさん。貴方あなたは誰が好きだと仰おっしゃるのですか？」
+
+「え……っと」
+
+　その雰囲気に、流石に少し吞のまれかける僕。しかも彼女は淡々と詰めてくる。
+
+「そういえば貴方は、いつも、自分は友達が少ないと卑下されてますよね。特に退学以降は酷ひどいとも」
+
+「は、はい」
+
+「また、小鳥遊さんには異性の知り合いの少なさをいじられることも少なくありませんが、それに対して有効な切り返しが出来ている場面にも、とんと見覚えがございません」
+
+「なにこれウケるんだけどｗ　ウタちゃんのロンパモード、クソつよｗ」
+
+　ウタマルさんに僕が詰められている光景に爆笑するギャル。あいつ……！
+
+　しかしウタマルさんは、悪意など何一つない様子で更に続けてくる。
+
+「またバンジョーさん、貴方ご自身、恋愛や出で逢あいよりは趣味を優先されるお人柄に感じられます。そのような傾向からも考えますに──」
+
+「か、考えるに？」
+
+「──貴方の人生において『恋愛対象となりうる相手』は極めて少ないと推察されます」
+
+「…………」
+
+「その上でお聞きします。本当に、貴方の好きな方は、小鳥遊女史ではないのですか？」
+
+　な、なんなんだろうな、この人は。ポーカーフェイスって言えばいいんだろうか。時折、噓うそみたいに淡々と真実や勝利をもぎ取る執念を見せてくるっていうか。一応ボドゲ経験者としてまだ各種ゲームの勝率でこそ僕の方が高いけれど、人としての地力の部分では全然勝てている気がしないというか。
+
+　今もまさにそれで。僕なりに思いついた、この先でっちあげる噓のプランはあったものの、みるみる自信がなくなってきた。
+
+　こんな……こんな浅はかな「逃げ」の噓、この怜悧な視線の前には一発で看破されてしまうのではないか。そんな予感が脳内を駆け巡り、僕は唾をごくりと飲む。
+
+　が、ここまで来たからにはもう退ひけない。他に代案があるわけでもなし、今はこの噓に……なけなしの、苦し紛れの噓に賭けるしか、ないんだ。
+
+「ぼ、僕の、本当に好きな人は……」
+
+「はい。バンジョーさんの本当に好きな御方は？」
+
+　……くぅ。なんて目してんだよ。こんな人に、僕の噓が通じるとは到底思えない。
+
+　思えないが……それでも僕は、一いち縷るの望みに託して。
+
+　自分のスマホのロックを外し、その「とある人」のインタビュー記事を二人に見せつけると同時に。
+
+　そのなけなしの噓を──小鳥遊さんではなく、ウタマルさんの目を見て、放った。
+
+
+
+「僕が本当に好きな人は──女流棋士の、歌うた方かた月つき乃のさんです！」
+
+
+
+　刹那。ボードゲームでは何をしても崩せない、ウタマルさんのポーカーフェイスが──
+
+「……………………。………………へあ!?」
+
+　──なぜか盛大に崩れた。それどころか、これまで見たこともないほどの盛大な動揺を瞳にたたえ、意味もなくわたわたと両手をばたつかせたかと思えば、最終的に──
+
+「か、帰ります」
+
+『急に!?』
+
+　──突如退店の意を示された。これには僕ら店員二名がむしろ激しく動揺。こんなのは、店側にとてつもない落ち度があったとしか思えない。僕は勿もち論ろん、百戦錬磨の小鳥遊たかなしさんでさえ流石さすがにテンパる。
+
+
+
+「ちょ、ちょ、待って待って待ってウタちゃん！　いや、ウタマルさん！　ごめんごめん、あたしらチョーシに乗りすぎだったよね！　ホントごめん！」
+
+　小鳥遊さんの希少なガチ謝罪モードに、しかしウタマルさんは小首を傾かしげて応じる。
+
+「？　いえ、小鳥遊さんに落ち度なんて何もありませんが……」
+
+「そ、そう？　じゃあ改めて……」
+
+「はい」
+
+　そこでウタマルさんは爽やかに微ほほ笑えみ────席を立った。
+
+「帰りますね」
+
+『帰るかぁー』
+
+　がっくりと項うな垂だれる僕ら。ウタマルさんはそんな僕らを見て、何か取り繕うように説明を続けて来る。
+
+「あ、あの、ホントに、何か不快だとかそういうのでは全然なくてですね」
+
+「本当ですか？　あの、僕ら店員の言動や態度に問題があったようであれば、今後の改善のためにも忌き憚たんのないご意見を頂けると……」
+
+「いえいえっ、そういうのは本当に！　あ、ですが……」
+
+「ですが？」
+
+　ごくりと唾を飲み込む僕。接客業である以上クレーム問題は常につきまとうものだが、とはいえその大半を占める理不尽なモンスター客のクレームにはまだ耐性がある。
+
+　だが、このウタマルさん──本当に素晴らしいお客様の声となれば話は別だ。自分が彼女にどんな不興を買ってしまったのか。それを聞くのが怖くて怖くてたまらない。だってそれはもう、致命的に僕が悪いことが決定しているのだから。
+
+　緊張で額に汗が滲にじみ始める僕に対し。ウタマルさんは……なぜか一度正面からジッと僕を見つめた後、怒りのせいか頰をほんのり赤く染めると、最後はなぜか僕から視線を逸そらしつつ言い放ってきたのだった。
+
+
+
+「……そ、『そういうの』は、二人きりの時に仰って下さると、重畳です……」
+
+
+
+「え」
+
+　一瞬何を言われているのか分からなかった。が、すぐに直前までのやりとり──「歌方月乃さんが好き」というくだりを思い出し、ハッとする僕。同時に、小鳥遊さんも何か気付いた様子で僕を咎とがめてくる。
+
+「あ、そうだぞぉ、バンジョー。歌方月乃って子が好きなら、勇気を出して当人にこそぶつけないと！　あたしらじゃなくて！」
+
+「へ？　ああ、いや、だってそれはお二人が僕を追い詰めたから仕方なく……」
+
+「あ、そーゆーこと言うんだバンジョー。ってか、ホントに歌方月乃って子のこと、好きなわけぇ？」
+
+　やべ、なんか流れで疑われてる。こ、ここはハッキリ言い返しとかないと！
+
+「失敬な。僕は、歌方月乃さんを、心から愛していますよ！」
+
+「帰ります」
+
+『だからなんで急に!?』
+
+　僕が歌方月乃氏への純愛（大噓）を大声で宣言した途端、なんか知らんがウタマルさんがＳＣＰもかくやという人知を超えた動きで出口へ向かってしまった。
+
+　とてもじゃないが僕らに追いつける速度じゃない。目で追うのがやっとだ。しかしそれでいて利用代金は律りち儀ぎにレジに現金できっちり置き、そうして──
+
+「今日も対局──対戦、ありがとうございました！」
+
+　──「対あり」まで几き帳ちょう面めんにこなすも、直後またＳＣＰ速度で退店してしまった。
+
+『…………』
+
+　あまりのことに、ただただ呆あっ気けにとられる僕と小鳥遊さん。
+
+　僕らはしばらく呆ほうけるも……二人、ふと目が合った瞬間にハッとし。なにか気まずさをごまかすように、「店員」へと戻って行く。
+
+　僕はタイムボムの片付けを。小鳥遊さんはウタマルさんの置いていった代金をレジに入れていく。……黙々と作業をこなす僕ら。
+
+　そうして、僕がタイムボムを片付け、棚に戻そうとしていたところで。ガチャンとレジを閉じつつ、小鳥遊さんが話しかけて来た。
+
+「それで、バンジョーさ」
+
+「なんですか？」
+
+　特に振り向きもしないまま応じる僕。小鳥遊さんもまた、興味なさげな淡々としたテンションで、続けて来る。
+
+「……歌方って子が好きっていう話。ガチなわけ？」
+
+「……まぁ、ガチ、ですけど……」
+
+「そう」
+
+「はい」
+
+　…………特に目も合わせないままそんなやりとりをかわし、店内に沈黙が訪れる。
+
+　…………。
+
+　これがボードゲームの話なら、僕は「最後までくさらず、ベストを尽くして戦い抜く」という、人として、ゲーマーとして正しいムーブをしきったはずだ。そこに疑いの余地はないと確信している。
+
+　だというのに、なぜだろう。
+
+「そっか。好きな人がいたんだねぇ、バンジョー」
+
+「……まぁ……」
+
+「そっかそっか。……そっかぁ」
+
+「…………」
+
+
+
+　まるで二歩でも指したかのような、何かを致命的にしくじった感覚が、拭えないのは。
+
+
+
+歌方月乃
+
+
+
+　クルマザの退店から、約十秒後。
+
+「失礼します」
+
+「!?」
+
+　勢いそのまま、同ビル五階にある人材派遣会社事務所に駆け込んだ私は。
+
+　突然の闖ちん入にゅう者に驚く社長──叔母のマリさんにも構わず、一目散に奥へと進むと。
+
+　撮影用の更衣ボックスへと素早く上がり込み、シャッと強くカーテンを閉める。
+
+　そうして狭きょう小しょう空間へと引きこもり、蒸れる変装用のキャップをとって、長い黒髪を解放し、そのまま備え付けの簡易椅子に座りこんだところで。
+
+　私はようやく──胸の奥でとぐろを巻いていた、剝むき出しの感情を吐き出した。
+
+「うううぅぅぅぅぅうううううううううううう！」
+
+　途端に、当然の如ごとく叔母から抗議が入る。
+
+「うん、ツクちゃん？　いくら血縁関係でも、突然職場にカチこんで一角を占拠し、獣のようなうなり声を上げるのは、私、どうかと思うのよね。人として」
+
+「すみません。お邪魔します。失礼します。ううぅぅぅぅうううううううううう！」
+
+「うん、礼儀正しく挨拶したからって許可下りないからね、獣声」
+
+「…………………………………………！」
+
+「え、まさかハンカチでも嚙かんで声押し殺してる？　それはそれでやめて」
+
+「……すいませんマリさん。でも今はただの狐きつね憑つきだとでも思って、放置して下さい」
+
+「いや狐の憑いた姪めいを職場に放置出来る叔母がどこにいるのよ……」
+
+「うぅうううううううううううううううううううううううううううううう！」
+
+「うん、もう勝手にしなさい」
+
+　マリさんが呆あきれて仕事に戻って行く気配をカーテン越しに感じた。どうやら「狐の憑いた姪を職場に放置出来る叔母」はここにいたらしい。流石は師匠だ。
+
+　私は彼女の言葉に甘え、そのままひとしきり更衣ボックスの中で奇声を上げ続けるも。
+
+　約五分後、ぴたりと奇行をやめると、スッと立ち上がってカーテンを開け、いつもの怜れい悧りな「歌方月乃」として、改めて師匠の前に姿を現した。
+
+「こんにちは、師匠。今日もいい天気で、まさに重畳ですね」
+
+「いや切り換えエグいて、うちの姪。ガチ狐憑きの領域でしょそれ」
+
+「？　棋士なんて皆そんなものでしょう？」
+
+「ま、それもそうだね」
+
+　あっさり納得するマリさん。実際多少語弊はあるものの、棋士に限らず勝負師たるもの、各自気持ちの整理法の一つや二つは持っているものだ。
+
+　それは私も同じ。いくら憎からず思っている異性に……バンジョーさんに愛を告白されたところで、五分も呻うめけば、もうそれは……。それは……。
+
+「うぅぅ……」
+
+「おや、ツクちゃんに残尿とは珍しい」
+
+「なんて表現ですか。まぁでも……そうですね。この動揺は引きずりそうです」
+
+　ため息をつきながら、応接・ビジネス兼用と思おぼしき長机前に設置されたデスクチェアの一脚へと腰を下ろす。マリさんはパソコンのキーボードを打つ手を止めると、可動式のモニターを横に向けて互いの顔が見えるようにしつつ、私に訊たずねてきた。
+
+「で、今日はどうしたわけ？　レンタル彼氏としての初稼か働どうはまだのはずだけど」
+
+「いえ、それ、まだやるとは決めてませんからね」
+
+「えー、困るよぉ、ＨＰホームページのプロフィール写真、もう前任者から差し替えちゃったしぃ」
+
+「うん、その『えー、困るよぉ』は圧倒的に私の台詞せりふだったと思います」
+
+「まいいや。それで、真面目に今日はなんでここに？」
+
+「……ええと、その、なんといいますか……」
+
+　いざ師匠に事情を吐露しようとすると、意外なほど言葉がつっかかった。将棋の悩みに関しては日常的に相談していたものの、人間関係の相談など初めてだ。
+
+　私は情報を頭の中で整理すると、少し焦点を絞って、叔母に相談することにした。
+
+「その、先程、異性から突然、愛の告白をされてしまいまして……」
+
+「？　何を今更。そんなの、少し前から日常茶飯事だろうに」
+
+　不思議そうに訊ねてくるマリさん。実際、それはそうだ。特にテレビで取り上げられるようになった一時期は、ＳＮＳ、手紙、直接……各種媒体でアプローチを受けた。時には芸能人さんからさえ。……うん。
+
+「確かに、言われてみればそうですね。でもそれはなんというか……」
+
+「まあ真面目に取り合うレベルではなかったか」
+
+「はい。勧誘のチラシとか、迷惑メールとかと同じ流し方をしていました。ただ、たまにお気持ちのこもった手紙とかもあって、そういうものには自筆で返信致しましたが……」
+
+「それも、あくまで礼節としての反射行動だったと」
+
+「はい。やはり私にとっては見知らぬ人ですから。そもそも、報道で少し見ただけの人物に、いきなり交際を申し込む時点で、私とは価値観に致命的な相違があるかと」
+
+「ふむ。つまりは、なんだ」
+
+　マリさんはそう区切って、いつもの師匠らしく私の現状をまとめる。
+
+「ツクちゃんは、こと、自分がなんとも思っていない相手からの告白に関しては、まるで胸に響かないタイプ、というわけだな」
+
+「……確かに、改めて分析するとそうなのかもですね。流石さすが師匠。重畳です」
+
+　私が師匠の的確な診断に感心していると。師匠はにやりと笑って続けて来る。
+
+「裏を返せば」
+
+「？」
+
+
+
+「『憎からず思っている相手からの告白』なら、その胸を撃ち抜くわけだ？」
+
+
+
+「！」
+
+　言われた途端、かぁっと顔が熱くなってくる。見れば、マリさんはニヤァと現役時代もかくやという嫌な笑みを浮かべて、私を観察していた。く……！
+
+「そ、そんなのは、皆さん、そうでしょう」
+
+「そりゃそうね。けど今問題なのは、ツクちゃんに──あの歌うた方かた月つき乃のに、遂ついにそういう人が現れたって点よ」
+
+「な、なんですかそれ」
+
+「なんでもなにもないでしょ。だってツクちゃんさ、貴女あなたのこれまでの人生、恋愛のれの字だって出てこなかったわけでしょ」
+
+「失敬ですね。私とて、今をときめく、うら若き純情乙女ですよ？」
+
+「もうその表現が既にして、今をときめいてなさすぎるけど」
+
+「しょ、奨励会でも、棋士と浮名を流したことの一つや二つ……」
+
+「ああ、女流棋士を小馬鹿にしていた有名現役棋士を、とある小学生女児が非公式な対局でフルボッコにした伝説なら、小耳に挟んだことがあるけど……」
+
+「…………。……中学クラスメイトの男子から、真摯なお手紙を頂いたことが……」
+
+「ああ、それおねーちゃんから見せて貰もらったことあるわ。『もう〈放課後・将棋講座〉は大丈夫です。充分です。ホントに。なんかマジすいませんでした』ってヤツでしょ？　確かに気持ち、こもりまくってたよね、あれ。字、ガタガタ震えちゃってたし」
+
+「こ、高校では、女子校ながら将棋部の姫として、それはもう部員達から……」
+
+「畏怖されすぎて、最後には追い出されたんだったっけ？」
+
+「追い出されていませんよ。『殿堂入り』です。名誉部員ですね」
+
+「うんうん、そうだね、憐あわれな姪っ子よ」
+
+「あ、あと、男性絡がらみの話で言えば、永世竜王の九十九つくもさんとホテルで……」
+
+「殴り合いの喧けん嘩かしたんだっけ？　あれ？　違う？　これ『龍と苺いちご』かなんかまざってる？　とにかく、あんたの人間関係って基本ストロングスタイルでしょう？」
+
+「うぅ……」
+
+　否定出来ない。私は対人関係をまず「勝つか、負けるか」から始めているところがある。実際バンジョーさんとだって、そうだし。うぅ……すとろんぐすたいる……。
+
+「その女傑・歌方月乃ともあろう女に、憎からず思える異性が現れるとはねぇ」
+
+　ニヤニヤといじる叔母に、私はあくまで怜悧に、スンとしたすまし顔で、応える。
+
+「別に、そこまで重要な相手ではありませんけどね」
+
+「いやうちの事務所で五分間も獣の呻き声をあげてから、それは無理だって」
+
+「う」
+
+　それはそうだ。流石にこれは詰み、王手だろう。私は降参するように肩の力を抜くと、開き直って叔母に相談することにした。
+
+「既にお察しのことと思いますが、その、私、最近親しくさせて頂いている方から愛の告白を受けてしまいまして」
+
+「それはおめでとう」
+
+「ありがとうございます──と私も素直に喜べたら、良かったのですが」
+
+「どういうこと？　ただ照れてる……というわけでも、なさそうね」
+
+「はい。というのも──」
+
+　そのまま、自分が現状、ある種間接的に告白されたにすぎない状況を説明しようとしたところで──突如、来客を知らせるインターフォンの音が響いた。
+
+「え」
+
+　びくりと振り返る私。磨すりガラス越しにぼんやりと人影が見える。来客だ。
+
+　いやそれはまあ当然なんだけど、初来訪からこの方、ここに自分以外の来客があるのを見たのは初めてだったから、少し動揺してしまった。
+
+　なぜか思わず息を潜めてしまう私をよそに、叔母は「はーい」と自然に切り返した。
+
+「どちらさまで？」
+
+　叔母の問いかけに、ドアの外から若い女性の──妙に聞き覚えのある声が返ってくる。
+
+「あ、あの、ＨＰのメールフォームから連絡させて頂いた者ですが……」
+
+「はい？　えっと、すいません、今確認しますね」
+
+　応じながら、少し慌ただしくモニターを自分の方に向け、カチカチとマウスを操作する師匠。と、何か見つけたらしく、恐縮しながら、ドア越しのやりとりを継続する。
+
+「あ、ありましたありました。すいません、どうも見逃していたみたいで……！」
+
+「あ、いえ、あたしがそもそもメールを送ったの自体、つい三分前なんで当然です」
+
+「え？　あ、ホントですね。えっと、これは一体……」
+
+「あ、その、メール送ってから改めてＨＰ見たら、『あれ？　この住所、すぐ上の階じゃね』？　ってなりまして。だったら、直接行った方が早いなー、なんて」
+
+『すぐ上の階？』
+
+　マリさんの疑問に、思わず私も声を重ねてしまう。彼女はただ純粋に不思議そうにしていたものの、私の中には、マリさんとは別の「いやな予感」が湧き上がり始めていた。
+
+「（この声や、言葉遣いに、『上の階』発言。もし私の予想が的中しているなら……ここで『今の私』が『この来客者』と顔を合わすの、若干まずいんじゃ……）」
+
+　束ねた髪を解放し、露骨に「歌方月乃」然としたビジュアルで──しかし服装は先程までボドゲカフェに来店していた「ウタマル」そのものな私。となれば、若干鈍そうなバンジョーさんならまだしも、もう一人の店員たる「彼女」が正体に気付かないはずがない。
+
+　そしてその正体バレは、今となっては、かなり致命的だ。
+
+　これが三十分前までの話ならば、正体がバレても「実は少しだけ有名人でしたぁ」程度の軽い笑い話で済む話だったのだけれど。
+
+　しかし、今となっては。……バンジョーさんの想おもい人が「歌方月乃」だと聞いてしまった今となっては、かなり話が変わってくる。
+
+「（流石にこのタイミングでの身バレは、状況が悪すぎます！）」
+
+　気まずいどころの話じゃない。いや、「彼女」のバンジョーさんに対する想いの質によっては、壮絶な修羅場に発展する可能性さえありうるだろう。
+
+　とにかく、今は、まずい。
+
+　私は跳ねるように椅子から立ち上がる。とにかく、どこかに身を隠さねば。
+
+　と、私のそんな様子を見て……師匠が、「ああ」と何か察した様子を見せた。おお、流石は師匠にして血縁の元女流棋士。私の求めていることを的確に見抜いて──
+
+
+
+「あ、いつまでもドア越しですいませんね！　とりあえず入って下さーい」
+
+
+
+「（こんの────！）」
+
+　天然なのか策略なのかどっちともつかない「善意」で、師匠が来客の入室を促した。
+
+　思えば、マリさんは昔から将棋でもこういう人だった。しばらくゆるやかで楽しい将棋に興じていたかと思ったら、突如、地獄の泥沼対局一直線の鬼畜めいた一手を笑顔で指してくる。そういう人なのだ。ホント、昔から。
+
+「あ、じゃあお言葉に甘えて」
+
+　言って、ガチャリとドアノブの回る音。もはや猶予はない。
+
+　まるで将棋の詰め段階のように、ここから私にとれる手は、一つしかない。
+
+　この椅子のすぐ背後に設置された、まさに先程まで私が引きこもっていた場所──
+
+「（間に合え！）」
+
+　──更衣ボックスへと、飛び込むことだ。
+
+　果たして私は靴を高速で脱ぎ、更にそれを手に持ちながら更衣ボックスに飛び込むと、シャッと勢い良くカーテンを引いて身を隠した。
+
+　そのまま、息を殺して、状況を観察すべく耳を澄ます。
+
+「しつれいしまーす」
+
+　耳馴な染じみのある声が入室してくる。……間違いない。「彼女」だ。問題は……。
+
+「って、あれ？」
+
+「どうかしましたか？」
+
+　何かに気付いた様子の彼女。私は目の前で揺れるカーテンを眺めながら、ドキドキと心臓を高鳴らせていた。……うぅ、あと数秒あれば、この揺れも落ち着いたろうに……！
+
+　改めて、師匠の悪い意味での判断の速さが恨めしい。
+
+　表情は見えないが、カーテンの外で師匠がニヤニヤしているのが分かる。きっと、どちらに転んでも面白い、などと考えているのだろう。そういう人だ。
+
+　そうして、そんな賭けの結果は……。
+
+「おー、ワンフロア上なだけで、外の風景けっこー違うじゃん！」
+
+　……どうやら私の勝ちのようだった。来客者は、地味な更衣ボックスなどより、窓の外の風景に食いついたらしい。
+
+　師匠が「ふっ」と息を漏らす。こうなったらなったで、彼女は潔いさぎよい。
+
+「はは、こんな風景でよければ、いくらでも堪たん能のうしてくれたまえ」
+
+　当然のように、私のことをバラすような野暮はせずに。それどころか……賭けに対する勝利への報酬だとでも言わんばかりに、来客者の正体を、明らかに私へ向けて提示してみせたのだった。
+
+
+
+「──小鳥遊たかなし、みふるさん」
+
+
+
+＊
+
+
+
+「どうぞ、そちらに掛けて下さい。今お茶を淹いれますので」
+
+「ども。あー、ってか、えっと、オカマイナク？」
+
+　どこか使い慣れない丁寧語を口にしつつ、マリさんに促され、小鳥遊さんがこちらに──更衣ボックスのすぐ近くに移動してくる。
+
+　カツカツと近付いて来る、小鳥遊さんの足音。私はそれに怯おびえつつも、同時に、きっちり室内の様子を探るべく耳をそばだてた。
+
+　更衣ボックス前までやってくる小鳥遊さん。薄い布一枚を挟んでそこに「今の姿を見られてはいけない知り合い」がいる状況への緊張がピークに達するも。
+
+「じゃ、失礼してっと」
+
+　小鳥遊さんは特に更衣ボックスへと違和感を抱いた様子もなく、来客用の椅子に着席してくれたようだった。
+
+　ホッと胸をなで下ろす。まだ近くにいるとはいえ、位置的に小鳥遊さんはボックス側に背を向けるカタチになるため、これで私の存在がバレる可能性が限りなく低下──
+
+「って、あれ？」
+
+「どうかしましたか？」
+
+　着席した小鳥遊さんが何か声を上げ、師匠が応じる。小鳥遊さんは、怪け訝げんそうに続けてきた。
+
+「や、なんか……椅子、あったかい？」
+
+「（直前まで私が座ってましたのでぇえええええええええええええええええええ！）」
+
+　思わぬ角度からの指摘に心臓を跳ね上がらせる私。まさか現世で、名探偵に追い詰められる犯人の気持ちが体感出来るとは思わなかった。
+
+　このまま推測を発展されてしまうと、「誰か他に人がいそう」「この室内で隠れられる場所なんてあまりない」「一番可能性あるのは……」という思考経路を辿たどり、最終的にこの更衣ボックスのカーテンを開けられても全然おかしくない。
+
+　いやここまで先を読んで精神面に負担を覚えるのは、もはや棋士の悪癖に近いものだと自認はしているのだが、とはいえ、一度考えてしまったらもう元には戻れないわけで。
+
+　小さな椅子の上で体育座りスタイルになって、ガタガタ怯えだす私。このままでは、小鳥遊さんによる推理とかそれ以前に、音と振動でバレかねない。
+
+　と、しかしそこで、意外にもマリさんが助け船を出してくれた。
+
+「ああ、すいません、ちょっと仕事の気分転換で」
+
+　照れ臭そうに告げるマリさん。それを聞いて、小鳥遊さんはどうも、マリさんが直前までそこに座っていたと勘違いしてくれたみたいだった。
+
+「ああ、全然全然」
+
+　そう明るく返すと、以降それに触れることもなくなる小鳥遊さん。
+
+　私はホッと胸をなで下ろすと同時に、震えも自然と治まっていった。
+
+　悔しいけど、相変わらずマリさんは……師匠は凄すごい。今のだって、私の存在を隠しつつも、決して「噓うそ」は言っていないのだから。マリさんは実際、仕事の気分転換を兼ねて──「私と喋しゃべっていた」のだけれど。そのあたりは省略したせいで、小鳥遊さんは「ここに座って仕事していたのだな」と勝手に解釈したわけで。
+
+　師匠の師匠らしい冴さえが未いまだ健在であることを嬉うれしく思う反面、そういうのを実感するにつけ、やはりこうも思ってしまう。
+
+　なのにどうして、ずっと私の目標で──女流棋士でいてくれなかったのか、と。
+
+　欲しいものは、手に入れてこそだよ、ツクちゃん。
+
+　そんな風に不敵に笑っていた頃の「憧れの師匠」が、今もまだ恋しくて仕方ない。
+
+「…………」
+
+　思わずぎゅっと膝を抱える腕に力を込めてしまっていると、いつのまにか二人の会話は挨拶を終え、本題へと移行し始めていた。
+
+「それで、改めて本日弊社へお越し頂いた事情をお伺いしても？」
+
+「あ、うん。それなんだけど……」
+
+　そこで、小鳥遊さんがズズッとお茶を啜すする。その後、どこか気合いをいれるように、強めに長机へ湯飲みを置く音と共に。
+
+　彼女は、ある意味予想通りの「厄介な提案」を切り出して来た。
+
+
+
+「ＨＰに出てるこの『宇う佐さ樹いつき』って人を、レンタル彼氏として、貸してちょーだい！」
+
+
+
+「……な、なるほど」
+
+　これには流石さすがの師匠も少し虚を突かれたらしい。若干声に動揺が混じっていた。が、私の方はと言えば、あの小鳥遊さんの依頼という時点で、半ば予想出来ていたことだった。
+
+　……うん、予想は、確かに、出来ていた、けれどね。
+
+「（状況の、あらゆる意味での『フクザツさ』がエグいですって！）」
+
+　更衣ボックス内で思わず頭を抱える私。いや、ただでさえ普段から変装でボドゲカフェ通いしている中、その店員の一人に、今度は彼氏としてレンタルされるって、何？　対局でも中々ここまで予測の入り組んだ局面にはお目にかからない。
+
+　私が心の中で呻うめき声を上げる中、マリさんが説明を始める。
+
+「一応改めて説明させて頂きますと、ＨＰにも書かれてる通り、この『レンタル彼氏』はあくまで『彼氏役のエキストラ』のような運用を前提としたサービスであるというのは、ご承知頂いた上でのご依頼と考えてもよろしいでしょうか？」
+
+「う、うん。あ、いかがわしい話じゃないなら、顧客が未成年でも問題ないっしょ？」
+
+「え？　え、ええ、まあ、それはそうなんですが……」
+
+　若干グレーな領域なのか、口ごもるマリさん。彼女は少し沈黙した後、今度は別方面から切り出した。
+
+「ただ実際貸し出すとして、時間計算で料金が発生する上、当事務所から計算での交通費なども請求させて頂くため、コストの面でやはり学生さんにはやや厳しいかと……」
+
+「あ、それなんだけどね」
+
+　金額の話になると、小鳥遊さんは事前に何かプランを練ってきていたのか、いつものように流りゅう暢ちょうに喋り始めた。
+
+「基本的にはあたし、すっごく『最低限』で借りるし、あとあと、サービスが良かった場合、周囲への宣伝もするからさ。その分、安くして貰もらえないかなぁって。ほら、ご近所さんのよしみもあるし。ね？」
+
+「は、はぁ」
+
+　そこで、マリさんも堅苦しいお客様対応が馬鹿らしくなったらしい。小鳥遊さんに合わせるように、フランクな対応で返し始める。
+
+「それで？　キミの言う『最低限』ってのは、どのレベルの話なんだい？」
+
+「うん。それがさ」
+
+　小鳥遊さんは声を弾ませて説明する。
+
+「まずダイゼンテーとして、あたしが彼氏をレンタルしたいタイミングって、一週間に数回、ぶっちゃけ五分とかそういう世界なんよね」
+
+「は？　週に数回、五分だけ？」
+
+「そ。あと交通費って話なら、ここから下のフロアに一瞬お借りしたいだけだから、まあフツーに考えてゼロ円じゃん？」
+
+「……それはまた、なんというか……。……どうにも値付けに困る依頼だな」
+
+「でしょでしょ？　ほら、いっそのこと無料にしたくなってこない？」
+
+「き、キミねぇ」
+
+　小鳥遊さんが、小鳥遊さんらしさの本領を発揮し、師匠をたじろがせていた。あの師匠をも手玉にとるとは、流石は小鳥遊さんだ。
+
+　師匠が訊たずねる。
+
+「そもそも、それはまたどういう状況なんだい？　週に数回、五分程度だけ下の階に彼氏を貸し出すというのは……」
+
+「あー……それはまぁ、その、なんていうか……」
+
+　小鳥遊さんは気まずそうに呟つぶやくと。数秒の沈黙の後、吐露する。
+
+「下のバイト先で、ちょい、同僚に『イケメン彼氏がいる』って話しちゃって……」
+
+「……しょーもな」
+
+　呆あきれるマリさん。もう完全に客対応をやめている。そういうとこの判断は相変わらずシビアだ。
+
+　が、そういう部分では小鳥遊さんも負けていなかった。すぐに彼女らしい、迅速で直感的で本質を抉えぐる切り返しで応じて来る。
+
+「そのしょーもない需要をアテにして稼ぐ仕事の方が、しょーもないっしょ」
+
+「ぐ」
+
+　凄いな小鳥遊さん。私やバンジョーさんどころか、師匠でさえ完封じゃないか。彼女を将棋界に放り込んだら、色んな意味で大旋風を巻き起こしそうでさえある。
+
+　勢いづいた小鳥遊さんが続ける。
+
+「あと、この……ウサくん？　って人。すっごいイケメンで『自慢出来る彼氏役』にぴったりなのは勿もち論ろんなんだけど。実際一番気に入ったのは、『女の子』てとこだよね」
+
+　ああ、ＨＰにはそんなことまで書いているのか……と思ったものの、まあ普通に考えて業務である以上そこは隠す理由がないか。
+
+　マリさんが応じる。
+
+「ああ、その方が客も従業員も、安心だろう。お互いに」
+
+「ッスね。それになんていうか……」
+
+　そこで、小鳥遊たかなしさんは小さく、対面のマリさんには聞こえない程度の……しかし薄い布一枚隔ててすぐ傍そばの私には聞こえてしまう程度の呟きを漏らした。
+
+「……演技でもあたし、ガチ好きピ以外の異性とは、ベタベタしたくないし……」
+
+「…………」
+
+　え、ええと。なんかこう、今、私が知るべきではない情報の類たぐいを追加トッピングされた気がするのだけれど。うん、気のせいだろう。気のせいということにしておこう。
+
+「えっと、なんて？」
+
+　マリさんに訊ね返され、小鳥遊さんは改めて、元のテンションで応じる。
+
+「とにかく、あたしが求めるサービスって、具体的には、バイト帰りに、ここの下のフロアに彼ピ役が迎えに来る程度のカンジなんスよねー」
+
+「……ふむ」
+
+　マリさんが何か考え込むような対応をする。ああ、これ、女流棋士時代には、投了一歩前あたりによく聞いた声だ。つまりは……。
+
+「──なるほど。この程度の業務でご近所の学生からセコく小銭を巻き上げるくらいなら、いっそ無料で貸し出して代わりに広告をして貰う提案は、アリかもしれないな」
+
+　相手の要求を吞む準備が出来た合図。私が深く静かにため息をつく中、二人の会話は続いていく。
+
+「え、マジ？　じゃ、これ、案件決定ってことでおけ？」
+
+「いや、まだ検討段階だ。あくまで、キミがうちのサービスの広告塔として使い物になると経営判断が下った場合のみの特別な……」
+
+「あ、ちな、これ、今のあたしの使ってるＳＮＳ周りの総フォロワー数ね」
+
+「はい採用」
+
+　なんか秒で私の無料貸し出しが決定していた。お、叔母さん!?
+
+「まあ安心してくれ。宇佐へのバイト代自体は、うちの広告費からちゃんと出る」
+
+「？　はぁ、それはいいんじゃね？　しらんけど」
+
+　マリさんが、小鳥遊さんではなく、盗み聞いている私に向けて説明してくれていた。う、うん、まぁ、そういうことなら私もやぶさかでは……。
+
+　って、いや違う違う。今はもう、そういう段階の問題じゃないのだ。
+
+　マリさんは知る由よしもないことだけれど、現状、私と小鳥遊さん……そしてバンジョーさんの関係性はかなり繊細だ。
+
+　私が勝手に「小鳥遊さんに好意持ってそう」と感じていたバンジョーさんは、急になぜか本当の私──「歌うた方かた月つき乃の」を、あ……あ、あいしてるとか、言い始め。
+
+　一方で、バンジョーさんのことを憎からず思ってそうだと感じていた小鳥遊さんはと言えば、他に彼氏がいるとのことで、バンジョーさんへの好意を否定していたのに。いざ蓋をあけてみれば、実はそんな人はおらず、それどころかレンタル彼氏で場を凌しのごうとしている始末。
+
+　そして私はと言えば……ウタマルというゆるい人物設定で常連客化してしまった結果、バンジョーさんから思わぬ告白を受けることとなり、それどころか、今や小鳥遊さんの秘密まで知ってしまったわけで。
+
+　この状況で、もし。もし、小鳥遊さんに私の正体バレをしようものなら。
+
+　それはもう……。
+
+「ああ、ちなみにだが小鳥遊くん。もしこの『レンタル彼氏』の件が、キミの騙だましたい同僚や、周辺人物にバレた場合は、どうするつもりだい？」
+
+「え？　ああ、そりゃもう……なんていうか、どうするも何もなく、ただ一言ッスね」
+
+「なんだい？」
+
+　マリさんの問いかけに、怖い程爽やかに小鳥遊さんが応じた。
+
+「死ぬる」
+
+　はい、絶対バレるわけにはいかなくなりました。っていうか、それはもう、小鳥遊さんだけの台詞せりふじゃない。私にしたってそうだ。今の私を取り巻く状況が、全部、バンジョーさんだったり、小鳥遊さんだったり……いや、世間にバレた場合の感想。
+
+　死ぬる。
+
+　これはもう、人が秘密を守るべき最大の理由と言っていいレベルの三文字だろう。
+
+　しかし、だからこそ、それだけに……。
+
+「（この依頼だけは、今からでもなんとか断って貰えないだろうか……！）」
+
+　マリさんは私の詳しい事情を知らないから、ほいほい受けてしまったけれど。私からしてみれば、いくら短時間で報酬が欲しくとも、リスクが大きすぎるわけで。
+
+　い、いや、まあ拘束時間という観点で言えば、私にとっても神バイトではある。たまに遊びついでにクルマザへ行き、宇佐樹として小鳥遊さんと仲良さげに店を出ればいいだけなのだ。それでカフェ代金まで稼げるなら、こんないいことはない。
+
+　しかしそれは、大事な人間関係や社会的立場を危険に晒さらしてまでやることじゃない。
+
+　少なくともこのレンタル彼氏案件だけは、なんとしてもキャンセルして貰わないと。
+
+　と、そんな私の願いが通じたのか、はたまた師匠特有の天才的な読みが発動したのか、マリさんは小鳥遊さんに向けて一応の警告を入れてくれた。
+
+「あ、だけど宇う佐さがこのシフトに入れるかは、まだ分からないからね」
+
+「えー。他のレンタル彼氏を回されるかもてこと？」
+
+「んー、まあ、そういう可能性もあるかな？」
+
+「マジかー……」
+
+　露骨に不服そうなリアクションを返す小鳥遊さん。
+
+「あたし、このバチくそイケメンな『女の子』って部分で、ここに決めたんだけど」
+
+「ああ、それは重畳だね」
+
+　あ、ちょ、この叔母さん、なんでこのタイミングで私の口癖がうつって……！
+
+「ちょう……？　あれ、なんかその言い回し、どっかで……」
+
+「こ、こほんこほん」
+
+　わざとらしい咳せき払ばらいの後、叔母が続ける。
+
+「じゃあ、宇佐がダメだった場合は、代役を立てることもなく、この商談自体がご破算ということでいいかい？」
+
+「まぁ……そうなりますかね」
+
+　明らかに納得はいってない様子だが、そう応じる小鳥遊さん。私は思わず小さくガッツポーズをとる。
+
+「（よし。小鳥遊さんには悪いけど、彼女が帰ったあと、改めて、マリさんにこの案件をキャンセルして貰もらおう！）」
+
+　そう決意を新たにしていると、小鳥遊さんが「あ、けど」と付け足した。
+
+「今日の依頼のことを、宇佐君が全部聞いた上でのキャンセルは、なしですよ」
+
+「ん？　それは、守秘義務的な観点からの話かな？」
+
+「もちろん。だってバリバリ個人情報っしょ、これ。あたしがレンタル彼氏を頼みにきた、ってだけのことでも、出来るだけカンケーシャ以外には知られたくないわけで」
+
+「まあ当然の話だな」
+
+「でしょ？　んなわけで、宇佐君の意思確認は依頼の詳細を話す前にして。ってか、もし逆に依頼内容まで聞かれたら、その時はもう問答無用で受けて貰うから」
+
+「ああ、キミの要求は理解した」
+
+　軽く応じるマリさん。あくまで「理解した」であって、「了解した」とは言ってないあたりが狡こう猾かつだ。まぁ実際この後……小鳥遊さんには申し訳ないが、私は全ての事情を知った上で、なお断らせて貰おうとしているのだから、それも宜むべなるかな、だ。
+
+　一応、詭き弁べんを弄するなら、今ここで彼女の事情を知ったのは「歌方月乃」であり、まだ「宇佐樹いつき」ではないとは言える。であれば「宇佐樹は何も知らず断った」という理屈が一応成り立つ。いや成り立ってないけど。小鳥遊さんをかわす程度は出来るはずだ。
+
+　と、そんな算段を立てていると、突如、小鳥遊さんが立ち上がる音がした。
+
+「っと、やば、もうこんな時間！」
+
+「後があるのかい？」
+
+「ってか、今まさにバイトの休憩時間で抜けてきちゃってて！」
+
+「なるほど。ではまた詳細はそのうち。宇佐との顔合わせや打ち合わせも……」
+
+「はーい。じゃ、そんな感じで……っと？」
+
+「どうかしたかい？」
+
+「あ──や、すいません、なんか今立ち上がった拍子に、ブラのホック外れたみたいで」
+
+「あらら。大丈夫かい？」
+
+「やー……これシャツを一旦脱がなきゃッスねー」
+
+「ああ、ならその辺で好きに着替えてくれて構わな──」
+
+　と、そこまで言いかけたところで、なぜか言葉を止めるマリさん。
+
+　と同時に、私にも、彼女が「何を見て」言葉を止めたのか──いや。
+
+　それによって「これからどんな修羅場が起こりうるのか」までが、一瞬で推察出来た。直後、早指しの如ごとく「即決即断」の覚悟で動き始める私。
+
+　更衣ボックス内に置かれっぱなしだった「ある衣装」を、高速で身に纏まとっていく。
+
+「どもッス。あ、じゃあ丁度いいんで、この試着室みたいなの借りますねー」
+
+　案の定、数秒前に私と師匠が予期した未来へと向けて事が運んでいっていた。
+
+　更衣ボックスと外の空間を隔てる薄いカーテンに、小鳥遊みふるの手がかかる。
+
+　これから刹那の後、私が彼女と対面する未来はもう避けようがない。
+
+　局面は既にして最悪だ。最悪中の、最悪。──だが。
+
+　それでも、棋士ならば。
+
+　詰みを少しでも回避し、生きながらえる手段があるならば。
+
+　それがたとえ更なる地獄へと続く選択肢でも、迷わずとらなければいけない。
+
+　と、そこまで考えた、その直後だった。
+
+「じゃ、失礼しまー…………す？」
+
+　小鳥遊みふるの手により、私達を隔てていた薄いカーテンが無慈悲に引かれると同時に。
+
+　ギリギリで着替えを終えた私と、彼女の目が、ばっちりと合ったのは。
+
+『…………』
+
+　事務所内の時が止まる。
+
+　呆ぼう然ぜんとする三者。そんな中……最初に口を開き静寂を破ったのは、小鳥遊たかなしみふるだった。
+
+　彼女は戸惑いながらも、私に──いや、「オレ」に向かって、声をかけてくる。
+
+
+
+「え……もしかして、宇佐、君？」
+
+
+
+　今、彼女の瞳に映る存在。
+
+　それはまさに「詰みの一歩手前の選択肢」。
+
+　最悪中の最悪たる局面にあっても、それでもまだ、歌方月乃やウタマルとしてここで彼女と対面するよりは、かろうじて希望が持てる。そんな存在。まぁ、つまりは──
+
+
+
+「や、やぁ。今日からキミの彼氏になる、宇佐樹だ。以後、よろしく」
+
+
+
+　私は金髪をサラッと搔かき上げると、女流棋士時代の傲岸不遜な叔母の性格を参考にしつつ、半ば事故みたいに「レンタル彼氏・宇佐樹」としての業務を開始したのだった。
+
+
+【閑話　レンタル・インストラクション（Ｄａｙ９４）】
+
+
+
+「あたしとウサくんの距離感は、ガチめでいくから。あと誰か、麦ちょーだい」
+
+　例の事故みたいな──いや事故そのものであった邂かい逅こうの翌日。人材派遣会社ロールワーカーの応接テーブルにて。
+
+　私、歌方月乃改めウタマル改め、金髪青年の「宇佐樹」は、ボドゲカフェ店員の小鳥遊みふると改めて、打ち合わせに臨んでいた。
+
+　──超ド定番ボードゲーム「カタンの開拓者」に興じながら。
+
+「うーん、土くれるなら」
+
+　そう応じたのは、巽たつみ真ま理り狭さ──私の元師匠・叔母にしてこの会社の社長だ。
+
+「おけおけ」
+
+「あいよ」
+
+　交渉に基づき、互いの手札を交換し合う小鳥遊さんと師匠。ちなみにこの大事な打ち合わせ中に私達がカタンをやっている理由は、至極単純。師匠が「私もボドゲ、やってみたい」とか言い出したせいだ。ならばと小鳥遊さんが「じゃ、あたしがルール覚えてる数少ないやーつ」という理由で「カタン」をカフェから持ち出してきて、現在に至っている。
+
+　師匠は自らの手番を終えると、ようやく現実の契約に関する質問を返した。
+
+「あー、それで『ガチめ』ってのはどういう意味？」
+
+「うん、つまりは、彼ピッピというより彼ピになってもろて」
+
+「は？　なんて？」
+
+　自分の手札から視線を上げ、ぽかんとする師匠。相変わらずギャルとの相性が悪いらしい。小鳥遊さんと師匠の二人から、同時に助けを求める視線が──二人の通訳を務めろという要請が飛んでくる。
+
+　が、私とて本質は根っからの女流棋士。いくら年代的に小鳥遊さんと近しくても、師匠よりギャル言葉に造ぞう詣けいが深いなんてわけもなく。
+
+　だからそれを知る師匠はすぐに私への通訳要請を取り下げるように視線を外してくれたのだけれど、困ったのは小鳥遊みふるの方だ。
+
+　なにせ今彼女の目に映る私はと言えば──
+
+「ウサくんにはこのニュアンス、伝わるっしょ？」
+
+「……と、トーゼン」
+
+　チャラい金髪をふぁさっと搔き上げて、キザに応じる私。そう、そもそも現在私の外見が同年代のチャラ男子な上に。
+
+　その性格設定も、初対面時に本来の自分とは真反対にして──つまりは「今時の若者感」を前面に押し出してしまったため、小鳥遊さんの言葉が分からないとは言いづらく。
+
+　結果──
+
+「じゃ、解説してみて。彼ピッピと彼ピの違い」
+
+「ＯＨ……」
+
+　女流棋士と元女流棋士が、二人揃そろってギャルに詰まされかけていた。
+
+「ふっ、是非私も聞きたいものだね、彼ピと彼ピッピの違い。あと誰か鉄くれ、鉄」
+
+　かと思えば、再び手番の回ってきた師匠がなんか他人ひと事ごとみたいにカタンへ興じつつ煽あおってきた。こ、この人はホント……！
+
+「あたし鉄今あるけど、そっち何出る系？」
+
+「んー……木、一枚とか？」
+
+「はっ、ウケる。んじゃこの提案はやっぱなしでー」
+
+「いや待って待って。うーんと……」
+
+　師匠と小鳥遊さんがカタンの素材交渉に興じている。その間、私は「彼ピと彼ピッピの違い」に関して、必死で思考を高速展開する。
+
+「（彼ピッピと彼ピの違い……。まぁ、普通に考えてピの数よね。でもそれがなんだって……ん？　ピの数の違い？　そんなのを確か……昔音楽の授業で……）」
+
+「ＰＰ……ピアニッシモ……」
+
+『はい？』
+
+　私の独り言に二人が交渉の手を止めてキョトンとしていたものの、構わず思考を加速させる。
+
+「（ＰＰで顕あらわされるピアニッシモは確か『とても弱く』の意。そしてその前段階、Ｐはピアノ。その意味は『弱く』。Ｐの数が増えれば増えるほど、弱くなる。そしてそれはもしかしたら『ピ』にもまた言えることなのかもしれない！　つまりは──）」
+
+　それらの思考を刹那の内に終えた私は、「宇う佐さ樹」としての口調で答える。
+
+「彼ピは、そのまんま、彼氏の意味。彼ピッピは──その少し手前。ラブコメ漫画でよくある、友達以上恋人未満みたいな状態、かな」
+
+　余裕しゃくしゃくの態度でそう答えつつも、内心では心臓バクバクの私。実際テキトーな推理にも程がある。が、外れたら外れたで、今度はチャラくかわしていく方向で──
+
+「せーかい！」
+
+『正解!?』
+
+　目玉が跳び出す程に驚く私達。小鳥遊さんは疑わしそうに私を見つめてきた。
+
+「いやなんでウサくんが意外そうにしてんの？」
+
+「え、あ、いや、えーと……なんか、ししょ──社長につられて」
+
+「ふーん。ま、いいけど。やるじゃん、ウサくん。いいね」
+
+「ど、どーも」
+
+　何を評価されたのか分からないが、とにかくほんのり心を開いて貰もらえたらしい。
+
+　と、師匠がニヤニヤと肘で私の腕を小突いてきた。
+
+「やるじゃん、宇佐君」
+
+「ぶっ殺しますよ」
+
+　にっこりと応じる私。うん、今の乱暴な言葉は我ながらなんだかもの凄すごく自然に表現出来た。実際師匠が顔を青ざめさせているぐらいだ。
+
+「（なるほど、役者さんみたいにしっかりキャラを演じるんじゃなく、元々私の中にある『この要素』を前面に押し出すイメージの方が、レンタル彼氏はスムーズかも……）」
+
+　師匠の余計な一言のおかげで、期せずしてそれが理解出来てしまった。重畳重畳。
+
+　実際今の社長と私のやりとりは、小鳥遊さんの中でも何か評価すべき点があったらしい。
+
+「でさでさ、ウサくんさ」
+
+　すっかり友達に接するようなノリで、カタンに興じつつ話を先へと進ませてきた。
+
+「レンタルとは言っても、あたしは可能な限りガチなノリでお願いしたいんだよね」
+
+「ガチっていうのは……つまり、人前でベタベタでもしろと？」
+
+　いくら同性とはいえ、それは流石さすがに……と少し引いていると、意外なことに小鳥遊さんは苦笑いしつつ否定してきた。
+
+「ちがうちがう。ってか、それこそむしろガチじゃないじゃん。ウサくんって、ビジュに反して案外交際経験少ない？」
+
+「……ど、どうだろうね」
+
+　流すように烏ウー龍ロン茶ちゃを口に運ぶ私。ニヤニヤとする師匠がたまらなくうざったい。
+
+　小鳥遊さんが続けて来る。
+
+「とにかく、テンプレであざといバカップルじゃなく、自然な仲の良さを出していきたいわけ」
+
+「あー……まぁ、言わんとしていることは分かるけどさ。あ、道一本ひきまーす」
+
+　私は盤上に道のコマを置きつつ、小鳥遊さんを見やる。
+
+「それ、実は地味に凄くハードルの高い要求じゃない？」
+
+「まぁね。でもウサくん、プロなんでしょ？」
+
+「いや……」
+
+　プロどころかド素人しろうと以下もいいところだ。交際経験がないのは勿論、十代の平均的青春ライフさえ送れていないのだから。
+
+「え、えっと、とりあえず手番終了で」
+
+　私が困り果てつつゲームを進めると、意外なことに師匠がダイスを振りながらも助け船を出してくれた。
+
+「確かにうちの宇佐はプロだが、それでもキミの要求難易度が高いことは事実だ。いくら日々の送り迎え程度の時間とはいえ──いやだからこそ、リアルな交際関係を演じるには綿密な準備が必要になってくるだろう。しかしそうなると今度は拘束時間が──」
+
+　私の将棋活動及びボドゲ時間にバイトの影響が出ることを懸け念ねんしてくれているらしい師匠。こういうところだけは変にキッチリしているあたりが、少し憎たらしい。
+
+　しかし小鳥遊さんもそう返されるのは想定済みだったらしく、ニィッと小悪魔的な笑みを浮かべる。思わず言葉を止める師匠。小鳥遊さんはそれを確認すると「ところで」と突然私の方に、一見無関係と思える話題を振ってきた。
+
+「ウサくんさ、カタン、たのし？」
+
+「は？」
+
+　突然意外な質問をしてくる小鳥遊たかなしさん。その表情が、幼少期に私とどうぶつしょうぎをしてくれた母親のそれに重なり、少し動揺してしまう。
+
+「そ、その質問、この話になんの関係が……」
+
+「いいからいいから。今やってるカタン……ってか、ボドゲ、好き？」
+
+　……どう答えたものだろう。私本人という意味では勿もち論ろんボドゲは好きだが……。
+
+　私は二択の間で少しの間逡しゅん巡じゅんするも──最終的には「自然な演技のため、無駄な噓うそは極力排除すべき」と結論した。
+
+「うん、好きだよ、ボードゲーム。楽しいよね」
+
+　それは、宇佐樹いつきというキャラを身に纏まとってから、おおよそ初めてにして最大の、心からの言葉だった。
+
+　それが伝わったのだろうか。小鳥遊さんもまた、ニカッと快活な笑みを浮かべる。
+
+「ならチョージョー！」
+
+「？」
+
+　私の──というか恐らくは「ウタマル」から影響を受けた言い回しをする小鳥遊さん。その意図が分からず私と師匠が目を見合わせていると、彼女は意気揚々と続けて来た。
+
+「ウサくんさ、今後暇な時は、あたしの送り迎えに加えて可能な限り『クルマザ』に遊びに来てよ」
+
+「キミの働くボドゲカフェに？」
+
+「そ。で、バンジョー……あ、私の同僚ね。彼と三人で、一緒にボドゲ遊んでよ。そうしたら、少しはあたしたちの距離も自然に近づくじゃん？」
+
+「それは、そうだけれど……」
+
+「あ、もちろん、カフェ代金なんかはそっちの経費で落としてもろて」
+
+「待ーて待て待て」
+
+　流石に看過出来ない提案だったらしく話を中断してくる師匠。小鳥遊さんが目を丸くする。
+
+「あ、鉄ならあげないよ？」
+
+「いや今はカタンじゃなくて、レンタル彼氏のカフェ通い提案の話だ。宇佐の拘束時間を増やす上に、その代金までこちらで出せだって？　そんなのは……」
+
+「あはは、やっぱこの交渉提案はムリめ？」
+
+「当たり前だ。たとえ拘束時間の件はさておいたとしても、もし本当に宇佐を──レンタル彼氏をボドゲに付き合わせたいなら、その料金はキミが負担して然しかるべきだろう」
+
+「だよねー。うーん、でもあたしもしょーじきそこまで懐ふところ事情が……」
+
+「だったら、やはりその提案は却下──」
+
+　師匠がそう言いかけたその時だった。私は思わず身を乗り出して話を遮る。
+
+「あ、ちょっと待って下さい社長」
+
+「？　なんだ、ツクちゃ──宇佐」
+
+「少し、お耳を」
+
+「？」
+
+　私と師匠は小鳥遊さんに聞こえないよう顔を寄せ合い、小さく相談を始める。
+
+「今の提案、オレ──いえ、私、歌うた方かた月つき乃のとしては大変重畳なものなので、是非受けたいです。それこそ、カフェ代金は私のバイト代から天引きで構いませんので」
+
+「？　それはまたどういう？」
+
+「どういうも何も。お忘れですか？　そもそも私が師匠の元でバイトする目的を」
+
+「それはまあ、ツクちゃんのボドゲカフェ通いの代金を賄うため……。……あ」
+
+「そうです。なので私の給料がボドゲカフェ代金に直接充あてられても一切問題ありませんし、もっと言えば、拘束時間の問題だってないようなものです」
+
+「ああ、元々はボドゲの時間確保のために短時間のバイトしたがってただけだものな」
+
+「はい。更に言えば、この完璧に変装した『宇佐樹』のキャラでクルマザに出入り出来るのもありがたいです。なにせこれまでの薄い変装状態の『ウタマル』に関しては、最近その正体がバレかけてきていましたので……」
+
+「つまりツクちゃんにとって小鳥遊君の今の提案は、一石三鳥というわけか」
+
+「はい。ですから……」
+
+「うむ」
+
+　密談が終わったところで、改めて小鳥遊さんの方を振り向く私達。師匠はこほんと咳せき払ばらいすると、彼女へと切り出した。
+
+「やはりその提案、喜んでお受けしよう」
+
+「なんでやねん」
+
+　即座に謎関西弁でツッコミを入れてくるギャル。彼女は勢い良く続けて来る。
+
+「一分前まで完全に却下の流れだったじゃん！」
+
+「不服かい？」
+
+「う、ううん、むしろありがたいけどさ。でもその分、怪しさがパないってゆーか！」
+
+　当然の疑問だろう。私は少し考えた後、それらしい理由をでっち上げることにした。
+
+「あー……小鳥遊さん。実はその提案、うちの会社というよりは、オレ的にメリットが多いんだよね」
+
+「どゆこと？」
+
+　小鳥遊さんが首を傾かしげる中、師匠も怪け訝げんそうにこちらを窺うかがう。恐らく、どこまで何を言うつもりなのか測りかねているのだろう。
+
+　私はカタンの手札とボードを見やりながら、小鳥遊さんに応じた。
+
+「キミの彼氏を演じながらボードゲームに興じることは、オレの『本業』の糧かてにもなりそうって話さ。あと羊、くれない？」
+
+「やらん。ってか、本業？　あ、ウサくんって実際は役者さんの卵とか？」
+
+「そこはまあ、ご想像にお任せするけど。じゃ、また道だけ引いて手番終了で」
+
+　ボドゲに興じながら肩を竦すくめる私。……実際噓はついていない。むしろほぼほぼ本音を言ってはいるものの、大事な核心だけボカしている状況だ。
+
+　師匠が感心したように見てくる中、小鳥遊さんが納得したように頷うなずく。
+
+「そーゆーことなら、まぁ納得……かな？」
+
+「じゃ、契約成立ってことで。具体的業務としては、キミの彼氏として日々の送り迎えに加え、時間がある時は客としても顔を出す、と。これで構わなかったかな、小鳥遊さん」
+
+「おけおけ。……あ、でも、既にして『それ』は彼ピ演じる上でちょい問題かな」
+
+「？　それ？」
+
+「『小鳥遊さん』」
+
+『あー』
+
+　私と師匠が同時に声を漏らす。二人とも全く気付いていなかったのだ。
+
+　小鳥遊さんが心底呆あきれたように嘆息する。
+
+「ちょいちょい、しっかりしてよぉ、もぅ。レンタル彼氏の派遣会社でしょ？」
+
+「いや別にレンタル彼氏専門ってわけじゃ……」
+
+「にしたって、だよ。……はぁ。これ、ちゃんと詰めといた方が良さそうだね」
+
+「ああ、そこはオレも同意だよ、たかな──。……みふる」
+
+「お、いいじゃん！　なんかムダに自然。ウケるｗ」
+
+　無駄に自然の意味は分からなかったけれど、気に入って貰もらえたようでなによりだ。
+
+　私はカタンの手番が自分に回ってきたのを確認すると、サイコロを振り、それにより算出された素材を見て──宣言した。
+
+「あ、今出た土で道を更に引くね」
+
+　そのムーブを見て、小馬鹿にしたように笑ってくる小鳥遊さん。
+
+「あはは、これだからボドゲシロートくんは。いい？　ウサくんさぁ、このカタンっていうゲームは、基本的に家や街を作って点数を稼ぐゲームで、道ばっか引いても点には……」
+
+　しかし私はそんな小鳥遊さんの発言を遮るように続ける。
+
+「で、今の街道建設によって、オレの引いた道が盤上で最長の交易路になったよね？」
+
+「え？　あ……」
+
+　小鳥遊さんの顔がサッと青ざめる。それというのも……。
+
+「で、このゲーム、道それ自体は点数にならないけど、確か、盤上で最長の交易路を保持するプレイヤーには『最長交易路』という称号カード……勝利点が２ポイントついたカードが贈られるって話だったよね？」
+
+「え、えーと……どど、どうだったかなぁ？」
+
+「いや、たかな──みふるが最初にそう説明してたじゃん。しかも、その称号はプレイヤー間を移動するとも。つまりは……」
+
+「う……！」
+
+　ササッとテーブル上の何かを手で隠す小鳥遊さん。往おう生じょう際ぎわが悪い。オレはにこっと笑うと、その指の隙間から見える最長交易路カードを指さして、告げる。
+
+「みふるからその『最長交易路カード』がオレに移り、そしてこの瞬間、オレの総合得点は10点──つまりはこのゲームのゴールに到達。オレの、勝ちだ」
+
+「いやぁあああああああああああああああああああああああああ！」
+
+　勝利宣言した瞬間、頭を抱えてテーブル上に突っ伏す小鳥遊さん。更に師匠が追い打ちをかける。
+
+「ああ、小鳥遊君が最長交易路を──勝利点を奪われたってことは、結果的に、二位はこの私ということになるな」
+
+「あああああああああ！　完膚なきまでに『インスト負け』したぁああ！　バンジョーいないのにぃ！　ここでなら、経験者ムソー出来ると思ったのにぃ！」
+
+　うん、打ち合わせがてら簡単なボドゲしようとか、彼女にしては珍しい提案してきたなと思ったら、どうやら素人しろうと相手にブイブイ言わせたかっただけらしい。なんて浅はかな……。そして彼女は知る由よしもないことだけれど、ボドゲ初心者とはいえ、私達は女流棋士と元女流棋士だ。なめてかかるには相手が悪すぎる。そして……。
+
+「（やっぱり普段の彼女の強さって、バンジョーさんありきなのかも……）」
+
+　改めてそれを実感する。いつも「ウタマル」として、彼女とバンジョーさんとの三人で遊ぶ時は、彼女、手がつけられない程強い。なぜなら、バンジョーさんが彼女にとことん甘いから。っていうか、甘くしないと、むしろそれはそれで弱すぎてゲームにならないから。つまりボドゲカフェ店員としては致命的なのだけれど……それでも彼女と興じるボドゲは最高に楽しいから不思議だ。
+
+　その証拠に……。
+
+「ふむ、こういうボードゲームも存外楽しいな。私もカフェ、行ってみようかな」
+
+　珍しく師匠が興味を抱いていた。その反応に私は思わずほっこりしてしまうが……そんな中、ダダをこね続けていた小鳥遊たかなしさんがとんでもないことを言い出した。
+
+「なんか……バンジョー（盤上）に関するアレコレで、最終的にウサくんに勝利をかすめ取られるって、妙な示唆を感じちゃうなぁー」
+
+「げほっ、げほ」
+
+　思わず噎むせる私。師匠がニヤニヤこちらを窺う中、私は喉を整えて切り返す。
+
+「な、何を馬鹿なことを。これだから、みふるは……」
+
+「お、なんか今の名前呼びは、ガチめの彼ピっぽい。いいね」
+
+　ぴょこんと机から顔を上げて微ほほ笑えむ小鳥遊さん。本当に、表情がコロコロ変わる子だ。カフェで客に好かれるのもよくわかる。同性の私でさえ、少し照れてしまう。
+
+「そ、そうかな？」
+
+「うん。あー、でもそのテイストって、ナチュでデフォに出せるもんじゃなさそくね？」
+
+「あー……それは、そうかもね」
+
+　確かに私の演技は「実」を伴ってこそようやく成立するレベルだ。
+
+　と、私達の会話を聞いていた師匠が「だったら」と、カタンの説明書を眺めながら片手間にアドバイスを授けてくれる。
+
+「こういう打ち合わせの場だったり、なんだったら二人きりの時さえも『彼氏設定』でやりとりしたらいいんじゃないか？　その方が、より演技も早く馴な染じむってもんだ」
+
+『あー』
+
+　二人、思わず納得して目を見合わせる。それは妙案かもしれない。こうして打ち合わせの時の私と、彼氏を演じる時の私で「オン／オフ」するぐらいなら、いっそずっとオンのままでいた方が効率的かもしれない。
+
+　小鳥遊さんもそう思ったらしく、「いいね」と乗ってきた。
+
+「その方があたしもノれそう。ま、ウサくんさえ良ければ、だけど」
+
+「ああ、勿もち論ろん。よろしくな、みふる」
+
+　オレがそう、彼氏然とした微笑をつくると。
+
+　小鳥遊さんもまたそれに応じてくれようと──
+
+　──突如「しな」を作って、くねくねと体を動かしてきた。
+
+「あはぁん、こちらこそぉ！　あーん、ウサくん、大しゅきぃ☆」
+
+『…………』
+
+　途端に頭を抱える女流棋士達。……本当に演技に問題を抱えていたのは、どうやら私の方じゃなかったらしい。
+
+「え、なになに？　二人とも、どしたん？」
+
+『……あの、やっぱり今日の交渉、やり直すわけには……』
+
+「ん？　カタンの話？」
+
+『……はぁ』
+
+「ちょ、なになに？　なんなのさぁ、もう！」
+
+　結局、この日の打ち合わせ──という名の演技指導は、日が暮れるまで続いたのだった。
+
+
+
+＊
+
+
+
+　期せずして長丁場になった演技指導とカタンを終え、各おの々おの解散の準備を進めていると。
+
+「あー、小鳥遊君。帰宅前に一つだけ確認いいかな？」
+
+　社長席で打ち合わせ中にとったメモを眺めながら、師匠が切り出して来た。
+
+「はい？　なんです？」
+
+　カタンを片付ける手を止め、不思議そうに顔を上げる小鳥遊さん。私も飲み物の片付けをしながら、二人の会話に耳をそばだてる中、師匠がおもむろに口を開いた。
+
+「このレンタル彼氏の本目的は、どこにあるんだい？」
+
+「？　ほんもくてき？」
+
+「ああ。確かキミはバイト先の同僚君に彼氏を見せつけたいとの話だったよね？」
+
+　師匠の言葉に、小鳥遊さんが頷く。
+
+「あ、はい、そうですね。バンジョーに……」
+
+「それはなぜだい？」
+
+「へ？」
+
+「いや、だから。そのバンジョー君とやらにわざわざ彼氏を見せつけたい理由だよ。今日はボドゲで幾分はぐらかされたのもあって、そこが聞けてなかったなって」
+
+「……それ言う必要あります？」
+
+　珍しく少し身構えた様子で応じる小鳥遊さん。その僅かにひりついた空気を受け私も思わず完全に洗い物の手を止めてしまう中、師匠がフォローするように応じる。
+
+「いや、勿論答えを無む理り強じいする気はないよ。ただ、こちらがそのあたりの詳細な事情まで共有出来ていれば、それ相応に演技が行き届くこともあるかと思ってね」
+
+「……どゆこと？」
+
+「うーん、そうだなぁ。……たとえばただイケメン彼氏を友達に自慢したいだけの依頼と、ストーカー対策に偽装彼氏を雇いたいという依頼じゃ、同じ『彼氏のレンタル』でも、全然演技プランが変わってくると思わないかい？」
+
+「あー、なっとく」
+
+　小鳥遊さんが納得した様子を見せる。実は私も内心じゃ「なるほど」と感心していたが、なんとか表に出すのは堪こらえた。そんなことをすれば、演技素人だとバレてしまう。
+
+　師匠が続ける。
+
+「で、どうなんだい？　シンプルに見み栄えを張るのが目的って解釈でいいのかい？」
+
+「みえをはる……あー、うーん、そだね、見栄かぁ……」
+
+　若干答えに迷う素振りを見せる小鳥遊さん。そして、ふと、小さく呟つぶやく。
+
+「……あはは、どちらかといえば、張るのは『虚勢』かな……」
+
+『虚勢？』
+
+「うん。やっぱ、あたしが幸せにしてるとこを、見せつけていきたいっていうか……」
+
+　その若干彼女らしくない態度に、思わず目を見合わせてしまう私と師匠。
+
+　が、小鳥遊さんはすぐに「なんでもない」と表情を取り繕うと、いつものテンションに戻って続けてきた。
+
+「ま、ウサくん側の演技プランって意味じゃ、あたしが『見栄を張りたい』タイプの客って感じで思ってくれて全然解釈違いではないかな！　とにかく、自慢出来るイケメン彼ピムーブをバンバンかましてくれて、おけ！」
+
+　元気よくそう依頼してくる小鳥遊さん。師匠は「了解」と応じると、私の方に視線を向けてきた。
+
+「では宇う佐さもそれで構わないね？」
+
+「はい、問題ありません。今日の打ち合わせ通り『若干オラついたイケメン彼氏』で問題なさそうですね。いけますよ、はい。誠心誠意務めさせて頂きます」
+
+　そう応じつつ真面目に頷うなずくと、なぜか二人ともとても不服そうに私をつめてきた。
+
+　若干たじろぎつつ応じる私。
+
+「え、なんです？」
+
+「なんです？　じゃないでしょ、全く。あたしの彼ピって、そんな話し方だっけ？」
+
+「あ」
+
+　小鳥遊さんに指摘されてようやく気付く。……うん、今、完全に素の私で喋しゃべってしまっていた。
+
+　小鳥遊さんが盛大にため息をつく。
+
+「ちょっと、しっかりしてよぉ。今日決めたよね？　今後あたしと喋る時は、二人きりだろうがなんだろうが、もう普段からして『小鳥遊みふるの彼ピ・宇佐樹いつき』でいるって」
+
+「そうでしたね、小鳥遊さん。申し訳……」
+
+「あぁん？」
+
+「そ、そうだったな、みふる。わりぃわりぃ」
+
+　慌てて「宇佐樹」を作り上げる私。と、小鳥遊さんもまた、即座にモードを切り換えてきた。
+
+「ううん、全然いいよぉ、大好きなウサくん！」
+
+　……うーん……当初よりは大分マシになったとはいえ、彼女のこの演技もまだ違和感あるなぁ。これはお互いに、普段から積極的に会話して慣らさないと。
+
+　そんな私達のぎこちない様子を眺めつつ、師匠が呆あきれ気味に呟く。
+
+「やれやれ。まともな代金は発生しないわ、彼氏役と顧客が互いに演技指導をするわ、果ては偽装恋人関係が半ばプライベート会話にまで浸食するわ。ほとほと、ただのレンタルパートナーとは言い難がたい複雑さだな、キミ達は」
+
+「たしかに」
+
+　師匠の言葉に思わず頷いてしまう私。と、しかし小鳥遊さんはカタンの片付けを再開しながら「いやいや」と彼女らしいシンプルな答えを提示してきた。
+
+「んなの、もうフツーに『友達』って言い方でよくない？」
+
+　その飾り気のない表現に、内心少しきゅんとしてしまう私。いや、ずっと将棋一筋の人生だっただけに、同年代の子からこうもあけすけに友達と表現されることがなく……。……正直、もの凄すごく、重畳だ。友達か……友達。ふふっ。
+
+　けれど師匠──いや社長は無慈悲だった。
+
+「いや、残念だがそれはよくない。その表現を使った途端、ビジネスというものは破綻するからね」
+
+「うーわ、でたよ、大人の悪いとこ。うっざ」
+
+「う、ウザいとはなんだ、ウザいとは。いいかい小鳥遊君、こういうのはだねぇ──」
+
+「はいはい、分かりましたよ、分かりました。私とウサくんは友達じゃないですー」
+
+　ぐ。地味に心へダメージを受ける私。
+
+「分かればいいんだ、分かれば」
+
+　マリさんは悦に入っているが……正直なところ「友達」を否定されてしまった私はモヤモヤを抱えてしまっていた。
+
+　結果思わず……また演技も若干忘れて質問してしまう。
+
+「じゃあ結局、オレと小鳥遊たかなしさんの関係って、ビジネスパートナーでいいのかな？」
+
+「えー、なんかそれ、カワイくなーい。もっとなんかさぁ、こう……」
+
+　そこまで言ったところで、ふと言葉を止める小鳥遊さん。見れば、テーブル上に転がっていた二つのダイスを、ジッと見つめている。
+
+「レモン飴あめと、コーラ飴……」
+
+　何かを懐なつかしむように、温かく……そしてどこか切なげに呟く彼女。
+
+「みふる？」
+
+「あ、ごめんごめん。えっと、あたしとウサくんの関係の話だったよね」
+
+「ああ。友達表現はダメだとか、ビジネスパートナーは可か愛わいくないとか」
+
+「それなんだけどさ。丁度いい表現を一つ、思い出してたんだよね」
+
+「思い出す？」
+
+「うん。ウサくんとあたしはさ、今後、いわゆる……」
+
+　小鳥遊みふるはそこで、一拍置くと。
+
+　その垢あか抜ぬけた外見にたがわない、妙に軽薄な言い回しで、この場を締めたのだった。
+
+
+
+「遊びの関係、ってことで」-->
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">Impress一週間シリーズ</div>
+                    <a target="_blank"
+                        href="https://www.amazon.co.jp/1%25E9%2580%25B1%25E9%2596%2593%25E3%2581%25A7C%25E8%25A8%2580%25E8%25AA%259E%25E3%2581%25AE%25E5%259F%25BA%25E7%25A4%258E%25E3%2581%258C%25E5%25AD%25A6%25E3%2581%25B9%25E3%2582%258B%25E6%259C%25AC-%25E4%25BA%2580%25E7%2594%25B0%25E5%2581%25A5%25E5%258F%25B8-ebook/dp/B08FSKF3KV/?_encoding=UTF8&amp;pd_rd_w=3xi81&amp;content-id=amzn1.sym.40b77006-462b-43ea-a608-25dcf53d35e8&amp;pf_rd_p=40b77006-462b-43ea-a608-25dcf53d35e8&amp;pf_rd_r=356-2661968-1499022&amp;pd_rd_wg=qMTA2&amp;pd_rd_r=e8c5a384-baaa-44de-b378-64b99bb476e8&amp;ref_=aufs_ap_sc_dsk&amp;_encoding=UTF8&amp;tag=s03ef-22&amp;linkCode=ur2&amp;linkId=f09d04a7a56f3a1a6923e6f3f2b5f7c5&amp;camp=247&amp;creative=1211"><img
+                            class="card-img-top" src="./index_files/c-lang-book.png" alt="1週間でC言語の基礎が学べる本"></a>
+                    <!-- 
+【最終話　放課後のキングメーカー（Ｄａｙ１６５）】
+
+
+
+「ねぇ、バンジョー、はやくぅ」
+
+「う……そんな、小鳥遊さん、急せかさないで……」
+
+　ようやく暑気が和らぎ始めたある日の夕方。ボードゲームカフェ、「クルマザ」にて。
+
+　同僚の女子高生ギャルの小鳥遊みふる（17歳）が、制服の胸元のリボンをほどきつつ、僕に猛烈なアプローチをかけてきていた。
+
+「じらさないでさぁ……ちょうだいよぉ。ねぇ。バンジョーの……たまった、ソ、レ」
+
+「い、いやぁ、でも、あの、それはその、悪いっていうか、申し訳ないっていうか……」
+
+「申し訳ないって、誰にぃ？」
+
+「だ、誰にって……」
+
+　小鳥遊さんの誘惑から逃れるように、もう一人の同卓者へと視線を逃がす。
+
+　そこにいたのは──
+
+「常盤ときわ君。……分かっているよね？」
+
+　──金髪の美青年にして、小鳥遊さんの彼氏、宇佐樹君だった。
+
+　自分の彼女が僕に猛烈なセックスアピールを仕掛けている光景を、恐ろしく冷たい目で見下してくる美青年。
+
+　僕は滑稽な程にガタガタと震えながら、童貞引きこもりコミュ障丸出しのとっちらかった言い訳をかました。
+
+「ち、ちちち、違うんだ宇佐君。これはその、小鳥遊さんが、強引に……」
+
+「ふーん。……常盤君って、そういう言い訳するんだね。なんだか、がっかりだな」
+
+「ぐっ！」
+
+　彼の深い失望を湛たたえた表情が、胸にグサリと突き刺さる。なんだろう、毎度のことながら、宇佐君からの軽蔑って、ただ想おもい人の彼氏さんに敵意を向けられた──ということ以上のダメージがある。不思議だ。
+
+　僕は小鳥遊さんを拒絶するように彼の方へ体を向けて、更に本気の弁明を続ける。
+
+「あ、あの、ホントに僕としては、みふるさんに『奪われる』つもりはなくて……」
+
+　そうわたわたと言い訳をする僕に。宇佐君はいつもの、同性でもうっとりしてしまうようなイケメンスマイルを浮かべたかと思うと──
+
+　──ダンッ、と、壁ドンならぬ卓ドンを伴いながら、僕にぐいっと顔を近づけてきた。
+
+「じゃあ、オレが貰もらっても構わないよな、常盤君」
+
+「ふぁ？」
+
+　宇佐君のあまりに整った顔がすぐ間近に迫ってきて、心臓が早鐘を打つ。あ、あれ、やばい、僕、これまでの自分のセクシュアリティに確信が持てなくなってき──
+
+「ちょっと、バンジョー！」
+
+　──刹那、ぐいっと肩を摑つかまれて強制的に振り向かされる僕。見れば、目の前にはやたらと艶めかしく迫って来る小鳥遊さんの姿があった。
+
+　彼女が、僕の肩を摑んだまま、潤んだ瞳で訴えかけてくる。
+
+「ねぇ、おねがぁい、バンジョぉ。あたしにぃ、だしてよぉ！」
+
+「ヒュッ」
+
+　ギャルからの誘惑が理性キャパを超えた際に童貞の出す音がこちらになります。
+
+　思わず放心からの硬直を決める僕。それに対し、今度は逆サイドから……そっと顎の下へと同性とは思えないほどの滑らかな指が滑り込んできたかと思うと、そのまま、滑らかに顔の向きを誘導された。
+
+　見れば、もはや呼吸さえ感じられる程の距離に美青年の顔があった。
+
+　僕の顎に指を当てたまま、彼は艶なまめかしく告げる。
+
+「いいからオレに捧ささげなよ、常盤君。……良くしてやるから、さ」
+
+「ギャッチェ」
+
+　あ、こちらは童貞の性的自認がグネった際の音になります。珍しいもの聞けましたね。
+
+　そうして僕が完全にキャパオーバーを起こす中、二人の争いはなおも加速していく。
+
+「もう我慢出来ない！　ほら、出して！　あたしが抜いてあげるから、バンジョー！」
+
+「いやいや、常盤君の心は『こっち』に傾いているはずだよ。ね？」
+
+「心なんかより、ホンノーに身を任せなよ。ね、バンジョー！」
+
+「いいや常盤君。本能を超えた先にこそ、本当の楽園があるんだよ」
+
+「ねぇバンジョぉー」
+
+「常盤君！」
+
+　そうして二人に迫られに迫られた末。僕は……僕という童貞の、脳みそは──
+
+　──一周して、賢者タイムにも近いモードに入ったことで、改めて冷静でシンプルなツッコミを弾はじき出したのだった。
+
+
+
+「いやこれ、ただの『カタン』の素材交渉ですよねぇ！」
+
+
+
+　バンッと机を叩たたきながら叫ぶ僕。卓上に広げられた『カタンの開拓者』のコマ達が揺れる。……こんな時でも、広げたボドゲの盤面が致命的にズレるような叩き方をしない自分の理性が少しだけ悲しい。
+
+　と、途端にこれまでの無駄に白熱した誘惑合戦はどこへやら。スーンと冷静になった様子の二人が、改めて本来の要求を口にしてくる。
+
+「いいからバンジョー、あたしに『麦』出せ、『麦』。一杯溜ため込んでいるんでしょ？　なんだったら、あたしが抜いてやってもいいよ？」
+
+「いいや、常盤君。ここは僕が『麦』を貰ってあげるから、勇気を持って捧げなよ。キミにも良い話だと思うからさ」
+
+「なんでその素材要求を一度意味深な言い回しに省略したの!?」
+
+　僕のもっともな疑問に、この色ボケカップルは顔を見合わせると、不満顔で応じてきた。
+
+『キミが優柔不断だから』
+
+「うっ！」
+
+　その切り返しにぐうの音も出ない僕。小鳥遊さんはすっかり白けた様子で僕から身を離すと、制服の胸のリボンを直しながら続けて来る。
+
+「バンジョーのターンで止まるの、これで何度目さ。あー、なんていうんだっけ、こういうダルい待ち時間のボドゲ用語」
+
+「ダウンタイムのことかな？　でも今の彼には『長考』という言葉の方が適切かも」
+
+　無駄にボドゲ知識の吞のみ込みが早いパーフェクト彼氏が余計なことを言う。
+
+　肩身を狭くする僕を横目に、ギャルが「それそれ」と彼氏に同調してきた。
+
+「ちょーこーね、ちょーこー。うちの店でもケッコー嫌われるタイプのやーつ」
+
+　その酷ひどい言い草に、僕はなんとか反論しようと試みる。
+
+「い、いや、ボドゲにおける長考は、むしろ勝負に真摯だからこそとも……」
+
+「や、トップ争いに無関係なバンジョーの長考は、ただのガチ害悪っしょ」
+
+「がはっ！」
+
+　リスキルレベルの瞬殺を喰くらう僕。相変わらずギャルが振り回す言葉のナイフは鋭かった。しかも僕に関してはこっそり「好きな人からの苦言」という種族特攻もかかってるから、尚なお更さらだ。
+
+　僕が心の致命傷からダクダク血を流していると、宇う佐さ君がフォローを入れてきた。
+
+「まぁ常盤君の気持ちも分からないじゃないけどね。実際難しい立ち位置だと思うよ、この……なんていうか……」
+
+　そこで少し言葉を選んで、しかし結局は無慈悲にならざるを得なかった様子で切り出してくる宇佐君。
+
+「オレとみふるが苛烈なトップ争いをする最中、優勝の目が皆無な三位って状況は」
+
+「うぅ……」
+
+　彼の的確な状況分析に、思わず項うな垂だれる僕。そう、その通りなのだ。
+
+　現在僕らは、なにやらこのカップルの思い出のボードゲームだとかいう、僕にとってはクソみたいな理由で、今更ながらに「カタンの開拓者」を遊んでいるわけだけれども。
+
+　このゲーム、初心者も楽しめる古典的名作枠であるその一方で、ダイス運によってはかなりエグい差が生まれてしまいがちなゲームでもある。結果今回は僕にそのしわ寄せが来たようで。10点先取のゲームで、小鳥遊たかなしさんと宇佐君が共に９点をとってる中、僕は４点とかいう体ていたらくだった。ぶっちゃけもう僕に勝ち目などない。
+
+　だから、僕が僕のターンに何をするか、誰と素材交渉をするかなんて、もう殆ほとんど意味がなく、僕自身がぞんざいに手番をこなしてしまうレベルなのだけれど……そうではないのが、このバカップルだ。
+
+　このターンで僕が誰と交渉するかが、残りの１点の行く末を──勝者の決定を左右するのだから。結果、あのような不可解な誘惑合戦に陥ったわけで。
+
+　と、そこで小鳥遊さんが「でもこれ、変な感じだよねー」と、手に持った素材カードで自らの首筋を煽あおぎながら疑問を呈してくる。
+
+「このゲームで全然優勝争いに絡からめないザコザコ最下位のバンジョーが、でも、あたしとウサくんのどちらが優勝するかの鍵を握ってるわけっしょ？」
+
+「確かに、将──囲碁とかみたいな二人対戦のものにはない、三人以上で遊ぶボードゲームならではの特異な状況だよね」
+
+　宇佐君が興味深そうに頷うなずく。彼のこういうボドゲへの純粋な興味は、僕にとって本当に好ましい。ある常連さんを想起するというか。まぁ、今なんで一度「将棋」と表現しかけたものを、わざわざ「囲碁」に言い直したのかはよく分からないけど。
+
+　僕は二人の疑問に対し、おもむろに眼鏡のブリッジを上げつつ解説を始めた。
+
+「いわゆる、キングメーカー問題というやつですね、これは」
+
+「キングメーカー問題？」
+
+　素直に聞き返してくれる宇佐君。ふふ、いい人だ。対して、僕の雰囲気から何かを察した小鳥遊さんは、珍しく「あ、バカッ」と愛いとしのカレシにツッコミを入れていた。
+
+　小鳥遊さんの危惧を無視して、僕は滔とう々とうと解説を始める。
+
+「そうなんだよ、宇佐君。今回みたいに、一位争いの決定打を、そこに直接は絡まない人間が持ってしまうような状況を、ボドゲ界かい隈わいじゃ『キングメーカー問題』と表現したりするんだよね」
+
+「へぇ、それは興味深いね」
+
+「でしょでしょ？　問題の根深さはさておき、現象としては興味深いよね」
+
+「うんうん」
+
+「ああ、もうこいつら、これだから……」
+
+　ボドゲ知識で盛り上がる男性陣を、呆あきれた風に眺めるギャル。うーん、どうしてこの手のシステム周りの不思議なジレンマを楽しめないかなぁ小鳥遊さんは。こんなん皆好きでしょ。普通。絶対。実際宇佐君はこうしてノってくれているわけだし……。
+
+「おい、この場で三対二だからってチョーシのんなし、バンジョー」
+
+「え、なんで僕が考えていることが!?　エスパー!?」
+
+「いや、この場合そっちがサトラレ。ホント、わかりやすいんだっつの」
+
+　そう言って苦笑する小鳥遊さん。……やばい。これが呆れられてるニュアンスだってのはちゃんと分かっているんだけど、なんだろう、好きな人が僕のことを深く理解してくれているという、その事実がただただ嬉うれしい。ニヤけかけてしまう。
+
+「…………」
+
+　と、気付けば宇佐君にジーッと見つめられてしまっていた。僕は慌てて咳せき払ばらいをして解説へと戻る。
+
+「まあ実際あんまり健全な状況とは言い難がたいんだよね。トップ争いの鍵を、それ以外の第三者が握っちゃうってのは」
+
+「あぁ、その判断に盤外の私情なんかを絡めちゃった日には、もう喧けん嘩か案件だよね」
+
+「そうなんだよねぇ。でも私情以外の判断材料が皆無な状況もあるわけで」
+
+「それは、問題のキングメーカーさん側としてもお辛つらいところだね」
+
+「そうなんだよ」
+
+　まるで拮きっ抗こうした多数決の最後の一票を託された人間だ。どちらに加担しても角が立つ。そもそもこの状況になった時点で、半ば詰んでるような状況。
+
+　と、そこで小鳥遊さんが突如「いやいや、これ、たかがボドゲじゃん」とボドゲカフェ店員にはあるまじき──しかし彼女らしい真理をついてきた。
+
+「誰が勝ったって、別にどーでもよくない？」
+
+「なるほど。流石さすがはコミュ力強者の小鳥遊さん、感心するほど大人なご意見だ」
+
+「ふっふー、そうじゃろてそうじゃろて」
+
+　僕からの賛辞に気を良くする小鳥遊さん。僕は笑顔で「ええ、ホントに」と相あい槌づちを打ちつつ、スッと──宇佐君に素材カードを差し出した。
+
+「じゃ、今回は宇佐君に『麦』をあげましょう」
+
+「ありがとう。じゃ、それを使って開拓地を作って、はい、ゴール！　オレの勝ち！」
+
+「ちょ、ええええええええええええええええ!?」
+
+　突然の勝敗決定に、愕がく然ぜんとして立ち上がる小鳥遊さん。彼女は怒り心頭といった様子で僕を睨にらみ付けてくる。
+
+「なにそれ!?　全然納得いかないんだけど、バンジョー！」
+
+「はい、それこそが『キングメーカー問題』です、小鳥遊さん。分かりました？」
+
+「くぅう！」
+
+　悔しそうに呻うめいてその場でドタドタと足を踏みならすギャル。いやホントに「地団駄を踏む」人、まだこの令和にいるんだな……。
+
+　僕は苦笑い気味に続ける。
+
+「まぁまぁ、小鳥遊さん。ここはひとつ『痛み分け』ってことで許してよ」
+
+「いたみわけ？」
+
+「うん。負けた小鳥遊さんは勿もち論ろんだけど。僕だって確実に恨みは買うわけだし……」
+
+　僕の言葉に、宇佐君が頷きつつ続ける。
+
+「オレはオレで、自分の力で勝った感がすっごい薄くてビミョーすぎるし」
+
+「そうなんだよね。根が深いよね、キングメーカー問題」
+
+「いやそっち側がそのテンションだと、あたしの悔しさもひとしおなんだけどぉ」
+
+「そうなんだよね。根が深いよね、キングメーカー問題」
+
+「常盤ときわ君がＢＯＴ化しちゃったよ。マジで根が深いな、キングメーカー問題」
+
+　そんなわけで三人それぞれに別種の苦いものを抱えながら、ボドゲを片付ける。
+
+　しばらく作業を続けたところで、ふと、小鳥遊さんが完全に片付けの手を止めてしまっていることに気がついた。僕はそれをいつものサボりだと解釈し、思わず咎とがめるように彼女の名を呼んでしまう。
+
+「ちょっと、小鳥遊さん」
+
+「…………」
+
+　しかし、どうも少し様子がおかしい。彼女はカタンの「盗賊コマ」を指先で摘まんで眺めつつ、なにやら切なげに呟つぶやいていた。
+
+「……キングメーカー……か」
+
+「？」
+
+　僕が不思議に思っていると、突然コマから視線を離してこちらを見てくる小鳥遊さん。
+
+　先程のゲームのことで何か文句でも言われるのかと咄とっ嗟さに身構えるも、予想に反して彼女は──なぜか、痛い程の切なさを湛たたえた笑みを僕に向けた。
+
+「バンジョー、さっきどうしてウサくんを勝たせたの？」
+
+「え？　だからそれは、小鳥遊さんの直前の発言が……」
+
+「でもウサくん勝たせたら、あたしがバンジョーに怒るって、分かってたじゃん？」
+
+「そ、それは、まぁ、そうだけど」
+
+　彼女が何を言わんとしているのか未いまだ摑つかめない僕。それに対し小鳥遊さんは、相変わらずどこか切なげな顔で、盗賊コマを弄びながら続けてきた。
+
+「逆に、あたしを勝たせた場合は、ウサくん、あんまり怒らなかったと思うんだよね。あたしの彼ピ、超イケメン紳士だから。ね、ウサくん」
+
+「ん？　ま、そうだね」
+
+　普通にサラッと受け容いれる宇佐君。超イケメン紳士というハードル爆上がりワードを素直に受け取れる度量がエグい。僕には一生無理な芸当だ。
+
+　僕が勝手に宇佐君との男としての格の違いに打ちのめされる中、小鳥遊さんが続ける。
+
+「それでも、バンジョーはウサくんを勝たせた」
+
+「そ、それはだから、小鳥遊さんが直前に煽るような発言を……」
+
+「いや違うっしょ」
+
+　そこで小鳥遊さんは苦笑いして微ほほ笑えむ。
+
+「ホントの理由は──カタンがあたしとウサくんの、思い出のボードゲームだって話、したからだよね？」
+
+「…………」
+
+　ごくりと唾を飲み、思わず黙りこくる僕。それを肯定と捉え、小鳥遊さんが続ける。
+
+「ウサくんにインスト負けして、悔しかったけど、ウサくんのカッコイイとこ見れてあたしも超アガったって話、最初にしてたから。だから、その状況を再現してくれようとしたんでしょ？　思い出の再現で、あたし達を『二人とも』喜ばせるために」
+
+「……えーと……」
+
+　ま、まずい。バレとるがな。僕がキングメーカーになりそうだと判断した時点で、実はもう宇う佐さ君を勝たせることで、どうにか『二人とも満足』させようとしていた童貞の浅知恵、バレとるがな。
+
+　宇佐君が感心したように呟く。
+
+「あー、だからみふるが失言した時、あんなスピード感でオレに麦渡したのか常盤君。渡りに船とばかりに」
+
+「うぅ……！」
+
+　照れのあまりに俯うつむく僕。洒しゃ落れた気遣いをしたつもりが全部相手にバレてるとか、一番恥ずかしいやーつじゃないか。
+
+　呻く僕を、宇佐君が笑いながら見つめてくれている。まぁ僕が恥をかいても、二人が機嫌よくゲームを終えられるならそれでいいか。
+
+　僕がそんな風に結論付ける中。小鳥遊たかなしさんもまた、僕へと最高に可か愛わいらしいはにかんだ笑顔を見せると。
+
+　手に持っていた盗賊コマを卓上にコトリと置き。
+
+「バンジョーのそーゆーとこさ。あたし……」
+
+　そう言いつつ椅子から立ち上がったかと思うと、最高の笑顔で僕を見下ろして──告げて来たのだった。
+
+
+
+「前から、サイッコーに、気に食わない」
+
+
+
+「……え？」
+
+　一瞬何を言われたのか分からず呆ほうけてしまう僕。見れば宇佐君もビックリした様子で片付けの手を止めてしまっていた。
+
+　対して小鳥遊さんはと言えば──
+
+「っと、そういやそろそろ備品補充の買い出し行かなきゃだったよね。丁度客いないし、あたし行ってくるわ」
+
+「え？　あ、いや、別に今日じゃなくても──」
+
+「じゃね。しばらくボドゲ大好き男子ズで遊んでてー」
+
+　──言うや否いなや、止める間もなくエプロンを外し、颯さっ爽そうと退店していってしまう小鳥遊さん。入り口のベルがカラコンコロンと鳴り、その余韻さえも完全に消え去ってから……僕はようやく口を開いた。
+
+「えっと……う、宇佐君」
+
+「なんだい？」
+
+「彼氏さんの目から見て……僕、なんか小鳥遊さんの地雷踏むようなことでもした？」
+
+「うーん……いや、どうだろう」
+
+　困ったように頭を搔かいて、宇佐君は答える。
+
+「みふるは確かにムラッ気のある性格しているけどさ、今のは流石のオレも驚いたよ。むしろどちらかといえば、常盤君を評価するような会話の流れだったしね」
+
+「そう……だよね」
+
+　少なくとも怒られるような立ち回りをしたつもりはなかったんだけど……でも事実として、小鳥遊さんは明らかに機嫌をこじらせてしまっていたわけで。
+
+　それも、ちょっとこれまで見たことないほど、真剣に。好きな人に……嫌われた。
+
+「……はぁ」
+
+　当然ながらすっかり意気消沈気味の僕。と、宇佐君が懸命にフォローしてくれる。
+
+「あー、常盤君？　何もそこまで落ち込まなくても」
+
+「いや、同僚に嫌われたら普通に落ち込むでしょ」
+
+　加えて僕にとって彼女は想おもい人でもあるのだ。嫌われたらサガるに決まってる。
+
+「んー……そこなんだけどさ。みふるは、確かに機嫌はこじらせてたけど、それはキミを『嫌い』だからじゃないと思うんだよね」
+
+「？　どういうこと？　宇佐君、小鳥遊さんが怒った理由、分かったの？」
+
+　僕の疑問に、爽やかな笑みで応じる金髪美青年。
+
+「まぁね。もちろん想像にはなってしまうけど、みふるは恐らく──」
+
+　宇佐君が何か言いかけたところで、カランコロンと店のベルが鳴った。
+
+　もう小鳥遊さんが帰ってきたのかと、入り口の方を見やる僕ら。
+
+　と、そこにいたのは──
+
+「失礼します。初心者一名なんですけど、大丈夫でしょうか？」
+
+　──同僚ではなく、客だった。それも──僕にとっては見覚えのありすぎる、客。
+
+　皺しわ一つないスーツに身を包んだサラリーマン風の好青年。その初うい々ういしく爽やかな容貌は一見就活中の大学生にさえ見えるが、実際には既に三十過ぎだったはずだ。
+
+　……本当に、あの頃と何一つ変わらない。
+
+　僕は椅子を鳴らして立ち上がると、懐なつかしむように呟いた。
+
+「……先生」
+
+「センセー？」
+
+　事情の分からない宇佐君が首を傾かしげて僕と「彼」を交互に見てくる。
+
+　そんな中、彼は穏やかで澄みきった──相変わらず人を無条件に魅了する眼まな差ざしを僕に向けて、口を開いた。
+
+「やぁ、孤こ太た郎ろう君。捜したよ。……キミの退学処分以来、かな」
+
+「……そう、ですね……羽は切ぎり先生」
+
+　思わず顔を青ざめさせながら応じる僕。……出来ることなら、まだこの人には会いたくなかった。会ってもいいことなど何一つないのだ。……少なくとも、僕にとっては。
+
+　そう、彼、羽切臣おみ虎とらは客は客でも──
+
+　──僕、常盤孤太郎にとって、最大級の「招かれざる客」だった。
+
+
+
+＊
+
+
+
+　彼、羽切臣虎との関係を一言で表現するなら、それは「恩師」だろう。
+
+　僕に勉強を、社会を、倫理を──道徳を、身をもって教えてくれた人。
+
+　そしてなにより──
+
+「え、じゃあ常盤君にボドゲを教えた『師匠』なんですか、羽切さんって」
+
+　宇佐君が手元のカードを選ぶ手を止め、目を丸くして訊たずねる。あれから約五分。何を話すにせよ、折角だから今ここにいる面メン子ツでボドゲをしながらにしようとなり。
+
+　先程までカタンに興じていたテーブルをそのままに移動。今こうして不思議な男性面子三名で新規のボドゲに……「ハゲタカのえじき」というカードゲームに勤いそしんでいた。
+
+　先生は宇佐君からの「ボドゲの師匠」発言に対し、自分の手札とにらめっこしつつも「いやいや」と苦笑いで否定する。
+
+「そんなんじゃないんだよ。入店時にも言ったように、ぼくはボードゲームに関しては素人しろうとといっていいレベルだからね」
+
+「またまた。常盤君を引きずりこんだ人が素人なわけないでしょう。あの常盤君ですよ？」
+
+　どの常盤ときわ君だろう。どうも宇佐君の中では現状、僕がボードゲーマー界の頂点みたいな扱いになっている気がする。
+
+　僕が困っていると、羽切先生が苦笑い混じりに説明を続けてくれた。
+
+「あー、なんというか、ぼくはあくまで、孤太郎君とボードゲームの接点を最初に作っただけなんだよ。それこそ、あの時は『カタン』だったっけね？」
+
+　羽切先生が僕の方に水を向けてくる。僕は一度、あらゆる感情を収めるべくごくりと唾を飲み込むと、どうにか平静を取り戻しつつ笑顔で応じた。
+
+「ですね。先生と、菜な摘つみさんと三人で遊んだカタンが、僕の本格ボドゲ原体験です」
+
+「？　ナツミさん？」
+
+「ああ、菜摘さんは、先生の奥さんだよ」
+
+　僕の説明に「へー」と納得する宇佐君。が、すぐに「ん？」と新たな疑問にぶつかったようだった。
+
+「いや学校の先生と、その奥さんと、生徒が三人でボドゲする状況ってなに？」
+
+『あー』
+
+　言われてみれば当然の疑問だった。僕と羽切先生は顔を見合わせ、どこからどう説明したものか、という視線を交わす。正直説明が面倒だし深掘りは避けたいのだけれど……。
+
+　結局は宇佐君の好奇心に満ちた──それでいて、彼特有の「一度気になったら止まるつもりがなさそう」な雰囲気に吞のまれ、観念することにした。
+
+　仕方ないので、僕の口から説明することにする。
+
+「えっとそもそもの話、僕と先生の出で逢あいって、生徒と高校教師という始まり方じゃないんだよね」
+
+「あ、そうなの？　じゃあ一体……」
+
+　そこまで言いかけたところで、宇佐君はボドゲ準備の手を止めると、僕と先生を交互に見て……「あ、分かったかも」と切り出してくる。
+
+「親戚だ、親戚。最初見た時から思ってたけど、なんか二人、雰囲気似てるよね」
+
+『あー』
+
+　また僕と先生のリアクションが被かぶる。確かに、こういうとこも含めて似てはいる。……うん、本当に……良くも悪くも、そっくりだ。
+
+　が、実際それだけだ。僕は首を横に振って続けた。
+
+「血のつながり的なものは本当に一切ないんだよ。だから似てるのはたまたま。うーん、なんだろ、阿あ佐さヶが谷や姉妹が似てる、みたいな感じかな？」
+
+「ふーん。じゃあ結局、二人ってどういう関係なわけ？」
+
+「まぁ端的に言えば『近所のおにーさん』ってやつだね。高校入学前……中学時代から遊んで貰もらってた、近所のおにーさん」
+
+「ああ、そういう……」
+
+　納得してくれた様子の宇う佐さ君。……うん、これならこれ以上の「深掘り」はされなくてすみそうだ。そうして僕がホッと胸をなで下ろしたのも束つかの間、まさかの身内──先生が、ボドゲ準備に集中していたせいか、ポロッと余計な補足を入れてきた。
+
+「まぁもっと厳密に言うなら、『近所のおねーさんの、旦那さん』なんだけどね」
+
+「？　つまり常盤君は、最初は羽切先生ではなくて、その奥さん──菜摘さん側と仲が良かったと？」
+
+「そうそう。で、そこに割り込んできたお邪魔虫がぼくというわけ──」
+
+「ごほんごほん！」
+
+　大きく咳せき払ばらいする僕。と、先生もハッとした様子で「ご、ごめん」と謝罪を口にして話を止めるも……もう後の祭り。
+
+　すっかり好奇心を刺激された様子の宇佐君が、爛らん々らんとした瞳でこちらを見ていた。……こういうとこ、「小鳥遊さんの彼氏」って感じするよなぁ。
+
+「おやおや、つまりそのおねーさんが常盤君の初恋の人だったりするのかい？」
+
+「ぐ……！」
+
+　こ、これだから深掘りされたくなかったんだ。
+
+　僕は宇佐君から視線を逸そらしつつ説明する。
+
+「き、近所の優しいおねーさんとか、一般的な男の子ならごく自然に憧れるでしょ？　そういうアレだよ。決してガチ恋みたいな話では……」
+
+　僕が言い訳を試みていると、昔から余計なことしかしない先生が補足してきた。
+
+「え、でも孤太郎君、初対面の時めっちゃぼくを睨にらんで来たよね？　正直、彼女のご両親に挨拶した時より汗かいたよ」
+
+「先生！」
+
+「ははは、やっぱガチ恋じゃん」
+
+　宇佐君がケラケラと笑う。こういうとこ、ホント小鳥遊たかなしさんの彼氏だよなぁ。
+
+　とはいえ彼もそれ以上いじることはなく、一旦ゲームを先に進めてきた。
+
+「っと、そろそろ皆手札選び終わったかな？」
+
+「あ、と、ごめん。少し待って」
+
+　促されて先生があわあわと手札選びを再開させる。宇佐君が「ごゆっくりどうぞ」と笑う中、僕は改めてこのゲーム……「ハゲタカのえじき」の説明を、見るとはなしに眺めた。
+
+　ルールは極めてシンプル。全員が１〜15の数字が書かれた手札を持っており、毎ターンそこから一枚出して、数字の大きさを競うだけ。当然、一番大きかった人が勝って点を得る。基本はホントそれだけ。
+
+　じゃあとにかく高い数字を出せばいいじゃんとなるのだけれど、そこがこのゲームのミソで、他の誰かと出す数字が被った場合、その数字は無効となってしまうのだ。要は相討ち、対消滅といったイメージだ。ボドゲではこれをよく「バッティング」と言う。
+
+　だからたとえば僕と先生が初戦で二人とも15を出して、宇佐君が１を出していた場合。このケースでは僕と先生がバッティングしたため無効。結果、残った宇佐君が勝ちとなるわけだ。数字は、最弱の１なのに。
+
+　で、このゲーム手札は使い切りだから、次のターン以降、僕と先生はもう「15」は使えないのに対し、宇佐君は「15」を温存している上、それを使う時は誰とも被る危険性さえないという、絶対的有利に立つわけだ。
+
+　また勝利によって得られる点も、最大で10点、最低でマイナス５点というグラデーションがついているため、ここぞという時に数字の高いカードで獲とりに行きたいけれど、でも相手も同じこと考えてて被ったらどうしよう……と悩みに悩むゲーム。
+
+　それこそが、この「ハゲタカのえじき」というカードゲームだ。
+
+「よ、よし決めたよ」
+
+　先生がようやく手札から一枚を選び、自らの目の前へと伏せる。ちなみに今回争っている得点は５。そこそこ欲しいけれど、無理をするほどでもないような、微妙な点だ。人によってかなり考え方のグラデーションが出るあたり。
+
+　だからそうそう被ることもなさそうなのだけれど……。
+
+「では……いっせーの！」
+
+　僕のかけ声と共に、全員が自分のカードをオープンする。その結果は……。
+
+　──宇佐君が３。僕と先生が９で丸被り、だった。
+
+「っしゃ！」
+
+　宇佐君がガッツポーズを決める。そうしてそのまま……。
+
+「これはちょうじょ──ラッキー！　あざーす」
+
+　ウキウキと得点を回収していった。残された僕と先生は、呆ぼう然ぜんと顔を見合わせる。
+
+「いや、なんで９なんですか、羽切先生……」
+
+「それはこっちの台詞せりふだよ、孤太郎君……」
+
+　二人、同時に深くため息をついて、今使った「９」のカードを捨て札にする。
+
+　と、その様子を見ていた宇佐君が楽しそうに笑った。
+
+「ホント似てるよね二人とも。でも、なんで９？」
+
+　その問いに、僕は「何でも何も……」と口を尖とがらせて応じる。
+
+「少し無理をしてでも点とりたかったからでしかないけど」
+
+「右に同じ。あ、あと……」
+
+　先生が理由を一つつけたす。
+
+「ぼくの場合は、うちの部に少しあやかったのもあるかな」
+
+「部活？」
+
+　首を傾かしげる宇佐君に、僕の方から説明を入れる。
+
+「ああ、羽は切ぎり先生は野球部の顧問もやっていたんだよ。去年なんて、甲子園も行ってさ」
+
+「え、マジで？　それは凄すごいッスね。……あれ？　でも過去形ってことは、今年は顧問じゃないんですか？」
+
+「あー、顧問じゃないというか……」
+
+　そこで一瞬先生は僕の方をちらりと窺うかがうと、頭を搔かきながら説明を続けた。
+
+「実はぼく、今はもう教師でさえないんだよね。孤こ太た郎ろう君が未いまだに『先生』呼びをやめてくれないから、勘違いさせちゃったかもだけど」
+
+「え、そうだったんですか？」
+
+　意外そうに目を見開く宇佐君。彼は僕の方に説明を促すような視線を送ってきたものの、僕はあえてそれをスルーさせて貰った。代わるように、先生が続ける。
+
+「それこそ、孤太郎君の退学から程なくしてぼくも、ね。今はお義父とうさんの仕事を手伝わせて貰っているよ。……約束だったから、ね」
+
+「？」
+
+　宇佐君が首を傾げる。当然だ。なぜならそれは、表向き彼に言っているようで、その実明らかに僕だけに向けた、先生の「報告」で。
+
+　しかし僕はそれに対してもノーリアクションを貫く。何か剣けん吞のんな雰囲気を察したのか、宇佐君が話を進めてきた。
+
+「ま、まぁなんにせよ、結果的に学校を去ったのも同時期だったなんて……」
+
+　そこで一拍置いて、なんの気なしに告げる宇佐君。
+
+「色んな意味でホント似ているんだね、二人は」
+
+　その評価に、僕は一瞬奥歯を嚙かみしめてしまったけれど……しかし宇佐君に他意がないのは明白なので、そこは素直に受け容いれておくことにした。
+
+「そう言って貰えると嬉うれしいよ。羽切先生は、僕の憧れの人だったから」
+
+「憧れ？　キミの初恋の人を奪った相手なのに？」
+
+　宇佐君らしいシビアな物言い。先生は若干ギョッとしていたけれど、今の僕には分かる。このあえての浅い挑発に関しては──むしろ、僕を想おもってくれてのことなのだと。
+
+「宇佐君」
+
+「ごめんごめん」
+
+　その証拠に、僕が冗談めかして怒る素振りを見せると、笑顔で謝罪しあっさり引き下がる宇佐君。
+
+　羽切先生はそんな僕らのやりとりを微ほほ笑えましそうに見つめて呟つぶやいた。
+
+「少し安心したよ。ここでも、いい友達を持ったようだね、孤太郎君」
+
+「ええ、それはもう！」
+
+　これにだけは力強く応じる僕。と、珍しく宇佐君が少し照れた様子で目を逸らしていた。
+
+　先生が興味深そうに質問を続けてくる。
+
+「そういえば、キミ達の関係性は聞いてなかったね。店員とお客さんなのかい？」
+
+「あ、いえ、宇佐君は僕が親しくして貰ってる同僚の彼氏さんですね」
+
+「……そ、そうなんだ……へぇ……」
+
+　先生がなんと言ったものやらというリアクションを返してくる。……うん。
+
+　…………。
+
+　いや言われて初めて気付いたけどこの面メン子ツ、どっちも僕の想い人の伴侶だな！　いや片方は「元」だけど！　なにこれ！　何をどうしたらこういう顔ぶれでボドゲを遊ぶことになるわけ？　僕、マジで前世でなにやらかしたの？
+
+　思わず碇いかりゲンドウスタイルで唸うなっていると、宇佐君が次の対戦に向けて場の中央の得点カードを公開した。数字は「マイナス５」だった。
+
+「っと、マイナス値争いか。確かこの場合って、首位が獲得するんじゃなくて……」
+
+「最下位の人が引き取らないといけないんだったかな」
+
+　先生が応じる。僕は「そうですね」と補足を付け加えた。
+
+「だけどここでも『バッティング』要素が生きてるのがポイントです。たとえば先生と宇佐君が『３』を出して、僕が『８』を出した場合。普通なら『３』の二人が最下位だけれど、そこがバッティングして無効化されちゃってるから、繰り下げで僕が最下位扱いになってしまうって感じ」
+
+　僕の説明を聞いて、宇佐君が唸る。
+
+「ホント美しいルールだなぁ」
+
+　こう見えて相変わらず感心するところが渋いというか、通っぽい人だ。
+
+　彼はそのまま手札とにらめっこしながら、軽い雑談を振ってきた。
+
+「あー、そうだ。特に他意があるわけではないんだけど、先生の奥さんのナツミさん？　って人は、どんな感じの人なわけ、常盤ときわ君」
+
+「え？　うーん、どんな感じ、と言われてもなぁ」
+
+　どう答えたものやら迷う僕に、宇う佐さ君が続けて来る。
+
+「……うちの彼女に似てたりするわけ？」
+
+「え」
+
+　思わず手札から顔を上げてしまう。宇佐君の顔は彼の手札に隠れて見えない。僕はなんとか胸を落ち着かせて、ゆっくり答えた。
+
+「い、いや……全然似てないかなぁ。なんだろ、所謂いわゆる『おっとりタイプ』って感じだから、菜な摘つみさんは。ね、先生」
+
+「そうだね。まぁ、ぼくのような身内に対しては気が強いとこもあるんだけれど」
+
+　苦笑いして答えつつ一枚手札を伏せる先生に、僕も手札を伏せつつ同調する。
+
+「確かに。菜摘さん、僕にとってこそ『優しいお姉さん』でしかないけれど、先生やご家族に対しては、怒る時、めっちゃ怒りますよね」
+
+「だね。普段内に秘めるタイプなだけに、そういう噴き出す際は苛烈というか」
+
+　何か嫌なことでも思い出したのか、心なしかげんなりする先生。……うん、まぁ、僕も何度か菜摘さんが羽切先生を詰めてるとこを見たことあるから、気持ちは分かる。
+
+　宇佐君が「意外だな」と呟きながら手札を決め、一枚伏せた。
+
+「羽切さんは日々を悠々と生きてそうに見えるけど」
+
+「いやいや、そんな。婿養子として粛々と肩身の狭い日々を送っておりますよ」
+
+「婿養子……そっか。常盤君の近所のおねーさんの家に来たって言ってましたもんね」
+
+　その宇佐君の言葉に、僕が「そう」と説明する。
+
+「菜摘さんの──羽切の家は名家でさ。家も豪邸と言って差し支えなく、つまりはリビングもテーブルも広いわけで、ホント、理想的だったんだよ。ボドゲ空間として」
+
+『ボドゲ空間として』
+
+　同時に言って苦笑する宇佐君と先生。僕はぷくっと頰を膨らませつつ、ゲームを進行させた。
+
+「ほら、じゃあ、各自カードオープン！」
+
+　僕の号令と共に、それぞれの伏せた札がめくられる。宇佐君が５、先生が４。そして僕が……２だった。つまりは僕の一人負けだ。
+
+　しぶしぶ「マイナス５」を受け取る僕を、宇佐君が少し睨にらみ付けてくる。
+
+「いや『２』って。キミ、勝つ気あった？」
+
+「手札調整だよ、手札調整。これからをお楽しみに」
+
+「ふーん」
+
+　どこか納得いっていない様子の宇佐君。……ホント、鋭い人だ。そしてその勘所の良さは、やっぱり、少し前まで常連だった彼女を想起させる。どうしてだろう。二人は全く似てないのに……。…………。……似てない、か？
+
+「孤太郎君？」
+
+　先生に声をかけられ、ハッとする僕。慌てて次の準備を進めながら応じる。
+
+「ええと、そうそう、羽切の家が最高のボドゲ環境って話でしたっけ」
+
+「いや羽切さんが婿養子で奥さんの尻に敷かれていたみたいな話」
+
+　呆あきれたようにツッコんでくる宇佐君。それに対し、先生が苦笑で応じた。
+
+「尻に敷かれているか……まぁそれも間違いではないかな」
+
+　その言葉に、しかし僕は少しだけ引っかかりを覚える。
+
+「菜摘さん、確かに怒ると凄い怖いですけど、普段は『尻に敷く』と言う程じゃ……」
+
+「ああ、いや、菜摘個人がどうっていうよりは、むしろ羽切の家にぼくの頭が上がらない、って意味でさ。ほら、支援のこともあるし……」
+
+「……ああ、それはそう、ですね」
+
+「？」
+
+　僕らのやりとりに首を傾げる宇佐君。流石さすがに家庭事情へ立ち入った話なので僕は口を噤つぐんでしまうも、しかし先生は自らの手札の、更に奥をジッと見つめるようにすると……何か決意した様子で、口を開いた。
+
+「いや、遊びの場にそぐわない話で申し訳ないんだけれどね。お恥ずかしながら、ぼくは羽切の家に借金があるんだよ」
+
+「借金って……」
+
+　正直その表現には少し僕から物言いを入れたい感もあったが、先生が視線で牽けん制せいしてきたので口を挟まないことにした。
+
+　羽切先生が続ける。
+
+「そう。羽切の家には、僕の家族の治療費を出して貰もらっていてさ」
+
+「治療費、ですか」
+
+「うん。とても難しい疾患を抱えた身内がいてね。いよいよ余命宣告まで受けていたような状況だったんだけど……近年になってそれの画期的な治療法が発見されてさ。ただなにぶん、これが北米の最新医療すぎて」
+
+「ああ……それはいかにも費用がエグそうですね」
+
+「うん、とてもじゃないけど庶民の手が届く額ではなかったんだ。しかしかといって、その治療法の一般化及び廉価化を悠長に待てる状況でもなく……」
+
+「ああ、そんな時に、奥さんの家がお金を用立ててくれた、と」
+
+「だね。だからまぁ『尻に敷かれている』という表現は適切だよ。奥さんというより、羽は切ぎりの家に、って感じだけど」
+
+「……なんか、すいません」
+
+　突然飛びだした重たい話に、流石の宇佐君も謝罪する。が、先生は「いやいや」と笑顔でそれに切り返した。
+
+「なにか勘違いさせたかもだけど、これ、ぼくとしては凄すごく『いい話』なんだよ」
+
+「いい話？」
+
+「ああ。なにせ身内の病気は羽切の支援で治したし、そもそも菜摘との結婚自体は純粋に恋愛結婚だし、なにより婿入りして引っ越した先では……」
+
+　言って、僕の方を見てくる先生。
+
+「一緒にボードゲームを遊んでくれる最高の友人が出来たわけだしね」
+
+「先生……」
+
+　その言葉に思わず手を止めてしまう僕。そんな僕らを見て宇佐君は微笑むと、急せかすようにテーブルを叩たたいてきた。
+
+「ほらほら、ゲームの手が止まってんぞ。二人とも、早く選んだ選んだ」
+
+　そうして促す彼に対し、僕と先生は思わず顔を見合わせると。
+
+　改めてこの「ハゲタカのえじき」へと本腰を入れて取り組みだしたのだった。
+
+
+
+歌うた方かた月つき乃の
+
+
+
+「それじゃ、ぼくはそろそろおいとましようかな」
+
+「え、もうですか？」
+
+「ハゲタカのえじき」が一戦終わった途端にそう言い出した羽切さんに面食らい、私は思わず宇佐ではなく月乃に寄ったリアクションを返してしまった。
+
+　なにせ、このゲームの一戦所要時間はたかだか十五分程度だ。私が将棋の時間感覚すぎるきらいもあるが、とはいえ正味三十分も滞在せずボドゲカフェを去るなんていうのは、私的に全くありえない。
+
+　更に言わせて貰えば今回の一戦だって私的には不満しか残らない内容だった。私が二位だったのはまぁいいとしても。問題は、何か作戦があるようだったバンジョーさんが結局一人でマイナス点を無駄に引き取りまくっただけで終わってしまった点だ。これには肩透かしというか……露骨に「ゲスト」たる先生を勝たせてあげようとしていた感があって、いただけない。非常に、いただけない。
+
+　思わず抗議するようにバンジョーさんを見やる。が、彼は私に──宇佐樹いつきを窘たしなめるように微ほほ笑えみかけると、そのまま椅子から立ち上がった。
+
+「入り口までお送りします」
+
+「ああ、じゃあお勘定を……」
+
+「いえいえ、結構ですよ。先生、飲食されてませんし」
+
+「そういうわけには……」
+
+「ぶっちゃけ逆にこの状況でレシートを切る方が面倒なんです」
+
+　笑いながらそう告げるバンジョーさんに押し負け、引き下がる羽切さん。私はその様子をジッと見つめ、改めて胸の奥に広がるモヤモヤを再認識した。
+
+「（やっぱり、なんだか今日は……というか羽切さんが来てから、バンジョーさんが噓うそっぽいな）」
+
+　まるで今の私──「宇佐樹」みたいだ。
+
+　いつもの、口下手だけど朗らかで、真面目で、一生懸命で、私の大す──人として実に好感が持てる「バンジョーさん」の影はなりを潜めており。
+
+　代わりに、なんというか、今日はマニュアル通りの「ボドゲカフェ店員さん」がそこにいるような印象だった。勿もち論ろんそれが悪いわけではないけれど……なんとなく、寂しい。
+
+　店の出入り口に向かう二人を、私もなんとなく追いかける。
+
+　羽切さんはドアの前でこちらを振り返ると、にこっと教師っぽい笑みを浮かべてきた。
+
+　──正直なところ、どうにも胡う散さん臭くさく感じて仕方ない笑顔だ。
+
+「じゃあ、今日はこんなおじさんと遊んでくれてありがとうね、二人とも」
+
+「いえいえ、僕も久々に先生と遊べて楽しかったです」
+
+　バンジョーさんもまた笑顔で返す。……なんだろう、ＡＩ同士の対局を思わせる、まるで感情が乗らないやりとりだった。
+
+　その薄気味悪さにどうにも耐えきれず、私は……宇佐樹のヤンチャキャラに任せて、あえて踏み込んだ質問を放り込んでみた。
+
+「でも結局、羽切さんって今日は一体何をしにここに来たんですか？　少なくともただボードゲームを楽しみに来たわけじゃないですよね？」
+
+「…………」
+
+　その質問に、彼の胡散臭い笑顔を形作る表情筋が少し歪ゆがむ。が、すぐに頰をさすってそれを誤魔化すと、次の仮面をかぶって対応してきた。
+
+「元教え子の顔を見に、かな。ある筋からたまたまキミの噂うわさを聞いてね」
+
+「は？　今更ですか？　いやいや、確か彼が高校を退学してからもうかなり……」
+
+「宇う佐さ君」
+
+　流石に窘めてくるバンジョーさん。その表情はいつになく強こわばっている。が、申し訳ないけれどその程度の圧じゃ私は──歌方月乃は止まらない。……大事な友人に関係することなら、尚なお更さらだ。
+
+　羽切さんは少し困ったように頭を搔かいて、続けてきた。
+
+「実を言うとぼく、これまで孤こ太た郎ろう君とは全く連絡がつかなくてね」
+
+「え？」
+
+　バンジョーさんを振り返る。彼はどこか気まずそうに視線を外しつつ応じた。
+
+「……すいません。退学後すぐに、実家ごと引っ越してしまったので。あ、でもその転居に関しては、僕の退学とはホントに無関係の親の都合ですよ？」
+
+「ああ、それは知ってるよ。でも、ぼくからの電話を無視してＬＩＮＥも既読スルーな件に関しては、たまたまじゃないだろうけどね？」
+
+「はは……そうですね」
+
+　苦笑いを浮かべるバンジョーさん。その顔は……なんだか私が泣きそうになる程痛ましかった。事情を知らずにこれ以上深入りすべきじゃないと私の良識が囁ささやく一方で、彼にこんな顔をさせている全てが腹立たしくて仕方ない獰どう猛もうな私が胸のうちで暴れる。
+
+　そうして結局勝ったのは──宇佐樹の仮面に背中を押された、獰猛な私の方だった。
+
+「常盤ときわ君に嫌われるなんて、さぞ酷ひどいことしたんでしょうね、羽切さん」
+
+「宇佐君……！」
+
+　流石に私の肩を摑つかんで制止にかかってくるバンジョーさん。けれど、私も譲れない。
+
+　私がジッと睨にらみ付けていると、羽切さんは──相変わらず腹の立つ笑みで応じてきた。
+
+「……どうだろうね。どちらかというと、ぼくに関しては『なにもしなかった』からこそ、今こうなっているのかもしれないね」
+
+「何もしなかった？　それは、彼が退学したことに関してですか？」
+
+「ああ。言い訳になるけど、ぼくも当時はまさか孤太郎君があんなことをするとは夢にも思っていなかったんだよ。あまりに面食らって、つい、ただ流されるように……」
+
+「？　すいません、ちょっと話についていけないのですが？」
+
+「？　ああ、そうか、キミは彼の退学事情に関して本当に『全く』聞いていないのか」
+
+　その「思ってたよりは親しくなかったんだね」というニュアンスの匂わせに、カチンとくる私。それを機に、今日、心の隅でずっと感じていた、この男──羽切臣おみ虎とらへの不快感が表出する。
+
+「逆に羽切さんは、常盤君の退学事情にとても精通しているご様子ですね」
+
+「どうだろうね」
+
+「……あの、今更ですけど、お名刺頂戴してよろしいですか？」
+
+「宇佐君」
+
+　私を窘めようと再度名前を呼んでくるバンジョーさん。しかしそれを無視して羽切さんを睨み付けていると、彼は鞄かばんの中から名刺ケースを取り出して微笑んだ。
+
+「勿もち論ろん構わないさ。あー、ただ申し訳ない、今丁度最新の名刺を切らしてしまっていてね。昔の、それこそ旧姓時代のものでも良ければ……」
+
+「構いません。貴方あなたの連絡先さえ分かればそれでいいので」
+
+　彼の差し出してきた名刺を、ひったくるように奪ってポケットに突っ込む私。
+
+　そのまま挑発的に彼を睨む私を、しかしバンジョーさんが力強く摑む。
+
+「宇佐君、もういいから。色々気になるなら……後でいくらでも話してあげるから」
+
+「いや、常盤君。オレはそんな野次馬根性じゃなくて、キミの友達として──」
+
+「宇佐君」
+
+
+
+　そこで初めて、私は自分の肩を摑む彼の手が震えていることに気がついた。
+
+「……分かったよ」
+
+　引き下がりながらも、つい、拗すねるように視線を逸そらしてしまう。……宇佐樹のキャラだから、ではない。正直それは紛まごうかたなき歌方月乃のリアクションだった。その子供じみた振る舞いに自分で驚く。こんな拗ね方をしたのは、いつ以来だろう？　いつのまにかバンジョーさんに関することは、私にとって「どうしても譲れないもの」の一つになっていたらしい。
+
+　私が糾弾をやめたことで場に静寂が訪れる。仕切り直したのは、バンジョーさんだった。
+
+「とにかく、先生は僕の様子が気になって顔を見に来てくれたわけですよね？」
+
+「え？　あ、ああ、それはそうなのだけれど。もっといえば、一言、謝り──」
+
+「あ、そうだ、謝ると言えば！」
+
+　羽切さんにターンを渡さず、バンジョーさんが自分のペースで会話を回す。
+
+「僕、先生のジャケット借りパクしっぱなしでしたね！」
+
+「ジャケット？　ああ……例のアレか。そんなのは、むしろ……」
+
+　羽切さんは更に何かを言いかけるも、有無を言わさぬ勢いのバンジョーさん。
+
+「あ、もしかして返さなくていい感じですか？」
+
+「え？　あ、ああ、それは勿論」
+
+「ありがとうございます、先生！　じゃ、この件は──」
+
+　そこで何かを決意するように一瞬目を伏せるも、すぐに笑顔で告げるバンジョーさん。
+
+
+
+「これにて『貸し借りなし』ってことで」
+
+
+
+「……！」
+
+　その言葉に、羽は切ぎりさんの仮面が歪む。悔しそうな、泣き出しそうな。それは私が今日初めて見る、羽切臣虎という人間の素顔に思えた。
+
+　しかし彼はすぐにまた仮面をかぶり直すと……胡散臭い笑顔で、応対する。
+
+「ああ。……じゃあね、孤太郎君。また──」
+
+　そう言いかけた彼の言葉を、しかし、バンジョーさんは、笑顔で、遮断する。
+
+「さよなら、先生」
+
+　その、暗に「二度と来るな」というニュアンスを含んだ言葉に。先生は苦笑いを浮かべた後……彼もまた、同じ笑顔で、返したのだった。
+
+「さようなら、孤太郎君」
+
+　そのまま、クルマザを退店していく羽切さん。カランコロンという景気のいいベルの音が、どこか寒々しい。
+
+「さて、と」
+
+　仕切り直すように呟つぶやいてテーブルの片付けに向かうバンジョーさん。彼はテキパキと「ハゲタカのえじき」のカードを回収すると、それを箱に詰め、手早くモビロンバンド（輪ゴムのようなもの）で固定し、ボドゲ棚に戻した。そのまま慣れた手つきでテーブルを消毒清掃し、一通りの作業をものの一分程度で終わらせると……。
+
+「それで、宇佐君」
+
+　元々私達が三人で遊んでいたカタンのテーブル席に座り直し、未いまだ入り口前でぼんやり佇たたずんでいたこちらに声をかけてくる。
+
+「そんなに、僕の退学理由が聞きたい？」
+
+　流石さすがに少し怒っているのか、珍しく少しなげやりな態度で訊たずねてくるバンジョーさん。
+
+　……本来ならば、私だって他人の心を土足で荒らすような無礼な振る舞いはしたくない。それが好きな──好感を持っている相手ならば、尚更だ。
+
+　けれど今の私の中には、それ以上に、強い想おもいが湧いていた。
+
+「ああ、是非聞きたいね、友達として。たとえそれで、キミに嫌われることになっても」
+
+　宇佐樹いつきの強気なキャラでそう応じ、こちらもカタンの席へと戻って椅子にどかっと腰掛ける。
+
+　──彼のことを、もっと、ちゃんと、理解したい。その想いが今の私をどうしようもなく突き動かしていた。
+
+　私の──宇佐樹のストレートな言葉を受け、どこか毒気を抜かれた様子を見せるバンジョーさん。
+
+「宇佐君はずるいよねぇ、ホント」
+
+　そう呟いて苦笑いを見せた後。彼はゆったりと背もたれに体重を預けると。
+
+　どこか他人ひと事ごとのように、カフェの天井を見上げながら、吐露したのだった。
+
+　────そのあまりに予想外かつ衝撃の、退学理由を。
+
+
+
+「女子生徒とラブホから出て来たところを同校生徒にバッチリ撮られた上、更に相手を妊娠までさせたんだよね、僕」
+
+
+
+　……………………。
+
+「ひょあ!?」
+
+　私の人生史上、一番変な声が出ました。はい。
+
+
+
+＊
+
+
+
+「び……っくりしたぁ」
+
+　今しがた衝撃の発言をした側のバンジョーさんが、目を丸くして私の方を見ていた。
+
+「今の、宇佐君の声だよね？　随分高い声が出るんだね。まるで女性みたいな……」
+
+「え、あ、ああ。ごめん、あまりに面食らったものだから……」
+
+　曖昧に応じて目を逸らす私。……今のは完全に素の「歌うた方かた月つき乃の」だったどころか、その人生の中でも指折りの「女の子らしい叫び」を披露してしまった。恥ずかしい。
+
+「……っていうか、今の声、なーんかどこかで耳馴な染じみが……」
+
+「そ、そんなことより！」
+
+　バンジョーさんが余計な記憶を辿りかけたため、私はバンッとテーブルを強めに叩たたいて話を元に戻す。
+
+「キミの退学理由だよ、退学理由！　今の、冗談か聞き間違いだよな!?」
+
+「？　ああ、僕が野球部の女子マネを孕はらませたって話？」
+
+「おっと表現が更にドギつくなって返ってきた！」
+
+「なんだか映画の続編キャッチコピーみたいだね」
+
+　何が楽しいのかケラケラ笑うバンジョーさんと、思わず頭を抱える私。……普段の宇う佐さ樹のキャラなんてとてもじゃないが保っていられなかった。が、話題が話題だけに、バンジョーさんもそこに違和感は覚えなかったらしい。
+
+　むしろ冷静すぎるほどの冷静さで、淡々と続けてきた。
+
+「ほら、僕が警告した通り、さっき先生の前で無理にする話でもなかったでしょ？」
+
+「た、確かに……じゃなくて！　その、それ、本当の話なのかい？」
+
+「いやこれが作り話だったらむしろ性癖歪ゆがみすぎでしょ僕」
+
+「そ、それもそうか。……い、いや、だけど！」
+
+　私は自分でも中々まとまらない想いを、それでも懸命に吐き出した。
+
+「キミは、そんなに愚かな人間じゃないだろう！」
+
+「宇佐君が、僕の何を知ってるのさ」
+
+　どこか突き放すように告げてくるバンジョーさん。その拒絶感が溢あふれる眼まな差ざしは、どこまでも黒く深く、まるで息詰まる対局中盤の棋士のようで。
+
+　しかしだからこそ、それを見て私もまた確信出来てしまった。
+
+　彼の挑戦を正面から受けて立つ防衛戦の心持ちで、私は今一度、同じ台詞せりふをハッキリ、ゆっくりと、復唱する。
+
+「キミは、そんなに、愚かな人間じゃ、ない」
+
+「…………」
+
+　私の言葉には何も返さず、深く息を吐いて背もたれに体重を預けるバンジョーさん。
+
+　まるでこれ以上は自分から何かを話す気はない、といった様相だ。
+
+　……上等である。
+
+　女流棋士として、ボードゲーマーとして……──いや、一人の友人として彼の挑戦を真っ向から受けた私は、椅子に深く座り直して目を瞑つぶり、沈思黙考を始めた。
+
+　……彼はこの件に関して、恐らく「噓うそ」はついていない。ウタマル時代に私が聞いたワードたる「ドン引き退学エピソード〜泥沼地獄編〜」という匂わせタイトルにも内容が一致しているし、だから「退学理由」としては彼が話した通りなのだろう。
+
+　常盤ときわ孤こ太た郎ろうは、不純異性交遊の疑いにより学校を退学にまで追い込まれた。
+
+　ここまでは、厳然たる「事実」なのだろう。実際こうして退学しているわけだし。
+
+　問題は、その裏に潜む「真実」の方だ。
+
+「…………」
+
+　私は軽く目を開けると、まず今一度彼の様子を窺うかがった。完全に表情を消してしまっている。なんというか、いつも柔にゅう和わな笑顔を見せてくれる人だけに、その様子が実に痛ましい。何が彼をそうさせるのかは分からないが、どうにも積極的に退学周りの真相を話したくはないようだ。
+
+　だから、私が今しようとしていることは、相変わらずの土足侵入行為だ。デリカシーの欠片かけらもない、友人への蛮行。
+
+　そもそも私と彼の関係なんて、あくまで時折一緒にボードゲームを嗜たしなむ程度のものなのだ。あえて露悪的な表現を用いるならば──「あそびの関係」以外の何ものでもない。
+
+　でも、だからこそ。私はどうしようもなく──
+
+「（──貴方あなたの核心に、触れたいんです）」
+
+　将棋のように真剣勝負の対局相手ではない。
+
+　心を寄せ合う「ただの遊び相手」だからこそ。
+
+　その痛みは、苦しみは、無視したままではいられない。
+
+　それもこれも、全てはここでの「遊び」を、ボードゲームを心から楽しむため……。
+
+「……？」
+
+　そんなことを考えながら、ふと広げたままのカタンの盤面から、何気なく「盗賊コマ」を拾い上げたその瞬間。
+
+　私の中で、今日経験したいくつかの「点」が、有機的につながりゆくのを感じた。
+
+　まず最初の「点」は、羽切さんが来る直前、小鳥遊たかなしさんと三人で遊んでいた時に行われたボードゲーム用語の説明だ。
+
+　それは将棋の世界にはない、不思議な状況に由来する問題。トップ争いを繰り広げるプレイヤーの勝敗の鍵を、本来そこに全く無関係な第三者が手にしてしまう事象。
+
+　次の「点」は、羽切さんと興じた「ハゲタカのえじき」の不自然なゲーム展開だ。普段より露骨に「マイナス点」を積極的に引き取っていたバンジョーさんの、違和感ある振る舞い。
+
+　そして、最後の「点」。それは別れ際ぎわの話題としてあまりに違和感のありすぎた、ジャケットの借りパクがどうこうという話、それに付随して二人の容貌が少し似ているという前提条件だ。
+
+　──それら三つの点に考えを巡らせたところで、私は──遂ついに気付いてしまう。
+
+　あのとても信じがたい「退学理由」が──本当は、どこから来たのか。
+
+　言い換えれば。
+
+　あの「マイナス」を、誰が、どこから、引き取ったのか。
+
+　私は思わず視線を上げ、そうして、改めてバンジョーさんの目を見つめると。
+
+　指で摘まんだ「盗賊コマ」を彼に見せつつ、その「核心」を告げたのだった。
+
+「キミは昔から、根っからの『キングメーカー』だったってわけか」
+
+　私のその指摘に。彼は驚いたように目を瞠みはると……次の瞬間、どこか清すが々すがしく破顔した後、どこか冗談めかして、うやうやしく頭をさげてきたのだった。
+
+
+
+「お見事。まいりました」
+
+
+
+＊
+
+
+
+「まぁなんていうか……僕の口からは言いにくいんだけど、ことのあらましは、概おおむね宇佐君のご想像通りだと思うよ」
+
+　気まずそうに曖昧な表現で済まそうとする彼。しかし私はぐいっと容赦なく踏み込む。
+
+「あの淫行教師、野球部顧問の身で女子マネと枕を交わしやがったのか」
+
+「いや『枕を交わす』て」
+
+　私の独特な表現に苦笑するバンジョーさん。いやいや、笑いごとじゃ全然ない。
+
+　私は更に踏み込んだ。
+
+「まさかヤツは、教師の身でありながら、意気揚々とラブホから出てきたところを、迂う闊かつにも同校生徒に目撃され、更に間抜けなことに、写真まで撮られたってわけ？」
+
+「前置詞の悪意がイチイチ凄すごいけど、まぁそうだね。あ、でもその時先生が撮られたのは、あくまで後ろ姿だったんだよね。不幸中の幸いなことに」
+
+「何が幸いなもんかよ。ざけんな」
+
+　吐き捨てるように言い放つ私。自分でも自分の口から自然にそんな怒気が出てきたことが意外だったけれど、それだけに、それが偽らざる本音でもあった。
+
+　私は冷めやらぬ怒りそのままに、更なる説明を促す。
+
+「んで、なんだ？　キミはヤツに身代わりを頼まれたわけか？」
+
+「あ、いやいや、それは違うんだよ宇佐君。先生はそんなんじゃないんだ」
+
+　慌てた様子で首をぶんぶん振って否定してくるバンジョーさん。自分に対する勘違いは流すくせに、ことここに至っても先生の名誉は守ろうとするその彼の善性が、今はなんだかとても腹立たしく、そして、悲しかった。
+
+　私のそんな感情を察したのか、バンジョーさんはトーンを落として粛々と説明を再開させる。
+
+「幸いなことに……って言い方したら、また怒られるかもだけど。当時、僕は例の写真をかなり早い段階で見られる立場にあったんだよね。それこそ、学校に伝わる直前……更に先生自身に伝わるには、まだ少し猶予があるようなタイミングでさ。だから……」
+
+「……野郎には事情も説明せず、ジャケットを借りに行ったわけか」
+
+「うん。あと例の女子マネとの口裏合わせもしといたかな」
+
+「……ホント、ボドゲの説明といい、『準備』の手て際ぎわがいいよね、常盤君って」
+
+「照れるなぁ」
+
+「褒めてない」
+
+「ごめんなさい」
+
+　そう謝りつつも、彼は結論を続ける。
+
+「だから、先生の淫行自体は軽蔑されて然しかるべきかもだけれど『僕に罪をなすりつけたヤツ』みたいには思わないであげて欲しいんだ。そこに関しては、完全に僕の罪だから」
+
+　ただただ真摯に、私の目を見て自らの罪を白状するバンジョーさん。
+
+　……彼には申し訳ないけれど、今の話で私の中での羽は切ぎり臣おみ虎とらへの再評価なんか進むわけもなかった。むしろ。
+
+　常盤孤太郎というあまりに善良すぎる人物が、現状全てのマイナスを引き受けているという状況への、どうしようもないやるせなさが、つのるのみ。
+
+　私は思わずドンッとテーブルを叩いてしまいつつ、想おもいを吐露する。
+
+「分からないな。どうしてキミはそこまでして、あのクズをかばって──」
+
+「あー……えっと。そうだな……まず野球部が去年、甲子園行ったって話はしたよね」
+
+「っ！」
+
+　言われてハッとする。……実際規則がどうなっているかは知らないけれど、確かに現役野球部顧問が女子マネに手を出した事実というのは、大変危うい。甲子園出場にケチがつく可能性もあるだろう。その点、それが顧問どころか「部外の生徒」であるならば、少なくとも野球部としての不祥事度はぐんと下がる。……とはいえ……。
+
+「だ、だからって、そんなのキミには関係ないだろう？」
+
+「いや、一応クラスメイトにも野球部の男子がいたからさ、完全に無関係でもないよ。彼は毎日毎日凄い練習頑張ってて、甲子園決めた時なんて泣いて喜んでてさ。流石さすがに見てるこっちまでウルッと来るというか。リアル熱闘甲子園」
+
+「そ、それはそうかもしれないけれど。……彼は親友だったとか？」
+
+「いや全然。クラスメイト、以上でも以下でもない感じかな。しかも彼には最後、結局絶交までされたんだけどね。お前のせいで青春が汚けがされたとか、ボロクソ罵られて」
+
+「いや引き取ったマイナスが大きすぎるだろ」
+
+　納得しきれない様子の私に、バンジョーさんが苦笑い気味に続けて来る。
+
+「あ、ついでにちょっとだけ羽切先生の名めい誉よ挽ばん回かい情報なんだけどさ。例の女子マネ、確かに羽切先生と関係は持ってたんだけど……。それどころか、そこそこの数の野球部員とも出来ていたみたいなんだ。いわゆる、えーと、ビ──」
+
+「あばずれさんか」
+
+「……宇う佐さ君って時折表現が古風だよね。思えばそういうとこも、ウタマルさんに──」
+
+「それでその、羽切の話だけど！」
+
+　私は慌てて話を軌道修正する。
+
+「お相手があばずれさんだとして、それの何がヤツの名誉挽回に繫つながるんだい？」
+
+「あ、うん。これは僕が退学した後に判明することなんだけど……結局、例の妊娠したって女子マネの産んだ子供は、野球部キャプテンとの間に出来た子だったんだよね」
+
+「は？」
+
+「ちなみに今では彼女、そのキャプテンと結婚して幸せに暮らしております」
+
+　言いつつスマホで彼女のインスタを見せてくるバンジョーさん。凄すさまじく幸福そうな親子のスリーショットがそこにあった。……なんだろ、経緯的には正直腹立たしいものの、可か愛わいい赤ちゃんの写真って問答無用で全て洗い流すよね。あぁ、かわいい。
+
+　実際バンジョーさんもそうなのか、スマホを回収する際に赤ちゃんの画像を見てちょっと破顔してしまっていた。いや「いい人」の極みか、この人。
+
+「こほん。と、とにかくまぁ、学生を『孕はらませた』ってくだりに関してだけは、先生、一応無実」
+
+「いや、だとしても……教師ともキャプテンともとか、泥沼すぎんだろこの裏話」
+
+「うん、実際更に他の部員とも関係はあったみたいで……ダーク熱闘甲子園だよね」
+
+　二人、げんなりする。なんだろう、青春の、見たくない部分が過ぎた。
+
+「しかしそんなグダグダ野球部の甲子園出場のために、キミは……」
+
+「い、いや、そうは言っても部員の大半は何も悪くないからね？　あと実際、この野球部の甲子園出場云うん々ぬんは僕が先生の身代わりになった動機の二割程度かな。むしろ最大の理由に関しては、もっと個人的な──」
+
+「ナツミさん、だろ？」
+
+　私が間髪入れず口にした推測に、バンジョーさんは驚いた顔をしながらこくりと頷うなずく。
+
+「凄いね、宇佐君。その通りだよ。先生との話でもちょろっと出てきたけどさ。菜な摘つみさんはその、なんていうか、普段穏やかなんだけど、それだけに……」
+
+「重い女？」
+
+「まぁ……正直、そんな感じだね。なんていうか、危ういんだよ。冗談とか考えすぎとかではなく、先生の浮うわ気きなんか発覚した日には、刃にん傷じょう沙汰が避けられなそうだった」
+
+「だとしても、少なくとも先生側は自じ業ごう自じ得とくだろう」
+
+「まぁね。けど菜摘さんの──憧れのお姉さんの心が壊れるとこは、見たくないかな」
+
+「……そう、かもしれないけど……」
+
+　未いまだに承服できかねる私。当然だ。彼が菜摘さんの……そして言わないけれど、恐らくは問題の羽切先生のことを思うのと同じくらい、私だって友人が報われてほしい。
+
+　どこかの淫行教師やグダグダ野球部やメンヘラ初恋泥棒のことなんて知ったこっちゃない。私は、バンジョーさんに、このたまらなく優しい人に、幸せになってほしいのだ。
+
+　…………。
+
+「？　どうしたの宇佐君。なんか、急に顔が赤く……」
+
+「い、いや、ことのほか入れ込んでいた自分に、自分でびっくりしただけというか……」
+
+「？」
+
+「な、なんでもない」
+
+　誤魔化すように咳せき払ばらいする私。……薄情なことに、今ので私の中の「怒り」が若干霧散してしまった感があった。正直どうかと思ったものの、とはいえ意識的に余計な悪感情を引き出すのも馬鹿らしい。なにより、バンジョーさんは終始私を宥なだめるようなスタンスだったのだ。だったら、ここらで怒りは収めておくのが吉だろう。なにせ、ことの全てはバンジョーさんにとって、一年以上前に終わってる話なのだ。今私が蒸し返して騒いでも、ただただ彼を困らせることにしか……。…………。
+
+「というか、じゃあ今日はあの淫行野郎、なにしに来たんだ？」
+
+「そこだよね」
+
+　やれやれと肩を竦すくめるバンジョーさん。ここに来てようやく初めて、彼が羽切臣虎に対する苛いら立だちを少しだけ顕あらわにした。
+
+　彼は私がボード上に置いた「盗賊コマ」を手に取ると、盤上に設置された自らの「村」のコマの近くに、ことりと置いて嘆息した。
+
+「ここまで聞いた宇佐君なら分かると思うけれど、今の僕としては、色んな意味で先生には会いたくないんだよね」
+
+「殺したくなるもんな」
+
+「そ、そうじゃなくて。僕らが余計な接触をすれば例の件が蒸し返される恐れがあるからね。だから僕は先生や……なにより、菜摘さんには二度と会うべきではないんだよ。二人のためにもね」
+
+「……キミは、ホント……」
+
+　呆あきれて頭を抱えてしまう。なんなのだろう、この人は。根っからのキングメーカー気質とでも言うのだろうか。その怒るポイントさえ、いちいち、他人のためだ。
+
+　彼は心底呆れた様子で呟つぶやく。
+
+「ホント、どういうつもりで僕に会いに来たんだか。まさに、招かれざる客だよ」
+
+「彼の様子を見るに、キミに謝りたかったのでは？」
+
+「そんなところだろうね。……くだらないよ。先生が僕に謝る理由なんて、一つもないのに。そんなしょーもない罪悪感の解消より、守るべきものが、沢山あるだろうに」
+
+　複雑な感情を滲にじませてそう吐き捨てる彼に、私は微ほほ笑えむ。
+
+「ああ、だから『ハゲタカのえじき』で『露骨にマイナス点を引き取る』みたいな、キミらしくない、あてつけみたいな戦略とったんだ？　彼を早々に追い返すために」
+
+「うん。事情を知った今なら、あのゲーム展開の居心地悪さ、宇佐君にも分かるでしょ」
+
+　ニィッと悪戯いたずらっぽく笑うバンジョーさんに、私も思わずつられて笑ってしまう。
+
+「確かに、傑作だったね、あれは」
+
+「でしょ？　まぁ本来娯楽たるボードゲームでああいうことをするのは、正直気が咎とがめるんだけどね。アレックス・ランドルフ氏にホント申し訳ないよ」
+
+「……誰？」
+
+「え、もちろん、『ハゲタカのえじき』の作者」
+
+「……キミさぁ」
+
+　遂ついにはボドゲの作者にまで謝り出したバンジョーさんを見て、もうすっかり毒気を抜かれてしまう私。ホント、敵かなわない。
+
+　私がクスクス笑っていると、それを見てバンジョーさんが不思議なことを言い出した。
+
+「……ありがとうね、宇佐君」
+
+「？　何がだい？」
+
+　本気で何を感謝されているのか分からず聞き返す私。彼は照れ臭そうに頭を搔いた。
+
+「退学周りのことは、結局全ては僕が選択した、自業自得だったんだけどさ。それでも……キミが怒ってくれた時。何かが、救われた気がしたんだ」
+
+「……そっか」
+
+「だから、ありがとう」
+
+「うん。どういたしまして」
+
+　彼を正面から見つめ、ふわりと微笑む私。と、今度は彼の方が頰を赤くして、そっぽを向いてしまった。そ、そんなリアクションをされると、こっちも困るというか。
+
+『…………』
+
+　変な静寂が場に訪れる。私はこの気まずさを誤魔化すように新たな話題を振った。
+
+「しっかし、トータルはやっぱり胸むな糞くそ話だよな、これ」
+
+「そう？」
+
+「そうだろ。だって最終的に得したのが『淫行教師』『グダグダ野球部』『あばずれ女子マネ』『メンヘラ女』あたりだぜ。なんだよこれ」
+
+「そういう表現すると、なんだか闇金ウシジマくんのエピソードみたいだね」
+
+「それぐらいにはキミ以外の登場人物が闇深すぎるんだよ」
+
+「い、いや、そんなことは……。……ああ、ほら、そうだそうだ。そこ、触れ忘れてた」
+
+　ふと何か思い出した様子を見せるバンジョーさん。私が首を傾かしげていると、なにやら少しドヤ顔で切り出してくる。
+
+「この話、一人だけ明確に助かった、何も悪くない『第三者』さんがいるんだよね。そしてそれが、当時僕が先生の身代わりになろうと思った大きな理由の一つだったんだ。ある意味では、菜摘さんよりもね」
+
+「？　なんの話？」
+
+　本気で思い当たる人物が分からない私に、彼が続ける。
+
+「ほら、当時、羽切の家の支援で『最新治療』を受けていた──先生の、ご家族」
+
+「……ああ！」
+
+　そうだ、そんな話もあった。そうか、その治療が行われていたのは、まさに同時期の話だったのか。それなら確かに、もし先生の浮気なんて発覚しようものなら……。
+
+　私がそこまで考えたところで、バンジョーさんがキラキラした笑顔を見せる。
+
+「ほぅら、ちゃんと得した無む辜この第三者がいたでしょ？　いやぁ、良かった良かった」
+
+「まぁ、結果何も知らず浮気野郎の家族の治療費を律りち儀ぎに支払った羽切家視点で見たら、めっちゃバッドエンドとも言えるけどな」
+
+「宇佐君って、時折無慈悲に賢いよね」
+
+「逆にキミは、時折慈悲深すぎる馬鹿だよな」
+
+「ぐ……。……い、いや、そうは言うけどね、宇佐君。僕だって、別に聖人君子気取っているわけじゃないんだよ？　その証拠に、先生に『落とし前』はつけさせてるから」
+
+「落とし前？」
+
+「うん。ほら、先生、僕の退学後、ほどなくして教師辞めてるって話あったでしょ？　あれは、僕からの要求……いや、脅迫によるものなんだよ」
+
+　そう言われて、そういえばそんな話もあったなと思い出す私。
+
+「ああ、ヤツがキミとの約束がどうこうとか言ってた、アレか」
+
+「うん。確かに僕は先生をかばったけれど……それはあくまで彼のご家族を始めとした周囲を守るためのものであって。彼の、教師としての酷ひどい裏切り行為を容認する意図は欠片かけらもないんだ。少なくとも僕は……あの状況で生徒に手を出してしまう人に、このままのうのうと教師を続けてなんて、ほしくなかった。だから……」
+
+「……そっか」
+
+「……うん」
+
+　そのまま場に沈黙が降りてくる。ふと彼の顔を見やると、まるで今し方罪を告白した大罪人の如ごとく、苦い顔をしていた。私は思わず吹き出してしまう。
+
+「いやいや、なんでこの話でそんな顔してんだよ、キミは！」
+
+「な、なんでもなにも、一応僕の脅迫行為の話なわけだし……」
+
+「きょーはくこーい！　淫行教師の罪の大半を背負っておいて『あ、でもケジメとして教師は辞めてね』って要求を、キミ、まさか自らの脅迫行為として気に病んでんの!?」
+
+「そ、そうだけど……」
+
+「あはははははははは！　噓うそでしょ、キミ、どんだけ……あはは！」
+
+　思わず腹を抱えて笑ってしまう私。バンジョーさんはと言えばしばらくは不服そうに唇を尖とがらせていたものの、最終的には私に釣られて笑ってしまっていた。
+
+「なんだよ、もう。……ははっ」
+
+　そうして二人、ひとしきり笑い終えたところで。
+
+　突如ドアが勢い良く開かれカラカラとベルが鳴った。と同時に、これまでの店内にはまるでなかった底抜けに明るい声が響き渡る。
+
+「あいるびーばーっく！」
+
+　見れば、両手に荷物を抱えた小鳥遊たかなしみふるが、下着が見えそうな程の勢いで雑にドアを蹴り開いて入店してきていた。……偽にせの彼氏といえど、頭を抱えたくなる蛮行だ。いや、見れば同僚男子さえも頭を抱えていた。
+
+　あちーあちー言いながらドスドスとバックルームへ向かおうとする小鳥遊さんを、慌てて追いかけるバンジョーさん。彼の接近を見るや否いなや、小鳥遊さんは荷物の袋を一つ彼に向けて放った。
+
+「ちょ、急に──って、重っ！　え、何をこんなに買い出ししてきたんですか!?　うちのカフェの備品、ここまで不足してましたっけ!?」
+
+「してたしてたマジしてた。ほら、たとえばこのでっかいハトムギ化粧水とか」
+
+「カフェの備品とは！」
+
+「まま、いいじゃんいいじゃん。バンジョーも使えば、ほら、それはもう、びひーん」
+
+「冷たっ！　ちょ、やめ……！」
+
+「あはは！」
+
+　なにやらカウンター付近できゃっきゃとはしゃぎ始める二人に、なんだか感動を覚えてしまう私。
+
+「（す、すごいな……小鳥遊みふる）」
+
+　帰還してものの数秒で、先程までの重苦しい雰囲気を──羽は切ぎり臣おみ虎とらのまき散らしていったどこか淀よどんだ世界観を、一気にカラッと晴らしてしまった。
+
+　そして同時に、こうも思う。
+
+「（私はやっぱり普段のこのボドゲカフェが……クルマザが、好きだなぁ）」
+
+　そんな心地よい想おもいに身を任せながら、何気なくポケットに手を突っ込む。と、カサッと何かが手に触れた。取り出してみると、それは雑に折られた名刺だった。
+
+「（ああ、さっき羽切臣虎から受け取った名刺か、これ。…………）」
+
+　少し考えてから席を立ち、近くのゴミ箱へ向かう。あの時はつい怒りに任せて連絡先を貰もらってしまったけれど、改めて考えてみると……。
+
+「って、小鳥遊さん、この最新ヘアドライヤーは……」
+
+「……び、備品？」
+
+「おお、そうですかそうですか。では詳しく解説して頂きましょうか、ボドゲカフェにこれが必要な理由を……！」
+
+「バンジョーうざーい」
+
+　……羽切臣虎に連絡を取る時間があるなら、あのやりとりを見ていたい。
+
+　私はそう結論すると、ゴミ箱に名刺を捨てようと──したところで、折り曲げられた名刺の一部から、想定外の漢字が覗のぞいているのに気がついた。羽切臣虎の四文字の、そのどれでもない、漢字。
+
+　一瞬他人の名刺でも摑つかまされたのかと考えたものの、すぐに思い直す。
+
+「（ああ、なにか旧姓の名刺だとか言ってたような……）」
+
+　それを思い出した途端、なんとなく興味をひかれ、ゴミ箱に捨てる前に軽く折られた名刺を開いてみる。
+
+　その刹那──元々、私の中にあった残りいくつかの疑問が、劇的に繫つながるのを感じた。
+
+
+
+　なぜ、あの子はボードゲームに一切興味がないのに、ここでバイトしているのか。
+
+　なぜ、あの子はただの同僚に「自分の幸せな姿」を見せつけたがっていたのか。
+
+　なぜ、あの子は「キングメーカー問題」に対して過剰に機嫌をこじらせたのか。
+
+　そしてなにより。
+
+　羽切臣虎の淫行がバレなかったことで、最も恩恵を受けた存在──
+
+　──ある意味バンジョーさんに命を救われた「先生の家族」とは、一体誰だったのか。
+
+　その全ての情報を、綺き麗れいに繫げるように。
+
+　羽切臣虎の残していった旧姓の名刺には、こう書かれていたのだった。
+
+
+
+〈小鳥遊　臣虎〉
+
+
+【エピローグ　スタートプレイヤー（Ｄａｙ１）】
+
+
+
+　ボードゲームカフェ「クルマザ」開店初日の、営業開始直前。
+
+　店内で改めてボドゲ棚を眺めつつも、緊張でガチガチに固まっている僕の肩を、突然誰かがぽんっと叩たたいてきた。
+
+　少しびくっとしながら振り向くと、そこにあったのは凄すさまじく垢あか抜ぬけたギャルの姿。
+
+　彼女は僕とまるで正反対の陽キャオーラを振りまきつつ、弾はじけるような笑顔で声をかけてきた。
+
+「おつかれさーん。へっへぇ、今日からよろぉ、常盤ときわ孤こ太た郎ろう君」
+
+「よ、よよ、よろしくお願いします、え、ええと……た、小鳥遊さん？」
+
+「いやいや、同僚の名前、今更ネームプレートで確認すんなし」
+
+　言って、バンバンと僕の背中を叩く小鳥遊さん。そのあまりの距離感の詰め方とスキンシップの軽さに、カルチャーショックを受ける僕。こ、これが陽キャの力……！　羽切先生や菜な摘つみさん、それに武たけ士しや半はん杭くいなんかともまた別種のコミュ力だ。どう対応したものか全く分からない。
+
+　僕は素早く深呼吸を繰り返すと、「むむ、むしろ、たた、小鳥遊さんは」と相変わらずキョドりながら話を振ってみた。
+
+「ぼ、僕なんかの名前、よく覚えてくれてましたね。少し前に一度、スタッフの顔合わせで軽く挨拶しただけだったのに……すごい」
+
+「え？　あ、あー……。でしょでしょ？　やるっしょ、あたし」
+
+「は、はい。尊敬です」
+
+　僕の指摘になぜか一瞬動揺した様子を見せるも、すぐに悪戯いたずらっぽい笑顔を見せる小鳥遊さん。が、なぜかまたすぐに僕から視線を外して、何事かを呟つぶやく。
+
+「……そりゃあれだけ不肖の兄と義理の姉の口から聞かされまくればね……」
+
+「？」
+
+「っとぉ、なにかなぁ、常盤君。あたしの顔、そんな熱心に見つめちゃってぇ」
+
+「え、いや、すす、すいません！　すいません！」
+
+　早速同僚からセクハラを指摘されてしまい、何度も頭を下げる僕。いや、この手の話は僕の場合はホント洒しゃ落れにならないから！　まだここじゃ誰にもバレてないとはいえ、僕の表向きの退学理由が退学理由だから！
+
+「…………」
+
+　僕が完全に萎縮して再び黙ってしまったのを見て、露骨に「うわ、しくった、メンド」みたいな顔をなさるギャル女子高校生こと、小鳥遊……なんとかさん。
+
+　僕はこの沈黙を脱すべく、どうにか話題を探す。
+
+「そ、そういえば、小鳥遊さんはどうやってこのバイトを知ったんですか？」
+
+「ん？　なんで？」
+
+「いえ、結構マニアックなバイトなんで。僕はたまたま張り紙を見たんですが……」
+
+「あー、それね」
+
+　小鳥遊さんは少し考えてから、同意するようにこちらを指さして返してきた。
+
+「ほぼほぼ、みーとぅー」
+
+「ん？　ああ、僕と同じく張り紙からってことですか。でも、ほぼほぼっていうのは？」
+
+「んー」
+
+　僕の疑問に、小鳥遊さんはなぜか少し照れ臭そうに付け足してきた。
+
+「あたしの場合は、張り紙ってより、それを見てる人を、見たっていうか？」
+
+　なぜかそこで僕の目をジッと見据えてくる小鳥遊さん。な、なんだろ、こう、イマイチ理屈が分からない。ただ、なんかその不思議な眼まな差ざしにはどうにも照れて仕方ない。
+
+　僕は少し視線を逸そらしながら続けた。
+
+「つ、つまり、お友達の紹介的な話ですか？」
+
+「んー……ま、大体それでいっかな。あたらずともとーからず、的な？」
+
+　うぅ、ダメだ、陽キャ論理が僕には難解すぎる。
+
+　なんとか、もう少し僕寄りの、二人で共通して盛り上がれる話題はないだろうか。そう思いながらあたりを見回したところで──僕ははたと気付いた。
+
+　このバイトに応募してくるような人としたい……とっておきの話題が、あったことに。
+
+　思わず前のめりに、鼻息荒く話題を振ってしまう僕。
+
+「そそ、そうだ！　小鳥遊さんの好きなボドゲって、なんですか!?」
+
+　目を爛らん々らんと輝かせたボドゲオタクによるその質問に対し。
+
+　しかし──彼女の反応は、凄まじく冷淡だった。
+
+「え？　知らんし」
+
+　その返答に一瞬絶望しかけるも。なんとか顔に笑みを貼り付かせて、会話を続ける僕。
+
+「あー、す、すいません。僕、不勉強でその『シランシ』というボドゲは初耳──」
+
+「や、だからボドゲなんか一度もまともにやったことないんだって、あたし」
+
+「──は？」
+
+　その瞬間──僕の中で何かがプツンと切れた。と同時に、これまで彼女へ抱いていた緊張も一切失った僕は、激しい剣幕でボドゲ無知勢ギャルへと詰め寄った！
+
+「どういうことですか、それ！」
+
+「ど、どういうことって……」
+
+　途端に気まずそうに視線を逸らす小鳥遊たかなしさん。しかし彼女は少し何か考える様子を見せると……なにやら妙に妖よう艶えんな笑顔で、僕へ手を伸ばしてきた。
+
+「あは、あたしってぇ、恥ずかしいけどぉ、謂いわばボドゲ処女ってヤツでぇ。だからぁ、できればこれからはキミにはぁ、手取り足取り優しく教えてほし──」
+
+「店長ぉ！　詐欺です！　詐欺バイトです、この人──」
+
+「ど、どぉどぉどぉ！」
+
+「むぐっ！」
+
+　途端に素早くこちらの背後へ回り込むと、まるで犯罪映画の一場面かのように背後から僕の口を右手で塞いでくる小鳥遊さん。しかももう片方の腕は僕を拘束すべく胴回りに回されており、結果、背中になんだか柔らかいものがむにむにと密着して仕方ない。マジでどうなってんだ陽キャの距離感。
+
+　僕がなんとか彼女を振りほどこうと身もだえしていると、小鳥遊さんは耳元でこそっと囁ささやいて来る。
+
+「ね、ねぇ、常盤君。あたしぃ、どうしてもぉ、ここでキミと働きたくてぇ」
+
+「わ、分かりましたから！　分かりましたから、まず体を離して下さい！」
+
+「あれ、もういいの？　それはそれでちょい残念」
+
+　途端に軽い調子で身を離す小鳥遊さん。僕は顔を真っ赤にしながら彼女を振り向くと、思わず抗議してしまう。
+
+「そそ、そういうの、よくないですよ！」
+
+「ん？　そういうのって？」
+
+「だからその、なんていうか……色いろ仕じ掛かけ的な何かというか」
+
+「色仕掛けってｗ　なに、今の数秒であたしにオチたわけ、キミ？」
+
+「違いますよ！　でもなんていうか……ああもう！」
+
+「あはは、安心しなよ。あたしだってこんなの、誰にでもはしないし」
+
+「え？」
+
+　その発言意図が分からず戸惑う僕。なんだか頰が熱い。と……途端に小鳥遊さんは、心底意地の悪い笑みを「にたぁ」と浮かべた。
+
+「はい、常盤君、完オチぃ！　あざーす！」
+
+「っ！　こ、この……！」
+
+「やば、マジウケんだけど」
+
+　こちらを完全に小馬鹿にした様子でケラケラ笑い始めるギャル。……ああ、もう、なんだろう、早速苦手かも、僕！　この人！　ってかただでさえ、例の退学の経緯的にあの女子マネさんタイプには若干の苦手意識が湧いてんだ。そこに加えて、唯一共通話題に出来そうだったボドゲに対する完全無知宣言。もう、どうしていいのか分からなすぎる。
+
+　苛いら立だちで頭をわさわさと搔かく僕に、小鳥遊さんは「てかさ」と切り出してきた。
+
+「そういうバンジョーは、ボドゲ強いわけ？」
+
+「バンジョー？」
+
+「キミ。なーんか常盤君とか孤太郎君って、全然しっくりこないし」
+
+「本名が全否定されることってあるんだ」
+
+　うん、今決めた。この人は僕の敵だ、敵。その認識の方が、変に緊張もしないし。
+
+　僕は一つ嘆息すると、眼鏡のブリッジを人差し指で押し上げながら応じた。
+
+「まぁ、貴女あなたに比べたらそりゃ強いと言っても差し支えないでしょうね」
+
+「ふーん？　じゃ、試しにサイコロ振ってみてよ、サイコロ」
+
+「は？」
+
+　言うや否いなや、カフェの備品の一つである汎用ダイスを放ってくる小鳥遊さん。
+
+　僕はそれを慌ててなんとか受け取りつつも、呆あきれ顔で返す。
+
+「いやいや、ボドゲが強いって、そういうことじゃ……」
+
+「うーわ、なにそれ言い訳クソダサｗ」
+
+「いいでしょう、見てて下さい」
+
+　売り言葉に買い言葉の勢いで、テーブルにダイスを放る僕。コロコロと転がったそれが指し示した数字は、果たして──
+
+「……『３』」
+
+「わはっ、めっちゃバンジョー」
+
+「どういう意味ですか、どういう！」
+
+　そう怒りながらも、実のところ自分でも理解出来た。うん、めっちゃ僕。こういう時に１とか６とか出ないあたりが、ホント、僕。それはそう。マジそう。
+
+　しかし初対面のこのギャルに、一体僕の何が分かるというのか。っていうか、これがダイス勝負というなら、まだ結果は分からないじゃないか。僕は小鳥遊さんにダイスを放ると、挑発するように告げた。
+
+「じゃあほら小鳥遊さんも、試しに──」
+
+「はい『６』」
+
+「なんかすいませんでした」
+
+　ガチ初心者勢のギャルに完全敗北を喫するボドゲオタク。そんな僕を見て、小鳥遊さんは何がそんなに面白いのか、腹を抱えて笑っていた。
+
+「やば、ボドゲ、めっちゃ面白い」
+
+「いや、まだダイス振っただけじゃないですか」
+
+「うん。まだダイス振っただけだよね。キミと」
+
+「？」
+
+　そこでなぜかこの状況を慈いつくしむかのような笑みを見せてくる小鳥遊さん。……やばい、ちょっとマジで意味分からん。いっそ怖いまであるんだけど。なにこの人。…………。
+
+　で、でも、まぁ……。
+
+「……こんなでも、初ボドゲが楽しかったなら、それは良かった」
+
+　頭を搔きながら思わずそう言ってしまう僕に。小鳥遊さんは、今一度微ほほ笑えむ。
+
+「うん」
+
+「……っ」
+
+　その妙にしおらしいというか、いじらしい笑顔に、思わず視線を逸らしてしまう僕。
+
+　ホント、この人は、ズルい。こ、こんなギャップ萌もえ技術に、惑わされてなるものか。
+
+　…………。
+
+　た、ただ、まぁ、その……確かに。
+
+　ダイスを振るだけのことがこんなに楽しかったのは、僕も初めてだったけどさ。
+
+　小鳥遊さんが「あ、そうだぁ」となぜか僕を咎とがめるように見て来る。
+
+「バンジョー、さっき自分が『３』を出した時、テンション落ちてたじゃん？　あれ、あんまよくないと思うよ」
+
+「よくない？」
+
+「うん。ほら、よく出るんなら『またかぁ』より『お、今日も出たねぇ！』的な迎え方の方が、ゼッタイ気分良いっしょ」
+
+「た、確かに」
+
+　それは僕の発想にはまるでない、しかしある意味で凄すさまじく理にかなった話だった。こ、これが根アカ属性の発想か。勉強になるなぁ。
+
+　僕は早速そのアドバイスをとりいれるべく、小鳥遊さんに提案してみる。
+
+「じゃ、今度から僕が、サイコロで３を出した時は……」
+
+「うん」
+
+「『マンマミーアァァァア！』と叫びますね！」
+
+「うん、やめて。それ叫んでいいのって任○堂の看板さんだけだから。客、引くから」
+
+「それじゃあどうしたら……」
+
+「んー……そうだねぇ」
+
+　と、そこで小鳥遊さんはふと、テーブルに置かれた無償提供の飴あめが盛られたバスケットへと視線をやると、何か名案を思いついた様子で切り出して来た。
+
+「ね、バンジョーはこの中だと、何味が好き？　あたしは断然レモン！」
+
+「え？　そうですね……僕は、コーラですかね」
+
+　言いながら、コーラの飴を摘まみあげてみる。と、小鳥遊さんがまさにそれを指さして、告げて来た。
+
+「じゃ、それにしようよ」
+
+「え？　何がです？」
+
+「だから、バンジョーが『３』を出した時のご褒ほう美び」
+
+　そう言いつつ、僕の手からコーラの飴を奪い取り、包装を剝むく小鳥遊さん。
+
+「はい、バンジョー、あーん」
+
+「え？　あ、あー……」
+
+　戸惑いながらもなんとか開いた口の中に、ぽいっとコーラ飴が放り込まれる。
+
+　……甘い。美味おいしい。ってか、なんか流れで食べちゃったけど、これ今、飴とはいえ「あーん」ってなかなかに際きわどいことをされたような……！
+
+「おいし？」
+
+「え？　あ、はい、はい」
+
+　戸惑う間もなく訊たずねられ、どうにかコクコクと頷うなずき返す僕。
+
+　小鳥遊さんは心から楽しそうに提案してきた。
+
+「じゃバンジョー。今後は、３を出した直後だけ、大好きなコーラの飴を舐なめていいよ」
+
+「え？……あ、あー、なるほど」
+
+　確かにこの程度のことでも褒ほう賞しょうがあれば、「３」を出した時に必要以上に落ち込むこともなく、むしろ少しだけ気分が上向くだろう。……ホント、僕にはない発想だ。
+
+　僕はコーラ飴を転がしながら、笑顔で彼女に礼を告げる。
+
+「いいですね、それ。うん。よし、僕は今後この店では、『３』を出したタイミングでだけ、大好きなコーラ味の飴を舐めることにします！」
+
+「いいんじゃない？……ま、あたしは好きな時に好きなだけレモン味舐めるけど」
+
+「おい」
+
+「あははは！」
+
+　二人、ケラケラと笑い合う。……うん、この人となら、楽しく働けそうだ。
+
+　──と、そこで外の準備をしていた店長からドア越しに店内へと声がかかった。
+
+「じゃあそろそろ開店だけど、準備はいいかーい？」
+
+　その問いかけに、僕と小鳥遊たかなしさんは視線を交わし、声を合わせて応じる。
+
+『オッケーでーす！』
+
+　気付けば、いつの間にか僕の緊張はすっかり解けていた。……認めたくないけれど、明らかに小鳥遊さんの……この同僚のおかげだ。
+
+　店長が最後の開店準備を進める中、小鳥遊さんは最後の休憩時間を堪たん能のうせんとばかりに目の前の椅子へ腰を下ろし、そのままテーブルへと上半身を投げ出した。……この人はこの人で、むしろ、もうちょっと緊張感持った方がいいような。
+
+　僕はその様子を立ったまま見下ろしながら、ふと訊ねてみる。
+
+「あ、そういえば小鳥遊さんって……」
+
+「んー？」
+
+　テーブルに寝そべったまま、頭だけを動かして僕の方を振り返るギャル。と、そこで彼女はふと目の前に転がっていたダイスに──彼女が先程「６」を出したっきりのダイスに気が付くと、それを指先でコロコロといじり始めた。
+
+　その様子を見るとはなしに見ながら、僕は質問を続ける。
+
+「どうしてわざわざこのバイトに？　特別時給が高いってわけでもないのに」
+
+「んー……」
+
+　僕の質問に対し、意外にも彼女はすぐには答えなかった。何かを思案するようにダイスをいじる。しばらくそうしたのち、彼女は言葉を選ぶように答えてきた。
+
+「なんかさー。しょーじき、自分でもびっくりだったんだけど」
+
+「はい」
+
+「家族からの話を聞いたり、こっそり遠くから見たりを、繰り返しているうちにさ。あたし……悔しいけど、夢中になっちゃってたみたいで」
+
+「…………」
+
+　正直なんの話かは全く分からなかったものの。彼女があまりにも穏やかで愛情に満ちた表情をするものだから、僕も思わずそれに見とれて言葉を失ってしまう。
+
+　小鳥遊さんは続ける。
+
+「気が付けば、はしたないとは分かりつつも、つい、手を出しちゃってたんだよね」
+
+「手を出すって……えっと、何に、ですか？」
+
+　彼女の美しさに心を奪われつつも、どうにかそれだけは聞き返す僕。
+
+　すると小鳥遊さんは、手遊びをやめておもむろに立ち上がりつつも。
+
+　なにやら出目を調整したダイスを、指先で挟んで僕へと見せつけてくると共に。
+
+　どこか悪戯いたずらっぽい微笑を浮かべて、その言葉を口にするのだった。
+
+
+
+「あそびの、かんけい」
+
+
+あとがき
+
+
+
+　いきなりで恐縮なのですが、まず最初に大事な警告と謝罪だけさせて下さい。
+
+　今回の「あとがき」は、十七ページあります。
+
+　目を疑いましたでしょうか？　大丈夫です、作者も目を疑っております。
+
+　もし、本作の残りページ数を見て「まだ物語の続きがあるな」と期待されていた方がいらっしゃいましたら、本当に申し訳ございません。ここからはずっと「あとがき」でございます。ラブコメじゃなくて、作者の愚痴です。たまったものじゃないですね。
+
+　でもご安心下さい。作文の苦手な作者はもっとたまったものじゃないです。たすけて。
+
+
+
+　さて、ページ数の話は一旦これぐらいにしまして。改めてご挨拶を。
+
+　初めまして、もしくはお久しぶりです。著者の葵あおいせきなと申します。
+
+　元々はファンタジア長編小説大賞で佳作を受賞してデビューさせて頂いたライトノベル作家でして、業界歴で言うと十九年になるようです。……うん、なんだかこう書くと、とても中堅だとか大御所っぽいですね。実際には編集さんへ原稿を送る度に「あぁ、ボロクソ言われたらどうしよう……こわ……やば、もう泣きそう……」とか未いまだ怯おびえるメンタリティの作家です。自分でもびっくりするほど十九年目感が無い。
+
+　あの、質問なのですが、テレビドラマとかでよく見る、編集さんに原稿を家に取りに来させてガッハッハする作家さんへの進化イベは、いつ来るのでしょうか？　なんか私だけ、ずっとイーブイのままで十九年戦っているような気がするのですが……。いや、きっとこれは、二十年目に何か起こるんだな。うん、そのはず。
+
+　というわけで、今後の発行物あとがきで急に私の態度が横おう柄へいだったら「葵せきな、一皮むけたな」と優しく見守ってやって下さい。
+
+　さて、自己紹介に戻りまして。
+
+　先程は「ライトノベル作家歴・十九年」みたいに言いましたが。実はこの十九年ずっとライトノベル一筋でお仕事させて頂いていたわけでもなくてですね。ここ数年は、ゲームや漫画のような他メディアでも少しお仕事させて頂いておりました。
+
+　その結果として、ライトノベル媒体という意味では、本作がなんと五年ぶりの新刊になるようです。なんてこったい。よく堂々と今日まで「ライトノベル作家」の肩書きを名乗れたものですよね。面の皮が厚いったらありゃしないです。
+
+　とはいえデビューから十五年程はライトノベルだけでご飯を食べさせて頂いていたので、未だに他のお仕事をする際も基盤に「ライトノベルでの考え方」が染しみついておりまして。ある種の「母国語」みたいなものですね。なので今後も出来れば「ライトノベル作家」を名乗らせて頂ければ幸いです。
+
+　ちなみに現在も本作と並行して漫画原作のお仕事などをさせて頂いておりますので、もしご興味があればそちらも……と宣伝したいところなのですが。うん、びっくりする程他社さんの話でした。やめましょう。……………………け、検索とかしてみてね！
+
+
+
+　とにもかくにもライトノベル媒体では実に五年ぶりの新刊になりまして。こうなると流石さすがに私の過去の著作を読まれてる方でも、「葵せきな」がどういう作家だったか忘れている方も多いことと思います。
+
+　なので、一言で説明させて頂きますね。葵せきなという作家は──。
+
+
+
+　──あとがきが、長い作家です。
+
+
+
+　思い出して頂けましたでしょうか？　そうですそうです。それです。面白い作品を書いているかはさておき、なんか無駄にあとがきが長かった作家。それが私です。ただ、本人が望んでその作風（個性・キャラ）を獲得したわけではなかったのですが……。
+
+　というわけで、主に初めましての方に向けて、ここから少し「葵せきなとあとがき」について説明させて頂きますね。既存読者様の中には「その解説は前も見たよ」と思われる方がいらっしゃると思いますが、とはいえ五年ぶりですので「これまでのあらすじ」を見る感覚でお付き合い頂けたら幸いです。
+
+
+
+　そもそもライトノベル──というかファンタジア文庫における「あとがき」って、皆さん、なんのために存在しているかご存知でしょうか？
+
+　作者からの挨拶？　読者サービス？　物語と現実の架け橋？
+
+　色々な解釈はあると思いますし、それらも全て正解なのですが。現実的な意味で一番切実な理由が、ページ調整になります。
+
+　電子媒体で読まれている人には少し実感しづらい話で申し訳ないのですが、紙媒体の方は基本的に十六ページ単位で作られておりまして。
+
+　だからたとえば本編やイラストがきっちり三百二十ページ（十六で割り切れる数）を埋め切っていれば、「あとがき」の入る余地はないのです。しかし本編が三百十ページしかなければ、あと十ページは余ってしまいます。そのままいけば白紙です。
+
+　ここで作者に与えられる選択肢は二つ。
+
+　一つは本編の長さを調整して、三百四ページ、もしく三百二十ページの本にしてしまうこと。先述しましたように、本のページ数の増減は十六ページ単位ですからね。
+
+　そしてもう一つは……シンプルに、余った十ページを添え物で埋めることです。広告や、それこそ「あとがき」で、ですね。
+
+　その際、もしあとがきの分量に無理があれば、本編を加筆・減筆してみたり、広告を入れてみたりして微調整するのが普通であり。…………普通、なのですが。
+
+　その、私、葵せきな。自分でいうのもなんですが「調整」が苦手なくせに、とはいえ広告もあんま入れたくないなぁとか言い出す、かなりアレなタイプの作家でして。
+
+　結果、毎回あとがきには出たとこ勝負の「無添加」で挑むことになりました。
+
+　本編を書き終えて出た「余白」は全て「あとがき」で埋める。ということですね。
+
+　で、どうなったと思います？
+
+　……うん、そうですね。
+
+
+
+　えらいことになりましたよね。
+
+
+
+　あとがきが四ページとか五ページぐらいの時は、丁度良いいんですよ。作品のこと、裏話、次巻の予告、関係者さんへの謝辞、そしてほんのりプライベート報告。それらを順当に書けば、まぁ埋まるんで。妥当なもんですよ。これには作文苦手な私もニッコリ。
+
+　しかし問題になってくるのは八ページあたりからですよね。……先程列挙した話題に、更に何を付け加えてかさ増ししろと？
+
+　私の作風的に長々語れるような「壮大な裏設定」なんか基本ないですし。予告だって、書きすぎるわけにもいかない。謝辞もいつも大体書く分量は同じ。で、そうなるともうプライベート報告に厚みを持たせるぐらいしかないわけですが……。
+
+　残念なことに私、フツーに引きこもりでしてね。
+
+　面白いプライベート報告なんざ、あるはずもなく。というか、そんなにプライベートが充実してたら、最初からライトノベル作家になんかなってないわけで（暴論）。
+
+　じゃあもう、その状況で書けることなんてあとは一つですよ。そうです。今まさに皆さんも目撃している、これですね。
+
+
+
+　長いあとがきへの、長い愚痴です。
+
+
+
+　だから当初の私からすればそれは本気で「苦肉の策」であり、ただただ「あとがき」への怨えん嗟さと血ち反吐へどをまき散らしただけだったのですが。
+
+　なぜかその「あとがき」が、一部の読者さんに妙に面白がられまして。
+
+　いや、まぁ分かりますよ。私は「水曜どうでしょう」が大好きなのですが、中でも何が好きって、出演者が辛つらい目にあって愚痴をこぼす場面ですからね。他人の笑える苦労は蜜の味です。分かります。分かるのですが、それが自分に降りかかるのは勘弁願いたい。
+
+　だというのに読者さん達の念が作用したのか、ある時期以降、なぜかあとがきページ数の上振れがやたら続きましてね。
+
+　二桁台はザラ。最終的には「あとがき十八ページ」とかいう、最も早はやなにかの記録でも狙っているのかという意味の分からない数値まで叩たたき出す始末でした。
+
+　基本四ページぐらいで話題の尽きる作家に、十八ページ与えるって何？　ファンタジア文庫編集部が「葵せきなの作家としての増長を抑え、イーブイのままで育てる」目的でわざとやってんのかってレベルで、当時の私は苦しめられたものです。
+
+　ちなみに参考までにご報告しますと、今回のあとがき、現時点でまだ七ページしか埋まってません。皆さん、既に結構長々と愚痴を読んだ実感あるでしょう？　私も書いた実感あります。なんだったら、既に数時間かけて書いてます。
+
+　それでも今回のノルマである十七ページの半分も、到達してないんですよ？　マジで正気の沙汰じゃない。皆さんは今何を読まされてるの？　私は何を書いているの？　ってか、ここまで来たらもう素直に広告入れた方が良くない？　私も読者さんも。そうなると私は今何にこだわってこんなことしてんの？　わかんない、わかんないよぅ……。
+
+
+
+　とまぁ、完全に精神のバランスを崩す程に脱線しましたが、話を本筋──「あとがき」の解説へと戻させて頂きまして。
+
+　ここまで「あとがき」のシステムや目的を読まれた方の中には「いや、だとしたら、やっぱりおかしくないか？」と何かに気付かれてしまった、とてつもなく鋭い方もいらっしゃることでしょう。
+
+　そうですね。おかしいですよね。だって今回のあとがき、十七ページです。なんなら私が先程語っていた過去の最大あとがきなんか、十八ページとか言ってましたよね。
+
+　この情報の何がおかしいって、こうなるともう、余白を埋めるって理由じゃ成立していないんですよ。だって「十六ページ単位で組まれている本の余白を埋めるため」の「あとがき」だって話をしているんだもの。
+
+　それが十六を超えるとは、いったい……？
+
+　戸惑っていますか？　大丈夫です、私の方がずっとずっと戸惑っております。
+
+
+
+　順を追って説明しますと。
+
+　先程は便宜上「本編だけで埋まったら、あとがきは要らない」的な話をしましたが。とはいえ「あとがき」は一種の文化みたいにもなっておりますので、言っても数ページは入れるのが慣例ではあるんですよね（勿もち論ろん例外もたくさんあります）。
+
+　で、そんな中で本作「あそびのかんけい」において算出された余剰ページ数は、なんと一ページでした。
+
+　これには私もニッコリです。流石に五年もライトノベルから離れたら、読者さんの怨念パワーなんてリセットされるんですね。うんうん、たまには距離を置いてみるもんですね。さてさて、それでは担当さんからの報告の続きを──
+
+
+
+担当「というわけで、今回のあとがきページ数は脅威の十七ページになります！」
+
+葵「なんでェ？」
+
+
+
+　──はい、これはどういうわけでしょうか。解説に戻りましょう。
+
+　少し前にあとがきのページ数に関して、私は四〜五ページぐらいが丁度良いと言いましたね。解説やら謝辞やらを書いて、いい塩あん梅ばいに埋まる量がそれぐらいなのです。ただそれは裏を返せばそれ以下……一〜二ページだと、それはそれで難しいということでもあり。
+
+　特に一ページだと、ほぼ成り立ちません。読んで頂きありがとうございました、的なことだけ伝えられれば、それこそ「重畳」といったところです。
+
+　そういった場合多くの作家はどうするか？　簡単です。本編の改行なんかをちょこちょこいじって数ページだけ捻出し、あとがきに充あてます。実にスマートな解決法です。
+
+　それが私の場合はどうでしょう。
+
+　はい、そうですね。本編の内容はいじりたくないとか、初期段階で妙にこじらせた主張を始めちゃった作家さんなんですね。この若気の至り野郎マジどうにかしろよ。
+
+　あとがき一〜二ページを回避しつつ、本編もいじらない手段。そんなのもう一つですね。
+
+　はい。まるまる十六ページ、あとがきを足します。こうして、十七ページとか十八ページのあとがきという、イカれた概念が出来上がるわけですね。
+
+　……いや、改めて、なんなのこの話。なんで私は理路整然とずっとトンチキ話をしているの？　ホントにこれ理屈通ってるの？
+
+　まぁ自じ業ごう自じ得とくと言われればそれまでの話ですね。マジで。ただこの話で一つだけどうしてもハッキリと主張しておきたいのは、こういうネタに走ろうとしてあとがきのページ数をわざと多く調整したことは、本当に一度もないということです。というか、たかが「ネタとしておいしい」のために数時間の苦行を選択するほどの根性が私にはないです。
+
+　だから基本的には毎回「四〜五ページぐらいであれ！」と本気で願っております。
+
+　なのにこうして新作を書けば……これですよ。私はなぜライトノベルを離れていたのか、今ようやく「真の原因」を思い出せた気がします。ただいま、クソが。
+
+　うん、なんか口が悪くなってきたので、ここらでいい加減話題を変えましょう。
+
+
+
+　では本作「あそびのかんけい」について（本当は最初に触れるべき話題だった気が）。
+
+　実は前作である「ゲーマーズ！」が完結してから、本当は全く別の長編作品（過去改変系ラブコメミステリー）を、他の仕事の合間にちょこちょこ書いていたのですが。これがまぁ、書き終わらないにも程がありましてね。また一応はミステリー作品なので、オチまで書いてようやく完成みたいなところがあり。途中で担当さんに提出もしづらく。
+
+　ただこのままだと本当にいつ完成するのか分かったものじゃありません。なので、じゃあ全く別の軽い連作短編形式作品を起たち上げて、短編が一本完成する度に担当さんに送り、それが数話溜たまったら一冊にしようと思って書き出したのが、本作「あそびのかんけい」でした。
+
+　当初は私の趣味でもある「ボードゲーム」を数人で遊ぶだけの、本当に内容がない、それこそ「生徒会の一存」に近い作品を想定していたのですが。
+
+「どうせボードゲームで遊ぶなら、遊ぶ人達は全員別々の思惑を持たせようかな」
+
+「基本好意の連鎖がいいよね。ボドゲ遊ぶなら、なかよしが一番」
+
+「そうだ折角ボドゲテーマなんだし、正体隠匿要素もあっていいか」
+
+　とかやっているうちに、今のテイストの作品に。な、なんか当初の「ボドゲ遊ぶだけ」という立脚点から随分遠いところに来た気がする……！　なぜ……！
+
+　一応言い訳させて貰もらうと。前作である「ゲーマーズ！」におけるビデオゲームなんかもそうなんですが。本作はあくまで「小説」であり、ゲームの紹介記事ではありません。なのでその焦点はあくまで登場人物達の「物語」の方に絞らせて貰うようにしておりまして。なので、濃密なボドゲ描写を期待された方々には本当に申し訳無いです。
+
+　ただボードゲームって、小説で本格的にルールから戦略まで説明しようとすると、中々にエグい文章量になるんですよね。特に本来の私が好む中〜重量級のゲームのルール説明をしようものなら、この本を実に十数ページ単位で無駄にしますよ！　商業誌でそんなことしていいんですか？　いや、絶対にいいわけがな──。
+
+　あ、今まさに十七ページをドブに捨ててる最中でした。うん、それなら「オーディンの祝祭」や「テラフォーミング・マーズ」なんかの魅力解説した方がよっぽど……。
+
+　こ、こほん。まぁとにかく本作に関しては、あくまで「よくボドゲの話が出て来るラブコメ」として読んで頂けると幸いです。一方でボドゲがよく分からない方も、本作で名前が出て来るゲームはそのどれもがバチクソに面白いので、少しでも興味を持たれましたらぜひ触れてみてくださいね。
+
+　さて、そんな本作「あそびのかんけい」なのですが。もう一点特徴的なのは、時系列が若干トリッキーな部分ですよね。
+
+　実際、本作の中だけで言えば第一話が一番最新の時系列だったりします。もっといえば、逆にエピローグが最古の時系列でさえあります。この構成はもう偏ひとえに、この物語の情報公開順として一番最適だったからとしか言いようがないです。
+
+　……うぅ、ボドゲを気軽に遊ぶだけのゆるふわラブコメ企画はどうなったの……。
+
+　あ、ちなみにここで耳寄り情報を。変則的時系列構成の結果、本作の第一話は、実はエピローグのエピローグみたいにもなっております。第一話をもう一度読んでみると、一周目では流していたある情報が、読み取れるようになっているかもしれません。
+
+　で、そうやって第一話を読んでいると、なんか流れで第二話も読みたくなると思います。そうやって読み進めて再びエピローグまで来ると、また第一話を読む気分に……。
+
+　やったね！　これぞ、無限ループ小説！　コスパ最高！　この一冊だけで、もう完成だね！　これはもう、続きとか全然いらないね！　葵せきな渾こん身しんの単品ラブコメ作品、ここに堂々の完結──。
+
+　え？　あれ、担当さん？　どうして告知の煽あおりに「新シリーズ開幕」と？　あの、ほらこれ、よく読んで下さい？　一冊でもうずっと楽しめるように出来て……。
+
+　ほへ？　イラストは深み崎さき暮くれ人ひとさんに依頼？　いやいやちょっと待ってくださいよ。そんなリップサービスで私のやる気を出させようとしたってダメですよ。これはもう、ほら、一冊で無限に読める感じになっているんですって。そりゃ私も続きを書きたい気持ちがないわけじゃないですよ？　でもほら、一冊で終わっても全然後悔はないように──。
+
+　はい？　え、深崎さんが、本当にイラストを描いてくれるって？　噓うそじゃなくて？
+
+　…………。
+
+　あ、すいません担当さん。そろそろ帰りますね私。
+
+　いや、どうしてって──二巻を書くために決まっているでしょうが！
+
+
+
+　とまぁそのようなわけで。本作、恐らくですが二巻も出ると思います。
+
+　次は「なんかもう気付けばほぼ主人公」な某女流棋士さんの「真の姿」も、遂ついに本格的にお目見えすると思いますので。ぜひご期待下さい。
+
+
+
+　さて、そうこうしているうちにもう十五ページ消化されました。いやぁ、改めてこうしてみると意外と短いもんですね──とか言いたかったのですが、うん、やっぱり無理ですね。長かったです。普通に。読者さんもそう思っていることと思います。
+
+　ちなみにこのあとがき、私は今回わけあって深夜から書き始めていたのですが。軽く休憩とか挟んだとはいえ、なんか今やもう、昼ですよ。太陽が眩まぶしいや。
+
+　徹夜は徹夜でも、いい原稿書いた時の徹夜は清すが々すがしい気分になるものです。しかし今日に関しては、清々しいどころか、疲れたでもなく、ただただ一言。
+
+「なんなん？」
+
+　これに尽きますね。いや、ホント、マジで、なんなん？　この労働。……労働？
+
+
+
+　それでは、最後に謝辞を。
+
+　まずは本作のイラストを快く引き受けて下さった深崎暮人さん。本当にありがとうございました。担当さんから話を聞いても、それでもまだしばらくの間「いや、言うてもやはり担当さんのリップサービスの線が濃厚……」とか疑っていたあの頃。ある日突如として、みふると月つき乃ののラフを頂いたあの衝撃は忘れられません。
+
+「え、かわっ。え。マジか。え、なにこれ、本気でかわっ。え、マジか。……マジか」
+
+　と、「動転する」という言葉の意味を身をもって理解させて頂きました。一巻の妙にトリッキーな作風にも演出を完璧に合わせて頂き、本当に感謝の念に堪たえません。今後とも何なに卒とぞよろしくお願い致します。……えと、あの、ただ、すいません、正直二巻もトリッキーです……。
+
+　次に、担当さん及びファンタジア文庫編集部様。なんかこう「新作？　書いてる書いてるー」って感じのやりとりのみでダラダラと数年経たってしまい、本当に申し訳ありませんでした。や、ただ、マジで書いてはいたのですよ。別の作品を。終わらない勢いで。
+
+　今、こうして「あそびのかんけい」を完成させられたのは、どう考えても偏に根気強くお付き合い頂いた編集部様のお陰です。ありがとうございました。引き続き何卒よろしくお願い致します。
+
+　そしてなにより、本作を手に取って頂いた読者様。
+
+　本当にありがとうございます。しかもこんな馬鹿みたいなあとがきを、最後まで読んで頂いているとか。もう感謝どころか、申し訳なさが勝る領域です。
+
+　ただそんな読者の皆様に報いられるよう、引き続き本作「あそびのかんけい」を懸命に執筆していきますので、今後とも何卒よろしくお願い致します。
+
+
+
+　それでは、今回はこの辺で。次はボドゲを中心に全ての関係性が「一歩前に進む」であろう「あそびのかんけい２」でぜひお会い致しましょう！
+
+
+
+　……次のあとがきは、丁度いいといいなぁ。
+
+
+
+
+
+葵　せきな-->
+                    <div class="card-body">
+                        <h2 class="card-title h4">書籍化された一週間シリーズ</h2>
+                        <p class="card-text">本講座が「<a target="_blank"
+                                href="https://www.amazon.co.jp/1%25E9%2580%25B1%25E9%2596%2593%25E3%2581%25A7C%25E8%25A8%2580%25E8%25AA%259E%25E3%2581%25AE%25E5%259F%25BA%25E7%25A4%258E%25E3%2581%258C%25E5%25AD%25A6%25E3%2581%25B9%25E3%2582%258B%25E6%259C%25AC-%25E4%25BA%2580%25E7%2594%25B0%25E5%2581%25A5%25E5%258F%25B8-ebook/dp/B08FSKF3KV/?_encoding=UTF8&amp;pd_rd_w=3xi81&amp;content-id=amzn1.sym.40b77006-462b-43ea-a608-25dcf53d35e8&amp;pf_rd_p=40b77006-462b-43ea-a608-25dcf53d35e8&amp;pf_rd_r=356-2661968-1499022&amp;pd_rd_wg=qMTA2&amp;pd_rd_r=e8c5a384-baaa-44de-b378-64b99bb476e8&amp;ref_=aufs_ap_sc_dsk&amp;_encoding=UTF8&amp;tag=s03ef-22&amp;linkCode=ur2&amp;linkId=f09d04a7a56f3a1a6923e6f3f2b5f7c5&amp;camp=247&amp;creative=1211">1週間でC言語の基礎が学べる本</a>」として書籍化されました！サイトの内容プラスアルファでより学習しやすくなっています！Impressより発売中です!!
+                        </p>
+                        <a class="btn btn-primary" target="_blank"
+                            href="https://www.amazon.co.jp/1%25E9%2580%25B1%25E9%2596%2593%25E3%2581%25A7C%25E8%25A8%2580%25E8%25AA%259E%25E3%2581%25AE%25E5%259F%25BA%25E7%25A4%258E%25E3%2581%258C%25E5%25AD%25A6%25E3%2581%25B9%25E3%2582%258B%25E6%259C%25AC-%25E4%25BA%2580%25E7%2594%25B0%25E5%2581%25A5%25E5%258F%25B8-ebook/dp/B08FSKF3KV/?_encoding=UTF8&amp;pd_rd_w=3xi81&amp;content-id=amzn1.sym.40b77006-462b-43ea-a608-25dcf53d35e8&amp;pf_rd_p=40b77006-462b-43ea-a608-25dcf53d35e8&amp;pf_rd_r=356-2661968-1499022&amp;pd_rd_wg=qMTA2&amp;pd_rd_r=e8c5a384-baaa-44de-b378-64b99bb476e8&amp;ref_=aufs_ap_sc_dsk&amp;_encoding=UTF8&amp;tag=s03ef-22&amp;linkCode=ur2&amp;linkId=f09d04a7a56f3a1a6923e6f3f2b5f7c5&amp;camp=247&amp;creative=1211">Read
+                            →</a>
+                        <a
+                            href="https://www.amazon.co.jp/stores/%E4%BA%80%E7%94%B0-%E5%81%A5%E5%8F%B8/author/B087D6917Q?ref=ap_rdr&amp;isDramIntegrated=true&amp;shoppingPortalEnabled=true"></a>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">Impress一週間シリーズ</div>
+                    <a
+                        href="https://www.amazon.co.jp/stores/%E4%BA%80%E7%94%B0-%E5%81%A5%E5%8F%B8/author/B087D6917Q?ref=ap_rdr&amp;isDramIntegrated=true&amp;shoppingPortalEnabled=true"><img
+                            class="card-img-top" src="./index_files/amazon.jpg" alt="..."></a>
+                    <div class="card-body">
+                        <h2 class="card-title h4">書籍化された一週間シリーズ</h2>
+                        <p class="card-text">一週間シリーズは書籍化されています。こちらもどうぞ！</p>
+                        <a class="btn btn-primary"
+                            href="https://www.amazon.co.jp/stores/%E4%BA%80%E7%94%B0-%E5%81%A5%E5%8F%B8/author/B087D6917Q?ref=ap_rdr&amp;isDramIntegrated=true&amp;shoppingPortalEnabled=true">Read
+                            →</a>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">プログラマーなら欲しいグッズ</div>
+                    <a href="https://sevendays-study.com/programminggoods.html"><img class="card-img-top"
+                            src="./index_files/programminggoods.png" alt="プログラミンググッズ"></a>
+                    <div class="card-body">
+                        <h2 class="card-title h4">プログラミンググッズ</h2>
+                        <p class="card-text">快適なプログラミング環境を構築したい人々にぜひとも揃えてほしいグッズです。</p>
+                        <a class="btn btn-primary" href="https://sevendays-study.com/programminggoods.html">Read →</a>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">制作・管理</div>
+                    <a href="http://shift-system.jp/"><img class="card-img-top" src="./index_files/shift-system.png"
+                            alt="シフトシステム株式会社"></a>
+                    <div class="card-body">
+                        <h2 class="card-title h4">シフトシステム株式会社</h2>
+                        <p class="card-text">このサイトはシフトシステム株式会社によって制作・管理がなされています。</p>
+                        <a class="btn btn-primary" href="http://shift-system.jp/">Read →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright © <a href="http://shift-system.jp/">shift-system.jp</a> All
+                Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="./index_files/bootstrap.bundle.min.js.ダウンロード"></script>
+    <!-- Core theme JS-->
+    <script src="./index_files/scripts.js.ダウンロード"></script>
+
+
+    <tbdiv id="picinpicBtn"></tbdiv>
+    <tbdiv id="playerControlBtn"></tbdiv>
+    <tbdiv id="leftFullStackButton"></tbdiv>
+    <tbdiv id="rightFullStackButton"></tbdiv>
+    <div id="extension-kjloo"></div>
+</body>
+
+</html>
